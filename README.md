@@ -23,3 +23,9 @@ La version courante de SEO Kalamity sera ajoutée à VirtualBox.
 ## Configurer Firefox
 Le compte Firefox administrateur pour conserver la liste des favori est déconnecté lors du partage de la machine virtuelle.<br/>
 Créer votre propre compte Firefox pour sauvegarder et syncroniser la liste des favoris actuelle et vos nouveaux favoris.
+## Eclipse
+L'outil de développement web Eclipse est disponible depuis le bureau.
+## Mantra
+L'outil navigateur pentest Mantra est disponible depuis le bureau.
+## Gephi
+L'outil Gephi est disponible depuis les scripts sur le bureau.
