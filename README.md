@@ -63,27 +63,42 @@ Ajout d'URL qui permettent de soumettre un fichier sitemap.xml par ping, aux mot
 ### Script pour Importer l'image de sauvegarde Docker
 Un fichier texte dans les raccourcis du bureau permet de réimporter l'image docker.
 
-## Utiliser Docker et l'image lamp mysql PHP5 cURL
-### Mise en place du serveur PHP lamp avec une image Docker<br/>
+## Utiliser Docker
+### Mise en place du serveur Lamp PHP5 MySQL avec une image Docker<br/>
 Importer l'image avec la commande : docker pull tutum/lamp<br/>
 Démarrer lamp : docker run -d -p 80:80 -p 3306:3306 tutum/lamp<br/>
+Cette image peut être modifiée puis sauvegardée a un état personnalisé.
 Tutoriel Docker : https://www.visionduweb.eu/wiki/index.php?title=Ajouter_Docker_sur_GNU_Linux#Installer_une_image_Docker_lamp
 
-### Importer l'image de Docker à neuf automatiquement
-Réimporter l'image Docker avec Lamp MySQL PHP5 cURL : docker load -i /home/seo/IMAGE.tar<br/>
+### Réimporter la sauvegarde d'une image Docker
+Normalement, il n'y a pas de conteneurs démarrés ou arrêtés au démarrage de la machine virtuelle SEO Kalamity.<br/>
+Si des conteneurs Docker existent déjà, vous pouvez maintenant les supprimer.<br/><br/>
 
-### Se connecter à une image
-Voir toutes les images disponibles avec la commande : docker images
+Pour arrêter et supprimer tous les conteneurs, se connecter en super utilisateur : su<br/>
+Ajouter le mot de passe de l'utilisateur root : OptimisationSEO<br/><br/>
+
+Vérifier si des conteneurs sont arrêtés : docker ps -a<br/>
+Vérifier si des conteneurs sont démarrés : docker ps<br/><br/>
+
+On stop tous les conteneurs avec la commande : docker stop $(docker ps -a -q)<br/>
+On supprime tous les conteneurs existant avec la commande : docker rm $(docker ps -a -q)<br/><br/>
+
+On peut maintenant importer notre image de sauvegarde Docker.<br/>
+Réimporter l'image Docker avec Lamp MySQL PHP5 cURL : docker load -i /home/seo/lamp-mysql-php5-curl.tar
+
+### Se connecter à une image Docker
+Voir toutes les images disponibles avec la commande : docker images<br/>
 docker run -d -p 80:80 -p 3306:3306 8d876406448a
-<br/><br/>
+
+### Entrer dans le bash de Nginx avec l'id de status du conteneur
 Voir tous les conteneurs démarrés et les ids associées avec la commande : docker ps<br/>
-Entrer dans le bash de Nginx avec l'id de status du conteneur : docker exec -it 8d876406448a bash<br/>
-Mise à jour de l'image Docker Lamp MySQL PHP5 curl : update upgrade
+docker exec -it 8d876406448a bash<br/>
+Mise à jour de l'image Docker Lamp MySQL PHP5 curl : update upgrade<br/>
 Installation du paquet php5-curl
 <br/><br/>
-Les fichiers du site par défaut une fois connecté à l'image Docker : /var/www/html# ls<br/>
+Les fichiers du site par défaut une fois connecté à l'image Docker : /var/www/html# ls<br/><br/>Maintenir le serveur et le site local.<br/>Ajouter des scripts php ...
 
-### Sauvegarde de l'image avec cURL
+### Sauvegarde de l'image Docker avec cURL installé
 Commiter le conteneur Docker avec Lamp MySQL PHP5 cURL pour générer l'état à sauvegarder.<br/>
 Identifier le conteneur a commiter avec la commande : docker ps -a<br/>
 Lancer le commit sur le conteneur avec la commande : docker commit -a "Auteur" -m "message optionnel" <ID du conteneur ou nom> <Tag à donner à l'image>
