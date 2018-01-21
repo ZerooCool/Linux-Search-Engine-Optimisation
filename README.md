@@ -70,7 +70,7 @@ Démarrer lamp : docker run -d -p 80:80 -p 3306:3306 tutum/lamp<br/>
 Cette image peut être modifiée puis sauvegardée a un état personnalisé.
 Tutoriel Docker : https://www.visionduweb.eu/wiki/index.php?title=Ajouter_Docker_sur_GNU_Linux#Installer_une_image_Docker_lamp
 
-### Réimporter la sauvegarde d'une image Docker
+### Réimporter une image Docker précédemment sauvegardée
 Normalement, il n'y a pas de conteneurs démarrés ou arrêtés au démarrage de la machine virtuelle SEO Kalamity.<br/>
 Si des conteneurs Docker existent déjà, vous pouvez maintenant les supprimer.
 <br/><br/>
@@ -98,7 +98,7 @@ Installation du paquet php5-curl
 <br/><br/>
 Les fichiers du site par défaut une fois connecté à l'image Docker : /var/www/html# ls<br/><br/>Maintenir le serveur et le site local.<br/>Ajouter des scripts php ...
 
-### Sauvegarde de l'image Docker avec cURL installé
+### Sauvegarde de l'image Docker modifiée
 Commiter le conteneur Docker avec Lamp MySQL PHP5 cURL pour générer l'état à sauvegarder.<br/>
 Identifier le conteneur a commiter avec la commande : docker ps -a<br/>
 Lancer le commit sur le conteneur avec la commande : docker commit -a "Auteur" -m "message optionnel" <ID du conteneur ou nom> <Tag à donner à l'image>
