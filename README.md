@@ -52,4 +52,5 @@ Ajout d'URL qui permettent de soumettre un fichier sitemap.xml par ping, aux mot
 
 ## Utiliser Docker et l'image lamp mysql PHP5 cURL
 Mise en place du serveur PHP lamp via Docker : docker pull tutum/lamp<br/>
-Démarrer lamp : docker run -d -p 80:80 -p 3306:3306 tutum/lamp
+Démarrer lamp : docker run -d -p 80:80 -p 3306:3306 tutum/lamp<br/>
+Tutoriel Docker : https://www.visionduweb.eu/wiki/index.php?title=Ajouter_Docker_sur_GNU_Linux#Installer_une_image_Docker_lamp
