@@ -70,11 +70,11 @@ Démarrer lamp : docker run -d -p 80:80 -p 3306:3306 tutum/lamp<br/>
 Cette image peut être modifiée puis sauvegardée a un état personnalisé.
 Tutoriel Docker : https://www.visionduweb.eu/wiki/index.php?title=Ajouter_Docker_sur_GNU_Linux#Installer_une_image_Docker_lamp
 
-### Réimporter une image Docker précédemment sauvegardée
+### Supprimer tous les conteneurs existants
 Normalement, il n'y a pas de conteneurs démarrés ou arrêtés au démarrage de la machine virtuelle SEO Kalamity.<br/>
-Si des conteneurs Docker existent déjà, vous pouvez maintenant les supprimer.
+Si des conteneurs Docker existent déjà, vous pouvez les supprimer.
 <br/><br/>
-Pour arrêter et supprimer tous les conteneurs, se connecter en super utilisateur : su<br/>
+Se connecter en super utilisateur : su<br/>
 Ajouter le mot de passe de l'utilisateur root : OptimisationSEO
 <br/><br/>
 Vérifier si des conteneurs sont arrêtés : docker ps -a<br/>
@@ -83,7 +83,7 @@ Vérifier si des conteneurs sont démarrés : docker ps
 On stop tous les conteneurs avec la commande : docker stop $(docker ps -a -q)<br/>
 On supprime tous les conteneurs existant avec la commande : docker rm $(docker ps -a -q)
 <br/><br/>
-On peut maintenant importer notre image de sauvegarde Docker.<br/>
+# Importer notre image de sauvegarde Docker
 Réimporter l'image Docker avec Lamp MySQL PHP5 cURL : docker load -i /home/seo/lamp-mysql-php5-curl.tar
 
 ### Se connecter à une image Docker
