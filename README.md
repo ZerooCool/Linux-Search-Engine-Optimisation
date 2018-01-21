@@ -49,3 +49,7 @@ Installation du Mineur cpuminer pour aider les nouveaux utilisateurs de monnaie 
 ### Ping google bing sitemap
 Ajout d'URL qui permettent de soumettre un fichier sitemap.xml par ping, aux moteurs de recherche.<br/>
 /home/seo/Scripts/ping-google-bing-sitemap.sh
+
+## Utiliser Docker et l'image lamp mysql PHP5 cURL
+Mise en place du serveur PHP lamp via Docker : docker pull tutum/lamp<br/>
+Démarrer lamp : docker run -d -p 80:80 -p 3306:3306 tutum/lamp
