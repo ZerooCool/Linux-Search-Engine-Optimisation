@@ -20,12 +20,18 @@ Double cliquer sur l'archive .ova téléchargée pour importer la machine virtue
 La version courante de SEO Kalamity sera ajoutée à VirtualBox.
 
 # Démarrer et utiliser la machine virtuelle Linux Search Engine Optimisation
-## Configurer Firefox
+## Logiciels
+### Configurer Firefox
 Le compte Firefox administrateur pour conserver la liste des favori est déconnecté lors du partage de la machine virtuelle.<br/>
 Créer votre propre compte Firefox pour sauvegarder et syncroniser la liste des favoris actuelle et vos nouveaux favoris.
-## Eclipse
+### Eclipse
 L'outil de développement web Eclipse est disponible depuis le bureau.
-## Mantra
+### Mantra
 L'outil navigateur pentest Mantra est disponible depuis le bureau.
-## Gephi
-L'outil Gephi est disponible depuis les scripts sur le bureau.
+
+##Scripts
+### Gephi
+L'outil Gephi est disponible depuis les scripts à partir du bureau.<br/>
+La page Gephi sur le wiki est ajoutée dans les favoris du navigateur Firefox : https://www.visionduweb.eu/wiki/index.php?title=Accueil_SEO#Gephi
+### sitemap-e
+Sitemap-e permet de créer un fichier sitemap.xml
