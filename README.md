@@ -30,8 +30,8 @@ Sauvegarde des favoris de firefox dans le dossier /home/seo/DOCU-SEO/Sauvegarde/
 Le compte Firefox administrateur pour conserver la liste des favori est déconnecté lors du partage de la machine virtuelle.<br/>
 Créer votre propre compte Firefox pour sauvegarder et syncroniser la liste des favoris actuelle et vos nouveaux favoris.
 
-Ajout du plugin Linkchecker pour vérifier si les liens de votre site ne sont pas brisés : https://addons.mozilla.org/fr/firefox/addon/linkchecker/<br/>
-Ajout du plugin PurTraqueur de PurMedia pour partager vos pages intéressantes en un clic sur PurMedia.
+Le plugin Linkchecker est intégré pour vérifier si les liens de votre site ne sont pas brisés.<br/>
+Le plugin PurTraqueur de PurMedia est intégré pour partager vos pages intéressantes en un clic sur PurMedia.
 ### Eclipse
 L'outil de développement web Eclipse est disponible depuis le bureau.
 ### Mantra
