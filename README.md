@@ -8,15 +8,20 @@ Télécharger l'image .ova avec ce lien pour soutenir le projet SEO Kalamity : h
 seo : UtilisateurSEO<br/>
 root : OptimisationSEO
 
-# Lien miroir
-Télécharger l'image .ova en version 0.3 depuis Onedrive - https://onedrive.live.com -> https://1drv.ms/u/s!AqtUsyUfGwC9hEZZZdnDSLZiARBM<br/>
-Télécharger l'image .ova en version 0.4 depuis MediaFire - https://www.mediafire.com -> http://www.mediafire.com/file/suef98dg7oj9dhs/SEO.ova
+# Liens en miroir de précédentes versions a télécharger
+# SEO Kalamity - Version 0.4 --> Télécharger l'image .ova avec ce lien pour soutenir le projet SEO Kalamity : https://cnhv.co/1cyiu<br/>
+## Télécharger l'image .ova en version 0.4 depuis MediaFire (https://www.mediafire.com) : http://www.mediafire.com/file/suef98dg7oj9dhs/SEO.ova<br/>
+## Télécharger l'image .ova en version 0.3 depuis Onedrive (https://onedrive.live.com) : https://1drv.ms/u/s!AqtUsyUfGwC9hEZZZdnDSLZiARBM
 
 # Importer la machine virtuelle avec VirtualBox
 Double cliquer sur l'archive .ova téléchargée pour importer la machine virtuelle Linux Search Engine Optimisation.<br/>
 La version courante de SEO Kalamity sera ajoutée à VirtualBox.
 
-# Démarrer et utiliser la machine virtuelle Linux Search Engine Optimisation
+# Démarrer la machine virtuelle
+Lancer la machine depuis Virtualbox.<br/>
+Utiliser l'identifiant seo / UtilisateurSEO indiqué en haut de la page.
+
+# Utiliser Linux Search Engine Optimisation
 ## Cours et prises de notes
 Ajout de cours et prises notes dans le dossier /home/seo/DOCU-SEO/<br/>
 Consulter les fichiers suivant : "SEO - Visuel.odg" et "SEO - Prise de notes.odt"
