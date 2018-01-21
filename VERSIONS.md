@@ -1,3 +1,8 @@
+## SEO Kalamity - Version 0.5
+Mise en place du serveur PHP lamp via Docker : docker pull tutum/lamp<br/>
+Ajout de cURL PHP5 et sauvegarde de l'image Docker.<br/>
+Un script est ajouté pour réimporter l'image de Docker à neuf automatiquement.
+
 # SEO Kalamity - Version 0.4
 Ajout du lien pour Content Spinning : https://www.visionduweb.eu/wiki/index.php?title=SEO_Content_Spinning<br/>
 Ajout du plugin PurTraqueur de PurMedia pour partager vos pages intéressantes en un clic, sur PurMedia : http://purmedia.fr/pur-traqueur.html<br/>
