@@ -26,14 +26,18 @@ Ajout d'un exemple de masterspin dans /home/seo/DOCU-SEO/Tutoriels/Master spin/
 
 ## Logiciels installés
 ### Configurer Firefox
-Sauvegarde des favoris de firefox dans le dossier /home/seo/DOCU-SEO/Sauvegarde/Les favoris de Firefox/<br/>
 Le compte Firefox administrateur pour conserver la liste des favori est déconnecté lors du partage de la machine virtuelle.<br/>
-Créer votre propre compte Firefox pour sauvegarder et syncroniser la liste des favoris actuelle et vos nouveaux favoris.
+Créer votre propre compte Firefox pour sauvegarder et syncroniser la liste des favoris actuelle et vos nouveaux favoris.<br/>
+Les favoris de Firefox ont été sauvegardés dans le dossier /home/seo/DOCU-SEO/Sauvegarde/Les favoris de Firefox/
 
+### Utiliser Firefox
+Des favoris ont été sélectionnés pour partager des outils pour le SEO.<br/>
 Le plugin Linkchecker est intégré pour vérifier si les liens de votre site ne sont pas brisés.<br/>
 Le plugin PurTraqueur de PurMedia est intégré pour partager vos pages intéressantes en un clic sur PurMedia.
+
 ### Eclipse
 L'outil de développement web Eclipse est disponible depuis le bureau.
+
 ### Mantra
 L'outil navigateur pentest Mantra est disponible depuis le bureau.
 
