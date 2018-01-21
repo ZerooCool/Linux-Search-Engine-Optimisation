@@ -42,17 +42,22 @@ L'outil de développement web Eclipse est disponible depuis le bureau.
 L'outil navigateur pentest Mantra est disponible depuis le bureau.
 
 ## Scripts installés
-### Gephi
+### Script pour lancer le logiciel Gephi
 L'outil Gephi est disponible depuis les scripts à partir du bureau.<br/>
 La page Gephi sur le wiki est ajoutée dans les favoris du navigateur Firefox : https://www.visionduweb.eu/wiki/index.php?title=Accueil_SEO#Gephi
-### Sitemap-e
+
+### Script pour créer un ficher sitemap.xml avec Sitemap-e
 Sitemap-e permet de créer un fichier sitemap.xml
-### Minergate et la monnaie numérique
+
+### Script pour miner de la monnaie numérique avec Minergate
 Créer un compte sur Minergate pour fabriquer de la monnaie numérique : https://minergate.com/a/8ac23bd407f9b6db4d848765<br/>
 Installation du Mineur cpuminer pour aider les nouveaux utilisateurs de monnaie numérique (https://www.visionduweb.eu/wiki/index.php?title=Sites_gratuits_pour_gagner_du_Monero_depuis_votre_navigateur#Installer_le_mineur_cpuminer_sur_Debian_Stretch)
-### Ping google bing sitemap
+### Script pour Ping google bing sitemap
 Ajout d'URL qui permettent de soumettre un fichier sitemap.xml par ping, aux moteurs de recherche.<br/>
 /home/seo/Scripts/ping-google-bing-sitemap.sh
+
+### Script pour Importer l'image de sauvegarde Docker
+Un fichier texte dans les raccourcis du bureau permet de réimporter l'image docker.
 
 ## Utiliser Docker et l'image lamp mysql PHP5 cURL
 ### Mise en place du serveur PHP lamp avec une image Docker<br/>
