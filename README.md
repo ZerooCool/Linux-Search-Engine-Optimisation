@@ -51,6 +51,14 @@ Ajout d'URL qui permettent de soumettre un fichier sitemap.xml par ping, aux mot
 /home/seo/Scripts/ping-google-bing-sitemap.sh
 
 ## Utiliser Docker et l'image lamp mysql PHP5 cURL
-Mise en place du serveur PHP lamp via Docker : docker pull tutum/lamp<br/>
+### Mise en place du serveur PHP lamp via Docker : docker pull tutum/lamp
 Démarrer lamp : docker run -d -p 80:80 -p 3306:3306 tutum/lamp<br/>
 Tutoriel Docker : https://www.visionduweb.eu/wiki/index.php?title=Ajouter_Docker_sur_GNU_Linux#Installer_une_image_Docker_lamp
+### Sauvegarde de l'image
+TODO !
+
+### Importer l'image de Docker à neuf automatiquement
+Se connecter avec l'image sauvegardée : docker run -d -p 80:80 -p 3306:3306 8d876406448a<br/><br/>
+Voir tous les conteneurs démarrés et les ids associées : docker ps
+Entrer dans le bash de Nginx avec l'id de status du conteneur : docker exec -it 8d876406448a bash
+Mise à jour de l'image Docker Lamp MySQL PHP5 curl : update upgrade
