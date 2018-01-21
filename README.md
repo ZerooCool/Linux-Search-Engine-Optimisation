@@ -54,11 +54,31 @@ Ajout d'URL qui permettent de soumettre un fichier sitemap.xml par ping, aux mot
 ### Mise en place du serveur PHP lamp via Docker : docker pull tutum/lamp
 Démarrer lamp : docker run -d -p 80:80 -p 3306:3306 tutum/lamp<br/>
 Tutoriel Docker : https://www.visionduweb.eu/wiki/index.php?title=Ajouter_Docker_sur_GNU_Linux#Installer_une_image_Docker_lamp
-### Sauvegarde de l'image
-TODO !
 
 ### Importer l'image de Docker à neuf automatiquement
-Se connecter avec l'image sauvegardée : docker run -d -p 80:80 -p 3306:3306 8d876406448a<br/><br/>
-Voir tous les conteneurs démarrés et les ids associées : docker ps
-Entrer dans le bash de Nginx avec l'id de status du conteneur : docker exec -it 8d876406448a bash
+Réimporter l'image Docker avec Lamp MySQL PHP5 cURL : docker load -i /home/seo/IMAGE.tar<br/>
+
+### Se connecter à une image
+Voir toutes les images disponibles avec la commande : docker images
+docker run -d -p 80:80 -p 3306:3306 8d876406448a
+<br/><br/>
+Voir tous les conteneurs démarrés et les ids associées avec la commande : docker ps<br/>
+Entrer dans le bash de Nginx avec l'id de status du conteneur : docker exec -it 8d876406448a bash<br/>
 Mise à jour de l'image Docker Lamp MySQL PHP5 curl : update upgrade
+Installation du paquet php5-curl
+
+### Sauvegarde de l'image avec cURL
+Sauvegarde de l'image Docker avec Lamp MySQL PHP5 cURL dans le dossier /home/seo/IMAGE.tar</br>
+
+### Important ### Commit du conteneur Docker avec Lamp MySQL PHP5 curl pour générer l'état à sauvegarder.
+### Important ### docker ps -a
+### Important ### docker commit -a "Auteur" -m "message optionnel" <ID du conteneur ou nom> <Tag à donner à l'image>
+
+### Important ### Sauvegarde de l'image Docker avec Lamp MySQL PHP5 curl
+### Important ### docker images -a
+### Important ### docker save -o /home/seo/lamp-mysql-php5-curl.tar c1d0dc8367a4
+
+
+
+### Important ### Les fichiers du site par défaut une fois connecté à l'image Docker : /var/www/html# ls
+### Important ###  : /home/seo/dockercurl.tar : 
