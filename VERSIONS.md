@@ -1,7 +1,11 @@
 ## SEO Kalamity - Version 0.5
 Mise en place du serveur PHP lamp via Docker : docker pull tutum/lamp<br/>
-Ajout de cURL PHP5 et sauvegarde de l'image Docker.<br/>
-Un script est ajouté pour réimporter l'image de Docker à neuf automatiquement.
+Ajout du paquet php5-curl et sauvegarde de l'image Docker.<br/>
+Un script est ajouté pour réimporter le conteneur de Docker à neuf automatiquement.<br/>
+Ajout dans les favoris du navigateur Firefox la page du wiki sur Docker : https://www.visionduweb.eu/wiki/index.php?title=Ajouter_Docker_sur_GNU_Linux<br/>
+Ajout du plugin Linkchecker pour identifier les liens morts d'un site avec Firefox : https://addons.mozilla.org/fr/firefox/addon/linkchecker/<br/>
+Nouveaux emblèmes sur les icones.<br/>
+Nouveaux fonds d'écran.
 
 # SEO Kalamity - Version 0.4
 Ajout du lien pour Content Spinning : https://www.visionduweb.eu/wiki/index.php?title=SEO_Content_Spinning<br/>
