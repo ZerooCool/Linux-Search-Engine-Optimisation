@@ -66,19 +66,14 @@ Voir tous les conteneurs démarrés et les ids associées avec la commande : doc
 Entrer dans le bash de Nginx avec l'id de status du conteneur : docker exec -it 8d876406448a bash<br/>
 Mise à jour de l'image Docker Lamp MySQL PHP5 curl : update upgrade
 Installation du paquet php5-curl
+<br/><br/>
+Les fichiers du site par défaut une fois connecté à l'image Docker : /var/www/html# ls<br/>
 
 ### Sauvegarde de l'image avec cURL
-Sauvegarde de l'image Docker avec Lamp MySQL PHP5 cURL dans le dossier /home/seo/IMAGE.tar</br>
-
-### Important ### Commit du conteneur Docker avec Lamp MySQL PHP5 curl pour générer l'état à sauvegarder.
-### Important ### docker ps -a
-### Important ### docker commit -a "Auteur" -m "message optionnel" <ID du conteneur ou nom> <Tag à donner à l'image>
-
-### Important ### Sauvegarde de l'image Docker avec Lamp MySQL PHP5 curl
-### Important ### docker images -a
-### Important ### docker save -o /home/seo/lamp-mysql-php5-curl.tar c1d0dc8367a4
-
-
-
-### Important ### Les fichiers du site par défaut une fois connecté à l'image Docker : /var/www/html# ls
-### Important ###  : /home/seo/dockercurl.tar : 
+Commit du conteneur Docker avec Lamp MySQL PHP5 cURL pour générer l'état à sauvegarder.<br/>
+Identifier le conteneur a sauvegarder avec la commande : docker ps -a<br/>
+Lancer un commit sur le conteneur avec la commande : docker commit -a "Auteur" -m "message optionnel" <ID du conteneur ou nom> <Tag à donner à l'image>
+<br/><br/>
+Sauvegarde de l'image Docker avec Lamp MySQL PHP5 curl<br/>
+Trouver l'id de l'image a sauvegarder avec la commande : docker images -a<br/>
+docker save -o /home/seo/lamp-mysql-php5-curl.tar c1d0dc8367a4
