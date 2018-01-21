@@ -72,17 +72,17 @@ Tutoriel Docker : https://www.visionduweb.eu/wiki/index.php?title=Ajouter_Docker
 
 ### Réimporter la sauvegarde d'une image Docker
 Normalement, il n'y a pas de conteneurs démarrés ou arrêtés au démarrage de la machine virtuelle SEO Kalamity.<br/>
-Si des conteneurs Docker existent déjà, vous pouvez maintenant les supprimer.<br/><br/>
-
+Si des conteneurs Docker existent déjà, vous pouvez maintenant les supprimer.
+<br/><br/>
 Pour arrêter et supprimer tous les conteneurs, se connecter en super utilisateur : su<br/>
-Ajouter le mot de passe de l'utilisateur root : OptimisationSEO<br/><br/>
-
+Ajouter le mot de passe de l'utilisateur root : OptimisationSEO
+<br/><br/>
 Vérifier si des conteneurs sont arrêtés : docker ps -a<br/>
-Vérifier si des conteneurs sont démarrés : docker ps<br/><br/>
-
+Vérifier si des conteneurs sont démarrés : docker ps
+<br/><br/>
 On stop tous les conteneurs avec la commande : docker stop $(docker ps -a -q)<br/>
-On supprime tous les conteneurs existant avec la commande : docker rm $(docker ps -a -q)<br/><br/>
-
+On supprime tous les conteneurs existant avec la commande : docker rm $(docker ps -a -q)
+<br/><br/>
 On peut maintenant importer notre image de sauvegarde Docker.<br/>
 Réimporter l'image Docker avec Lamp MySQL PHP5 cURL : docker load -i /home/seo/lamp-mysql-php5-curl.tar
 
