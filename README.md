@@ -1,4 +1,4 @@
-# Linux-Search-Engine-Optimisation
+# Linux Search Engine Optimisation
 L'objectif de cette machine virtuelle est de centraliser et partager des outils pour le référencement et le SEO.
 
 # SEO Kalamity - Version 0.4
@@ -70,10 +70,10 @@ Installation du paquet php5-curl
 Les fichiers du site par défaut une fois connecté à l'image Docker : /var/www/html# ls<br/>
 
 ### Sauvegarde de l'image avec cURL
-Commit du conteneur Docker avec Lamp MySQL PHP5 cURL pour générer l'état à sauvegarder.<br/>
-Identifier le conteneur a sauvegarder avec la commande : docker ps -a<br/>
-Lancer un commit sur le conteneur avec la commande : docker commit -a "Auteur" -m "message optionnel" <ID du conteneur ou nom> <Tag à donner à l'image>
+Commiter le conteneur Docker avec Lamp MySQL PHP5 cURL pour générer l'état à sauvegarder.<br/>
+Identifier le conteneur a commiter avec la commande : docker ps -a<br/>
+Lancer le commit sur le conteneur avec la commande : docker commit -a "Auteur" -m "message optionnel" <ID du conteneur ou nom> <Tag à donner à l'image>
 <br/><br/>
-Sauvegarde de l'image Docker avec Lamp MySQL PHP5 curl<br/>
+Sauvegarder l'image Docker avec Lamp MySQL PHP5 cURL<br/>
 Trouver l'id de l'image a sauvegarder avec la commande : docker images -a<br/>
 docker save -o /home/seo/lamp-mysql-php5-curl.tar c1d0dc8367a4
