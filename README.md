@@ -1,12 +1,12 @@
 # Linux Search Engine Optimisation
 L'objectif de cette machine virtuelle est de centraliser et partager des outils pour le référencement et le SEO.
- _______  _______  _______ 
-(  ____ \(  ____ \(  ___  )
-| (    \/| (    \/| (   ) |
-| (_____ | (__    | |   | |
-(_____  )|  __)   | |   | |
-      ) || (      | |   | |
-/\____) || (____/\| (___) |
+ _______  _______  _______ <br/>
+(  ____ \(  ____ \(  ___  )<br/>
+| (    \/| (    \/| (   ) |<br/>
+| (_____ | (__    | |   | |<br/>
+(_____  )|  __)   | |   | |<br/>
+      ) || (      | |   | |<br/>
+/\____) || (____/\| (___) |<br/>
 \_______)(_______/(_______)
                            
 # SEO Kalamity - Version 0.5
