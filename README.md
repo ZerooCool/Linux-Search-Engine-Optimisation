@@ -17,18 +17,35 @@ Double cliquer sur l'archive .ova téléchargée pour importer la machine virtue
 La version courante de SEO Kalamity sera ajoutée à VirtualBox.
 
 # Démarrer et utiliser la machine virtuelle Linux Search Engine Optimisation
-## Logiciels
+## Cours et prises de notes
+Ajout de cours et prises notes dans le dossier /home/seo/DOCU-SEO/<br/>
+Consulter les fichiers suivant : "SEO - Visuel.odg" et "SEO - Prise de notes.odt"
+
+## Exemples disponibles
+Ajout d'un exemple de masterspin dans /home/seo/DOCU-SEO/Tutoriels/Master spin/
+
+## Logiciels installés
 ### Configurer Firefox
+Sauvegarde des favoris de firefox dans le dossier /home/seo/DOCU-SEO/Sauvegarde/Les favoris de Firefox/<br/>
 Le compte Firefox administrateur pour conserver la liste des favori est déconnecté lors du partage de la machine virtuelle.<br/>
 Créer votre propre compte Firefox pour sauvegarder et syncroniser la liste des favoris actuelle et vos nouveaux favoris.
+
+Ajout du plugin check link pour vérifier si les liens de votre site ne sont pas brisés.<br/>
+Ajout du plugin PurTraqueur de PurMedia pour partager vos pages intéressantes en un clic sur PurMedia.
 ### Eclipse
 L'outil de développement web Eclipse est disponible depuis le bureau.
 ### Mantra
 L'outil navigateur pentest Mantra est disponible depuis le bureau.
 
-## Scripts
+## Scripts installés
 ### Gephi
 L'outil Gephi est disponible depuis les scripts à partir du bureau.<br/>
 La page Gephi sur le wiki est ajoutée dans les favoris du navigateur Firefox : https://www.visionduweb.eu/wiki/index.php?title=Accueil_SEO#Gephi
-### sitemap-e
+### Sitemap-e
 Sitemap-e permet de créer un fichier sitemap.xml
+### Minergate et la monnaie numérique
+Créer un compte sur Minergate pour fabriquer de la monnaie numérique : https://minergate.com/a/8ac23bd407f9b6db4d848765<br/>
+Installation du Mineur cpuminer pour aider les nouveaux utilisateurs de monnaie numérique (https://www.visionduweb.eu/wiki/index.php?title=Sites_gratuits_pour_gagner_du_Monero_depuis_votre_navigateur#Installer_le_mineur_cpuminer_sur_Debian_Stretch)
+### Ping google bing sitemap
+Ajout d'URL qui permettent de soumettre un fichier sitemap.xml par ping, aux moteurs de recherche.<br/>
+/home/seo/Scripts/ping-google-bing-sitemap.sh
