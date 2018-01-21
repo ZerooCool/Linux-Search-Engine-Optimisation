@@ -2,7 +2,7 @@
 Création de la page Github officielle : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation
 Mise en place du serveur PHP lamp via Docker : docker pull tutum/lamp<br/>
 Ajout du paquet php5-curl et sauvegarde de l'image Docker.<br/>
-Un script est ajouté pour réimporter le conteneur de Docker à neuf automatiquement.<br/>
+Ajout d'un script pour réimporter le conteneur de Docker à neuf automatiquement.<br/>
 Ajout de la page du wiki sur Docker dans les favoris du navigateur Firefox : https://www.visionduweb.eu/wiki/index.php?title=Ajouter_Docker_sur_GNU_Linux<br/>
 Ajout du plugin Linkchecker pour identifier les liens morts d'un site avec Firefox : https://addons.mozilla.org/fr/firefox/addon/linkchecker/<br/>
 Nouveaux emblèmes sur les icones.<br/>
