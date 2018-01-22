@@ -82,8 +82,8 @@ Vérifier si des conteneurs sont démarrés : docker ps
 <br/><br/>
 On stop tous les conteneurs avec la commande : docker stop $(docker ps -a -q)<br/>
 On supprime tous les conteneurs existant avec la commande : docker rm $(docker ps -a -q)
-<br/><br/>
-# Importer notre image de sauvegarde Docker
+
+### Importer notre image de sauvegarde Docker
 Réimporter l'image Docker avec Lamp MySQL PHP5 cURL : docker load -i /home/seo/lamp-mysql-php5-curl.tar
 
 ### Se connecter à une image Docker
