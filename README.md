@@ -2,10 +2,12 @@
 L'objectif de cette machine virtuelle est de centraliser et partager des outils pour le référencement et le SEO.
 
 # SEO Kalamity - Version 0.5
-Télécharger l'image .ova de la Version 0.5 avec ce lien pour soutenir le projet SEO Kalamity : https://cnhv.co/1f7v4
-<br/><br/>
-Compter environ 2Go 500Mo pour le chargement.<br/>
-Disposer de 30Go disponibles pour installer la machine virtuelle sur VirtualBox.
+Télécharger l'image .ova de la Version 0.5 avec ce lien pour soutenir le projet SEO Kalamity : https://cnhv.co/1f7v4<br/>
+Compter environ 2Go 500Mo pour le chargement.
+
+# Installer SEO Kalamity
+Installer VirtualBox dans sa dernière version.<br/>
+Disposer d'environ 30Go disponibles pour installer la machine virtuelle sur VirtualBox.
 
 # Utilisateurs de la machine virtuelle
 seo : UtilisateurSEO<br/>
