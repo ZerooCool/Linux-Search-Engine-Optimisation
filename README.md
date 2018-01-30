@@ -24,3 +24,6 @@ Télécharger l'image .ova en version 0.5 depuis OneDrive : https://1drv.ms/u/s!
 # Démarrer la machine virtuelle
 Lancer la machine depuis Virtualbox.<br/>
 Utiliser l'identifiant seo / UtilisateurSEO indiqué en haut de la page.
+
+# Aller plus loin avec Linux Search Engine Optimisation
+Utiliser le wiki officiel : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/wiki/Accueil
