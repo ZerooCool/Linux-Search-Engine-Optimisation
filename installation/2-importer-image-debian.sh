@@ -12,8 +12,8 @@ echo "Importation de l'image Docker Debian terminé."
 
 read -p "Continuer l'installation avec les commandes suivantes depuis le conteneur Docker." -t 5
 echo "apt install wget"
-echo "wget https://www.github.com LE SCRIPT D'INSTALLATION DU SERVEUR."
-echo "sh script.sh"
+echo "wget https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/blob/master/installation/3-installer-le-serveur-dans-le-conteneur.sh"
+echo "sh 3-installer-le-serveur-dans-le-conteneur.sh"
 
 # Démarrer Debian et entrer dans le shell. Le port 80 est mis en écoute du réseau.
 read -p "Appuyer sur une touche pour démarrer Debian et entrer dans le shell. Le port 80 est mis en écoute du réseau."
