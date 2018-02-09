@@ -8,4 +8,4 @@ Voir si php fonctionne. Doit afficher SEO.
 Retourne les informations du serveur web Apache2.
 
 ## curl.php
-Voir si cURL fonctionne. Doit afficher ENABLE.
+Voir si cURL fonctionne. Doit afficher Enabled.
