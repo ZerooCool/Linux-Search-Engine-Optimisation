@@ -1,5 +1,5 @@
 # Hello
-Scripts pour vérifier le bon fonctionnement du système.
+Le dossier hello contient des scripts pour vérifier le bon fonctionnement du système.
 
 ## hello.php
 Voir si php fonctionne. Doit afficher SEO.
