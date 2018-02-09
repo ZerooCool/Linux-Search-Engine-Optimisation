@@ -65,9 +65,13 @@ echo "Appuyer sur une touche pour se connecter en root à MariaDB."
 mysql -u root -p
 # Saisir le mot de passe de l'utilisateur root : GestionnaireBDD
 # Une fois connecté à l'interface MariaDB, lancer les 3 commandes suivantes :
+
+## COMMENT FAIRE CETTE SAISIE AUTOMATIQUEMENT ?
 CREATE USER ‘znation’@’localhost’ IDENTIFIED BY ‘KillTheZombie’;
 GRANT ALL PRIVILEGES ON *.* TO ‘znation’@’localhost’ WITH GRANT OPTION;
 FLUSH PRIVILEGES;
+## Comment sortir du terminal de MariaDB ? -- exit! 
+
 # Retourner sous http://localhost/phpmyadmin
 # Se connecter avec l'utilisateur znation / GestionnaireBDD
 # Créer manuellement la base de données : joomlazombies
