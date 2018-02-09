@@ -1,20 +1,27 @@
 #!/bin/bash
-# Script pour importer l'image Docker de Debian sur la machine virtuelle SEO.
+echo "  "
+echo "  "
 
-# Message de chargement pour l'image Docker.
-read -p "Importer l'image Docker Debian." -t 5
-read -p "Passer à l'étape suivante en appuyant sur une touche." -t 5
+echo " ----- Démarrage de l'installation ----- "
 
-# Importer l'image Docker de Debian.
-read -p "Appuyer sur une touche pour importer l'image docker de debian."
+echo "  "
+echo "  "
+
+echo " ----- Importation de l'image Docker Debian ----- "
 docker pull debian
-echo "Importation de l'image Docker Debian terminé."
+echo " ----- Importation de l'image Docker Debian terminée ----- "
 
-read -p "Continuer l'installation avec les commandes suivantes depuis le conteneur Docker." -t 5
-echo "apt install wget"
-echo "wget https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/blob/master/installation/3-installer-le-serveur-dans-le-conteneur.sh"
-echo "sh 3-installer-le-serveur-dans-le-conteneur.sh"
+echo "  "
+echo "  "
 
-# Démarrer Debian et entrer dans le shell. Le port 80 est mis en écoute du réseau.
-read -p "Appuyer sur une touche pour démarrer Debian et entrer dans le shell. Le port 80 est mis en écoute du réseau."
+echo " ----- Les commandes suivantes installent le serveur web dans le conteneur Docker ----- "
+echo " 1) apt install wget"
+echo " 2) wget https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/blob/master/installation/3-installer-le-serveur-dans-le-conteneur.sh"
+echo " 3) sh 3-installer-le-serveur-dans-le-conteneur.sh"
+
+echo "  "
+echo "  "
+
+echo " ----- Entrée dans le shell du conteneur Docker Debian ----- "
+echo " ----- Le port 80 est mis en écoute du réseau ----- "
 docker run --name Debian -p 80:80 -t -i debian /bin/bash
