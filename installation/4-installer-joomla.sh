@@ -66,10 +66,14 @@ echo " Output Buffering Désactivé. Il faudrait activer le Output Buffering. "
 echo "  "
 
 echo " L'installation aboutie correctement. "
+
+echo "  "
+
+echo " IMPORTANT "
 echo " Copier la configuration proposée en bas de page et l'ajouter dans le fichier configuration.php. "
 echo " touch configuration.php "
 echo " nano configuration.php "
-echo " Coller le code de configuration. "
+echo " Coller les données du fichier configuration.php "
 
 echo "  "
 
