@@ -111,23 +111,31 @@ FLUSH PRIVILEGES;
 echo " "
 echo " "
 
-# Se placer à la racine du dossier html qui contient les fichiers par défaut du serveur web local.
-echo "Se placer à la racine du dossier /var/www/html/ et charger Joomla!"
-cd /var/www/html/
-# Rapatrier Joomla! 3.8.4.1 qui est la dernière version stable lors de la rédaction de ce tutoriel.
-wget https://github.com/AFUJ/joomla-cms-fr/releases/download/3.8.4.1/Joomla_3.8.4-FR-Stable-Full_Package.zip
+echo " Changer le groupe et utilisateur pour celui de Apache. "
+echo " Apache est propriétaire du site. "
+echo " Depuis le répertoire /var/www/html/ "
+cd /var/www/html
+echo " Appliquer le changement de groupe et utilisateur "
+echo " chown www-data:www-data * -R  "
+chown www-data:www-data * -R
 
 echo " "
 echo " "
 
-# Dézipper au même niveau que l'archive .zip
-echo "Dézipper Joomla! dans le répertoire courant /var/www/html/"
-unzip Joomla_3.8.4-FR-Stable-Full_Package.zip
+echo " Notes pour créer une base de données. "
+echo " La base à sélectionner est mysqli "
+echo " localhost "
+echo " znation "
+echo " KillTheZombie "
+echo " Renseigner le nom de la base de données. "
+echo " Aller sur la page locale http://localhost/phpmyadmin "
+echo " Créer une nouvelle base de données joomlazombies "
+echo " Modifier le préfixe à sa convenance : wtb3n_ "
 
-echo " "
-echo " "
-
-echo "Installation terminée !"
-echo "Le serveur web local est fonctionnel !"
+echo "Installation du serveur terminée !"
 echo "Les paquets suivants ont été installés : nano wget unzip apache2 php7.0 php7.0-curl mariadb-server mariadb-client !"
-echo "Le CMS Joomla a également été préchargé ! ( Installation a finalisée. )"
+
+echo " "
+
+echo " Tester l'appel des 3 fichiers dans le dossier hello. "
+echo " Le serveur web local est fonctionnel ! "
