@@ -129,6 +129,7 @@ echo " znation "
 echo " KillTheZombie "
 echo " Renseigner le nom de la base de données. "
 echo " Aller sur la page locale http://localhost/phpmyadmin "
+echo " Se connecter à PHPMyAdmin avec znation / KillTheZombie "
 echo " Créer une nouvelle base de données joomlazombies "
 echo " Modifier le préfixe à sa convenance : wtb3n_ "
 
