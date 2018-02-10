@@ -139,3 +139,18 @@ echo " "
 
 echo " Tester l'appel des 3 fichiers dans le dossier hello. "
 echo " Le serveur web local est fonctionnel ! "
+
+echo " "
+
+echo " Continuer avec l'installation de Joomla! "
+echo " Se placer dans le home "
+cd /home/
+echo " Télécharger le script d'installation "
+wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/4-installer-joomla.sh
+sh 4-installer-joomla.sh
+
+echo " "
+
+echo " Supprimer le script 3 et 4 une fois l'installation effectuée. "
+rm /home/3-installer-le-serveur-dans-le-conteneur.sh
+rm /home/4-installer-joomla.sh
