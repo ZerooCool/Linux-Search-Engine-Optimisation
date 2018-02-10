@@ -28,8 +28,12 @@ cd /var/www/html
 echo " Appliquer le changement de groupe et utilisateur "
 echo " chown www-data:www-data * -R  "
 chown www-data:www-data * -R
+echo " Effectué. "
 
 echo "  "
+
+echo " Ouvrir le navigateur avec l'adresse localhost/index.php "
+echo " Finaliser l'installation de Joomla! "
 
 echo " Renseigner la page 1 "
 echo " Ajouter un utilisateur administrateur : MonAdminCMS / TravailLocal "
@@ -43,6 +47,7 @@ echo " znation "
 echo " KillTheZombie "
 echo " Renseigner le nom de la base de données. "
 echo " Aller sur la page locale http://localhost/phpmyadmin "
+echo " Se connecter à PHPMyAdmin avec znation / KillTheZombie "
 echo " Créer une nouvelle table joomlazombies "
 echo " Modifier le préfixe à sa convenance : wtb3n_ "
 
