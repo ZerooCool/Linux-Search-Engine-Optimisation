@@ -74,9 +74,11 @@ echo " Coller le code de configuration. "
 echo "  "
 
 echo " Supprimer le dossier d'installation en cliquant sur le bouton. "
-# echo " Erreur. Le dossier ne peut pas être supprimé. "
-# echo " Veuillez le supprimer manuellement. "
-# echo " rm -R installation/ "
+echo " Erreur. Le dossier ne peut pas être supprimé. "
+echo " Veuillez le supprimer manuellement. "
+echo " rm -R installation/ "
+cd /var/www/html
+rm -R installation/
 
 echo "  "
 
