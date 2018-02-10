@@ -1,5 +1,7 @@
 # Propositions pour la Version 1.0
-Ajouter des pages du wiki dans les Favoris.<br/><br/>
+Ajouter des pages du wiki dans les Favoris.<br/>
+Transformer en URL coinhive les URL qui ne sont pas gratuites.<br/>
+
 Récupérer la liste de ses contacts Twitter.<br/>
 Récupérer la liste de ses contacts Facebook.<br/><br/>
 Optimiser le poids des images pour les sites web.<br/>
