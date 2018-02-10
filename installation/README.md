@@ -4,6 +4,6 @@
 
 2 - Importer l'image Docker de Debian.
 
-3 - Installer le serveur local dans le conteneur Docker de Debian. Télécharger l'archive de Joomla!
+3 - Installer le serveur local dans le conteneur Docker de Debian.
 
-4 - Installer Joomla!
+4 - Télécharger l'archive de Joomla et installer Joomla!
