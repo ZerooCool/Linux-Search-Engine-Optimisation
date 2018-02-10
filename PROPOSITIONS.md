@@ -11,7 +11,8 @@ Intégrer Webcheck<br/>
 
 Vérifier pourquoi l'image Docker sauvegardée n'a pas de TAG lors de l'import.<br/>
 
-La sauvegarde du conteneur ajoute 200Mo à l'image ! Optimiser la sauvegarde des données avec Docker.
+La sauvegarde du conteneur ajoute 200Mo à l'image !<br/>
+Optimiser la sauvegarde des données avec Docker et les volumes.
 
 # Propositions pour la Version 2.0
 Ajouter PHP et cURL à l'image Docker de Nginx.<br/>
