@@ -9,6 +9,16 @@ echo "Mise à jour des dépôts de debian et mise à niveau des paquets."
 apt update
 apt upgrade
 
+# echo " "
+# echo " "
+
+## Installer sudo pour créer un utilisateur sudoers pour installer les paquets avec un utilisateur autre que root.
+# apt-get install sudo
+# adduser helloserveur
+## Ajouter les informations de l'utilisateur et un mot de passe : ServeurG0
+# usermod -a -G sudo helloserveur
+# su helloserveur
+
 echo " "
 echo " "
 
