@@ -15,9 +15,9 @@ La sauvegarde du conteneur ajoute 200Mo à l'image !<br/>
 Optimiser la sauvegarde des données avec Docker et les volumes.
 
 # Propositions pour la Version 2.0
-Ajouter PHP et cURL à l'image Docker de Nginx.<br/>
 Automatiser des actions de référencement.<br/>
 Utiliser de nouveaux scripts Bash, PHP, Perl pour automatiser les actions.
 
 # Propositions pour la Version 3.0
-Installer Wine avec des logiciels de SEO de Windows. Pour le moment les logiciels de SEO ne fonctionnent pas.
+Installer Wine avec des logiciels de SEO de Windows.<br/>
+Pour le moment les logiciels de SEO de Windows ne fonctionnent pas depuis la VM.
