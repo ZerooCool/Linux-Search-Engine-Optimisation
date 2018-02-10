@@ -155,3 +155,7 @@ echo " "
 echo " Supprimer le script 3 et 4 une fois l'installation effectuée. "
 rm /home/3-installer-le-serveur-dans-le-conteneur.sh
 rm /home/4-installer-joomla.sh
+
+# En cas de difficulté à l'installation, penser à redémarrer Apache2 et mySQL
+# service apache2 restart
+# service mysql restart
