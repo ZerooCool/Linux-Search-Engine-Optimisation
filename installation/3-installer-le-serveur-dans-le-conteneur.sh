@@ -5,15 +5,18 @@ echo " "
 echo " "
 
 # Mise à jour des dépôts de debian.
-echo "Mise à jour des dépôts de debian et mise à niveau des paquets."
+echo " Mise à jour des dépôts de debian et mise à niveau des paquets. "
 apt update
 apt upgrade
 
-# echo " "
-# echo " "
+echo " "
+echo " "
 
 ## Installer sudo pour créer un utilisateur sudoers pour installer les paquets avec un utilisateur autre que root.
-# apt-get install sudo
+echo " Installer les paquets avec un utilisateur autre que root." 
+echo " Installer sudo pour créer un utilisateur sudoers. "
+echo " A intégrer dans le script automatique ! "
+echo " En attendant, il faudra faire l'installation avec root. "
 # adduser helloserveur
 ## Ajouter les informations de l'utilisateur et un mot de passe : ServeurG0
 # usermod -a -G sudo helloserveur
@@ -29,9 +32,30 @@ apt install nano wget unzip apache2 php7.0 php7.0-curl mariadb-server mariadb-cl
 echo " "
 echo " "
 
+# Modifier le php.ini
+echo "Modifier le fichier php.ini"
+echo "A intégrer dans le script automatique !"
+echo "En attendant, il faudra modifier soit même le fichier /etc/php/7.0/apache2/php.ini"
+# nano /etc/php/7.0/apache2/php.ini
+## Modifier les lignes :
+# memory_limit = 256M
+# upload_max_filesize = 32M
+# post_max_size = 32M
+# output_buffering on
+
+echo " "
+echo " "
+
 # Démarrer MariaDB.
 echo "Démarrage de MariaDB."
 /etc/init.d/mysql start
+
+echo " "
+echo " "
+
+# Sécuriser MariaDB
+echo "Sécuriser MariaDB."
+mysql_secure_installation
 
 echo " "
 echo " "
