@@ -31,6 +31,7 @@ echo "Installation de PHPMyAdmin."
 apt install phpmyadmin -y
 # yes pour configurer phpmyadmin
 # Choisir un mot de passe : GestionnaireBDD
+# Choix 1 pour configurer Apache2
 
 echo " "
 echo " "
@@ -87,17 +88,19 @@ echo " "
 # mysqli_real_connect(): (HY000/1698): Access denied for user 'root'@'localhost'
 # Etablir alors une connexion avec MariaDB.
 echo "Se connecter en root à MariaDB."
+echo "Le mot de passe proposé à l'installation de PHPMyAdmin est GestionnaireBDD."
 echo "Saisir les 3 lignes suivantes :"
-echo "CREATE USER ‘znation’@’localhost’ IDENTIFIED BY ‘KillTheZombie’;"
-echo "GRANT ALL PRIVILEGES ON *.* TO ‘znation’@’localhost’ WITH GRANT OPTION;"
+echo "CREATE USER 'znation'@'localhost' IDENTIFIED BY 'KillTheZombie';"
+echo "GRANT ALL PRIVILEGES ON *.* TO 'znation'@'localhost' WITH GRANT OPTION;"
 echo "FLUSH PRIVILEGES;"
+echo "exit;"
 mysql -u root -p
 # Saisir le mot de passe de l'utilisateur root : GestionnaireBDD
 # Une fois connecté à l'interface MariaDB, lancer les 3 commandes suivantes :
 
 ## COMMENT FAIRE CETTE SAISIE AUTOMATIQUEMENT ?
-CREATE USER ‘znation’@’localhost’ IDENTIFIED BY ‘KillTheZombie’;
-GRANT ALL PRIVILEGES ON *.* TO ‘znation’@’localhost’ WITH GRANT OPTION;
+CREATE USER 'znation'@'localhost' IDENTIFIED BY 'KillTheZombie';
+GRANT ALL PRIVILEGES ON *.* TO 'znation'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 ## Comment sortir du terminal de MariaDB ? -- exit! 
 
