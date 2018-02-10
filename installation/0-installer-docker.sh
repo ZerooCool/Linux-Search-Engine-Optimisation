@@ -5,40 +5,43 @@ sleep 4s
 
 echo "  "
 echo " ----- Ajout du dépôt dans /etc/apt/sources.list.d/docker.list ----- "
-sleep 4s
 echo "deb https://apt.dockerproject.org/repo debian-stretch main" > /etc/apt/sources.list.d/docker.list
+sleep 4s
 
 echo "  "
 echo " ----- Installation du paquet dirmngr pour ajouter la clé ----- "
-sleep 4s
 apt install dirmngr
+sleep 4s
 echo " ----- Le paquet dirmngr a été installé ----- "
+sleep 4s
 
 echo "  "
 echo " ----- Ajout de la clé ----- "
-sleep 4s
 apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
+sleep 4s
 echo " ----- La clé a été ajoutée ----- "
 sleep 4s
 
 echo "  "
 echo " ----- Mise à jour des dépôts ----- "
-sleep 4s
 apt update
+sleep 4s
 echo " ----- Mise à jour des dépôts terminée ----- "
 sleep 4s
 
 echo "  "
 echo " ----- Installation de docker et de docker-compose ----- "
-sleep 4s
 apt install docker-engine docker-compose
+sleep 4s
 echo " ----- Installation de docker et de docker-compose terminée ----- "
 sleep 4s
 
 echo "  "
 echo " ----- Démarrage de Docker ----- "
-sleep 4s
 systemctl start docker
+sleep 4s
+echo " ----- Démarrage de Docker terminé ----- "
+sleep 4s
 
 clear
 echo "  "
