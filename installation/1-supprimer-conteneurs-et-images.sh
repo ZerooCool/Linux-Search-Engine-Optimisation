@@ -3,15 +3,18 @@ echo "  "
 echo " ----- Arrêt des conteneurs ----- "
 docker stop $(docker ps -a -q)
 sleep 4s
+
 echo "  "
 echo " ----- Suppression des conteneurs ----- "
 docker rm $(docker ps -a -q)
 sleep 4s
+
 echo "  "
 echo " ----- Suppression des images ----- "
 docker rmi $(docker images -q)
 echo "  "
 sleep 4s
+
 clear
 echo " ----- Les conteneurs et les images n'existent plus ----- "
 sleep 4s
