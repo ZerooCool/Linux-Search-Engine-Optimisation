@@ -1,7 +1,9 @@
 #!/bin/bash
+wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
 clear # Clear the screen.
 cat 00-ascii.sh
 sleep 4
+rm 00-ascii.sh
 
 echo " ################################## "
 echo " #          Choix du menu         # "
@@ -99,7 +101,7 @@ sleep 4
   echo
   echo "Merci d'utiliser uniquement les options du menu."
   sleep 3
-  sh menu.sh
+  sh 00-menu.sh
   ;;
 
 esac
