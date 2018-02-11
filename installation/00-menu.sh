@@ -28,7 +28,7 @@ case "$person" in
   sleep 4
 
 cd /home/
-wget 1-installer-docker.sh
+wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-installer-docker.sh
 sh 1-installer-docker.sh
 cd /home/
 rm 1-installer-docker.sh
@@ -43,7 +43,7 @@ sleep 4
   sleep 4
 
 cd /home/
-wget 1-supprimer-conteneurs-et-images.sh
+wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-supprimer-conteneurs-et-images.sh
 sh 1-supprimer-conteneurs-et-images.sh
 cd /home/
 rm 1-supprimer-conteneurs-et-images.sh
@@ -58,7 +58,7 @@ sleep 4
   sleep 4
 
 cd /home/
-wget 1-supprimer-docker.sh
+wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-supprimer-docker.sh
 sh 1-supprimer-docker.sh
 cd /home/
 rm 1-supprimer-docker.sh
@@ -73,7 +73,7 @@ sleep 4
   sleep 4
 
 cd /home/
-wget 2-importer-image-debian.sh
+wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/2-importer-image-debian.sh
 sh 2-importer-image-debian.sh
 cd /home/
 rm 2-importer-image-debian.sh
