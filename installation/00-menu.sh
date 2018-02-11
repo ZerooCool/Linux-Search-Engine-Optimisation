@@ -34,7 +34,7 @@ cd /home/
 rm 1-installer-docker.sh
 sleep 4
   ;;
-# Double points virgule pour fermer chaque option.
+# Double points virgule pour fermer l'option 1.
 
 # "2" | "deux" | "DEUX" | "Deux" valeurs acceptées pour lancer ce menu.
   "2" | "deux" | "DEUX" | "Deux" )
@@ -49,7 +49,7 @@ cd /home/
 rm 1-supprimer-conteneurs-et-images.sh
 sleep 4
   ;;
-# Double points virgule pour fermer chaque option.
+# Double points virgule pour fermer l'option 2.
 
 # "3" | "trois" | "TROIS" | "Trois" valeurs acceptées pour lancer ce menu.
   "3" | "trois" | "TROIS" | "Trois" )
@@ -64,7 +64,7 @@ cd /home/
 rm 1-supprimer-docker.sh
 sleep 4
   ;;
-# Double points virgule pour fermer chaque option.
+# Double points virgule pour fermer l'option 3.
 
 # "4" | "quatre" | "QUATRE" | "Quatre" valeurs acceptées pour lancer ce menu.
   "4" | "quatre" | "QUATRE" | "Quatre" )
@@ -79,7 +79,7 @@ cd /home/
 rm 2-importer-image-debian.sh
 sleep 4
   ;;
-# Double points virgule pour fermer chaque option.
+# Double points virgule pour fermer l'option 4.
 
 # "5" | "cinq" | "CINQ" | "Cinq" valeurs acceptées pour lancer ce menu.
   "5" | "cinq" | "CINQ" | "Cinq" )
@@ -90,7 +90,7 @@ sleep 4
   sleep 4
   exit
   ;;
-# Double points virgule pour fermer chaque option.
+# Double points virgule pour fermer l'option 5.
 
           * )
   # Réponse par défaut.
