@@ -1,6 +1,12 @@
-0 - Installer Docker sur Debian Stretch 9.
+Les scripts sont tous installés sur  Debian Stretch 9.
 
-1 - Supprimer les conteneurs et les images.
+00-ascii.sh - Affiche une image ascii.
+
+00-menu.sh - Lance le menu d'installation.
+
+1-installer-docker.sh - Installer Docker.
+1-supprimer-conteneurs-et-images.sh - Supprimer les conteneurs et images de Docker.
+1-supprimer-docker.sh - Supprimer le paquet Docker sur le système hôte.
 
 2 - Importer l'image Docker de Debian.
 

@@ -4,7 +4,6 @@ echo "  "
 
 echo " Installer Joomla! "
 
-
 # Se placer à la racine du dossier html qui contient les fichiers par défaut du serveur web local.
 echo "Se placer à la racine du dossier /var/www/html/ et charger Joomla!"
 cd /var/www/html/
