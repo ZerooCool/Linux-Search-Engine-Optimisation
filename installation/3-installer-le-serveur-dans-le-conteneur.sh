@@ -53,17 +53,12 @@ echo "Démarrage de MariaDB."
 echo " "
 echo " "
 
-# Sécuriser MariaDB
-echo "Sécuriser MariaDB."
-mysql_secure_installation
-
-echo " "
-echo " "
-
 # Installer PHPMyAdmin.
-echo "Installation de PHPMyAdmin."
+echo " Installation de PHPMyAdmin "
+echo " Proposition de mot de passe : GestionnaireBDD "
 apt install phpmyadmin -y
 # yes pour configurer phpmyadmin
+# Utiliser dbconfig-common y
 # Choisir un mot de passe : GestionnaireBDD
 # Choix 1 pour configurer Apache2
 
@@ -75,45 +70,8 @@ echo "Démarrage de Apache2."
 service apache2 start
 
 echo " "
-echo " "
-
-# Se placer dans le dossier par défaut du serveur web local.
-echo "Se placer dans le dossier /var/www/html du serveur web local."
-cd /var/www/html
-# Créer un dossier hello.
-echo "Création du dossier hello."
-mkdir hello
-# Se placer dans le dossier hello.
-echo "Se placer dans le dossier /var/www/html/hello."
-cd /var/www/html/hello
-
-echo " "
-echo " "
-
-# Importer le fichier index.php et l'image seo. Permet d'avoir accès aux scripts directement.
-echo "Importer le fichier index.php et l'image seo. Permet d'avoir accès aux scripts directement."
-wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/hello/index.php
-wget https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/raw/master/hello/seo.jpg
-
-# Créer le fichier hello.php pour vérifier le fonctionnement de PHP.
-echo "Créer le fichier hello.php pour vérifier le fonctionnement de PHP."
-echo "<?php" >> hello.php
-echo "echo 'SEO';" >> hello.php
-echo "?>" >> hello.php
-
-# Créer le fichier phpinfo.php pour obtenir les informations du serveur.
-echo "Créer le fichier phpinfo.php pour obtenir les informations du serveur."
-echo "<?php" >> phpinfo.php
-echo "phpinfo();" >> phpinfo.php
-echo "?>" >> phpinfo.php
-
-# Créer le fichier curl.php pour vérifier si cURL est activé.
-echo "Créer le fichier curl.php pour vérifier si cURL est activé."
-echo "<?php" >> curl.php
-echo "echo 'Curl : ', function_exists('curl_version') ? 'Enabled' : 'Disabled';" >> curl.php
-echo "?>" >> curl.php
-
-echo " "
+# wget URL
+# Appel au script hello.sh pour créer les fichiers exemple.
 echo " "
 
 # Vérifier si Apache2 est démarré et affiche sa page d'accueil depuis le navigateur
@@ -128,11 +86,11 @@ echo " "
 # Etablir alors une connexion avec MariaDB.
 echo "Se connecter en root à MariaDB."
 echo "Le mot de passe proposé à l'installation de PHPMyAdmin est GestionnaireBDD."
-echo "Saisir les 3 lignes suivantes :"
+echo "Saisir manuellement les 3 lignes suivantes, et valider à chaque ligne."
 echo "CREATE USER 'znation'@'localhost' IDENTIFIED BY 'KillTheZombie';"
 echo "GRANT ALL PRIVILEGES ON *.* TO 'znation'@'localhost' WITH GRANT OPTION;"
 echo "FLUSH PRIVILEGES;"
-echo "exit;"
+echo "Pour sortir, saisir alors exit;"
 mysql -u root -p
 # Saisir le mot de passe de l'utilisateur root : GestionnaireBDD
 # Une fois connecté à l'interface MariaDB, lancer les 3 commandes suivantes :
@@ -146,6 +104,19 @@ FLUSH PRIVILEGES;
 # Retourner sous http://localhost/phpmyadmin
 # Se connecter avec l'utilisateur znation / GestionnaireBDD
 # Créer manuellement la base de données : joomlazombies
+
+echo " "
+echo " "
+
+# Sécuriser MariaDB
+echo "Sécuriser MariaDB."
+echo "Remove anonymous users : Yes"
+echo "Disallow root login  remotely ? [Y/n] : no"
+echo "PLACER LA SECURISATION A LA FIN DU SCRIPT UNE FOIS L'UTILISATEUR MariaDB créé." 
+echo "... et mettre Y pour interdire root. <strike>No pour le moment.</strike>"
+echo "Delete test database : yes (?)"
+echo "Reload privilèges tables now : yes"
+mysql_secure_installation
 
 echo " "
 echo " "
@@ -173,7 +144,7 @@ echo " Créer une nouvelle base de données joomlazombies "
 echo " Modifier le préfixe à sa convenance : wtb3n_ "
 
 echo "Installation du serveur terminée !"
-echo "Les paquets suivants ont été installés : nano wget unzip apache2 php7.0 php7.0-curl mariadb-server mariadb-client !"
+echo "Les paquets suivants ont été installés : nano wget unzip apache2 php7.0 php7.0-curl mariadb-server mariadb-client mysql_secure_installation !"
 
 echo " "
 
@@ -192,8 +163,13 @@ sh 4-installer-joomla.sh
 echo " "
 
 echo " Supprimer le script 3 et 4 une fois l'installation effectuée. "
+sleep 4
 rm /home/3-installer-le-serveur-dans-le-conteneur.sh
 rm /home/4-installer-joomla.sh
+
+echo " L'archive de Joomla a été téléchargée et installée. "
+sleep 4
+echo
 
 # En cas de difficulté à l'installation, penser à redémarrer Apache2 et mySQL
 # service apache2 restart

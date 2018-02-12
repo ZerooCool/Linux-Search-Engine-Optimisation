@@ -9,12 +9,14 @@ echo " ################################## "
 echo " #          Choix du menu         # "
 echo " #    Installation automatique    # " 
 echo " ################################## "
+sleep 4
 echo
 echo " Cet assistant installe, configure ou supprime vos paquets automatiquement. "
+sleep 4
 echo
 echo " [1] Installer Docker "
-echo " [2] Supprimer Docker "
-echo " [3] Supprimer les conteneurs et les images de Docker "
+echo " [2] Supprimer les conteneurs et les images de Docker "
+echo " [3] Supprimer Docker "
 echo " [4] Importer l'image Docker de Debian "
 echo " [5] Exit "
 echo
@@ -88,7 +90,7 @@ sleep 4
   echo
   echo " EXIT "
   echo " L'assistant pour une installation automatique va s'arrêter. "
-  echo " Utiliser la commande sh menu.sh pour relancer l'assistant. "
+  echo " Utiliser la commande sh 00-menu.sh pour relancer l'assistant. "
   sleep 4
   exit
   ;;

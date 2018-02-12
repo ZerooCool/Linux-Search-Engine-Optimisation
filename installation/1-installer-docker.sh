@@ -1,4 +1,9 @@
 #!/bin/bash
+
+
+# Doit être logué en root.
+
+
 echo "  "
 echo " ----- Installer Docker sur Debian Stretch 9 ----- "
 sleep 4s
@@ -42,17 +47,15 @@ systemctl start docker
 sleep 4s
 echo " ----- Démarrage de Docker terminé ----- "
 sleep 4s
-
 clear
+
 echo "  "
 echo " ----- Docker a été installé et démarré ----- "
-sleep 4s
-echo " ----- Supprimer les conteneurs et images pour commencer proprement ----- "
 sleep 4s
 echo "  "
 echo " ----- Conseil ----- "
 sleep 4s
-echo " ----- Supprimer les conteneurs et les images ----- "
+echo " ----- Supprimer les conteneurs et images pour commencer proprement ----- "
 sleep 4s
 echo " ----- Lancer la commande suivante dans le terminal ----- "
 sleep 4s
@@ -74,3 +77,6 @@ sleep 4s
 echo "  "
 echo " sh 2-importer-image-debian.sh "
 sleep 4s
+
+# Faire revenir sur le menu.
+# Retour erreur après chaque action.

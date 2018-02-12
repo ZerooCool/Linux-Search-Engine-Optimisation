@@ -12,4 +12,5 @@ Les scripts sont tous installés sur  Debian Stretch 9.
 
 3 - Installer le serveur local dans le conteneur Docker de Debian.
 
+4 - Installer le dossier hello et les scripts pour tester le serveur.
 4 - Télécharger l'archive de Joomla et installer Joomla!
