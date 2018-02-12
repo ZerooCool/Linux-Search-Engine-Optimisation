@@ -33,4 +33,7 @@ echo "En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis Git
 echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
 sleep 4
 
-sh 2-importer-image-debian.sh
+# Charger l'image sur Docker.
+# Ne pas écraser l'image de développement.
+# Définir un dossier de travail.
+sh 00-menu.sh

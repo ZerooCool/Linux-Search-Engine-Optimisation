@@ -61,7 +61,8 @@ sleep 4
 su -c '
 
   echo
-  echo " Supprimer les conteneurs et les images de Docker "
+  echo " Lancement de la suppression des conteneurs et images de Docker "
+  echo
   sleep 4
 
 cd /home/
