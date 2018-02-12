@@ -1,4 +1,5 @@
 # La page officielle de SEO Kalamity sur Github
+La page Github permet de suivre l'évolution de ce projet partagé gratuitement.<br/>
 https://github.com/ZerooCool/Linux-Search-Engine-Optimisation
 
 # Le Forum et le wiki de Vision du web
@@ -10,6 +11,6 @@ Retrouver les dernières modifications depuis le wiki : https://www.visionduweb.
 Retrouver les dernières modifications depuis le forum :
 Le forum : https://www.visionduweb.eu/forum/referencement-seo/2079-une-machine-virtuelle-pour-le-seo-avec-seo-kalamity-basee-sur-debian-9-stretch
 
-# Les sites de professionnels en SEO
-Page officielle pour présenter ce partage sur le Forum SEO GHSTools : https://www.ghstools.fr/forum/viewtopic.php?f=179&t=4650<br/><br/>
-Page officielle pour présenter ce partage sur le Forum Joomla de l'AFUJ : https://forum.joomla.fr/node/1975328
+# Les sites de professionnels
+Le message suivant présente ce partage sur le Forum SEO GHSTools : https://www.ghstools.fr/forum/viewtopic.php?f=179&t=4650<br/><br/>
+Le message suivant présente ce partage sur le Forum Joomla de l'AFUJ : https://forum.joomla.fr/node/1975328
