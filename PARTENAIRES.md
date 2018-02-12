@@ -12,5 +12,5 @@ Retrouver les dernières modifications depuis le forum :
 Le forum : https://www.visionduweb.eu/forum/referencement-seo/2079-une-machine-virtuelle-pour-le-seo-avec-seo-kalamity-basee-sur-debian-9-stretch
 
 # Les sites de professionnels
-Le message suivant présente ce partage sur le Forum SEO GHSTools : https://www.ghstools.fr/forum/viewtopic.php?f=179&t=4650<br/><br/>
-Le message suivant présente ce partage sur le Forum Joomla de l'AFUJ : https://forum.joomla.fr/node/1975328
+Le message suivant présente ce partage sur le Forum SEO GHSTools :<br/>https://www.ghstools.fr/forum/viewtopic.php?f=179&t=4650<br/><br/>
+Le message suivant présente ce partage sur le Forum Joomla de l'AFUJ :<br/>https://forum.joomla.fr/node/1975328
