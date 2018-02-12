@@ -1,21 +1,20 @@
 #!/bin/bash
 # Charger l'image ascii depuis Github.
-cd /home/
+mkdir ~/installeur
+cd ~/installeur
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
 
-# Charger le menu depuis Github.
-cd /home/
+# Mise à jour de la dernière version ---- Charger le menu depuis Github.
+cd ~/installeur
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
 
 clear # Clear the screen.
 cat 00-ascii.sh
 sleep 4
 
-cd /home/
-rm 00-ascii.sh
-
+cd ~/installeur
 sh 00-menu.sh
-rm 00-menu.sh
+rm 00-ascii.sh
 
 #
 # TODO
@@ -176,6 +175,8 @@ echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une iss
 echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
 echo
 sleep 4
+
+rm -R ~/installeur
 
   exit
   ;;
