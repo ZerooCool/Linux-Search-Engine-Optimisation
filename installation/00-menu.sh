@@ -158,10 +158,12 @@ rm 4-installer-joomla.sh
   echo " Utiliser la commande ${vertfonce}sh 00-menu.sh${neutre} pour relancer l'assistant. "
   sleep 4
 
-  echo
-  echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis GitHub${neutre}"
-  echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
-  sleep 4
+# Message temporaire pouvant être retiré une fois l'ensemble des scripts stables.
+echo
+echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis GitHub${neutre}"
+echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
+echo
+sleep 4
 
   exit
   ;;
