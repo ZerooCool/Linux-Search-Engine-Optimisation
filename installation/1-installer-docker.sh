@@ -77,6 +77,3 @@ sleep 4s
 echo "  "
 echo " sh 2-importer-image-debian.sh "
 sleep 4s
-
-# Faire revenir sur le menu.
-# Retour erreur après chaque action.

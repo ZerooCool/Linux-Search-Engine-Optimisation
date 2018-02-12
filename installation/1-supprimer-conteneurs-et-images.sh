@@ -18,20 +18,19 @@ sleep 4s
 clear
 echo " ----- Les conteneurs et les images n'existent plus ----- "
 sleep 4s
+echo
+echo " ----- Conseil ----- "
 echo " ----- Importer une nouvelle image pour utiliser Docker ----- "
 sleep 4s
-echo "  "
-echo " ----- Conseil ----- "
+echo
+echo " ----- Vous êtes redirigé vers le menu ----- "
 sleep 4s
-echo " ----- Pour importer une nouvelle image Docker ----- "
-sleep 4s
-echo " ----- Lancer la commande suivante dans le terminal ----- "
-sleep 4s
-echo "  "
-echo " sh 2-importer-image-debian.sh "
-sleep 4s
-echo "  "
-echo " ----- Vous ne voulez pas importer une nouvelle image Docker Debian ? ----- "
-sleep 4s
-echo " ----- Vous avez terminé et pouvez quitter le terminal ! ----- "
-sleep 4s
+
+# Message temporaire pouvant être retiré une fois l'ensemble des scripts stables.
+echo
+echo "Le processus de suppression des conteneurs et images est terminé"
+echo "En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis GitHub."
+echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
+sleep 4
+
+sh 2-importer-image-debian.sh

@@ -5,20 +5,32 @@ cat 00-ascii.sh
 sleep 4
 rm 00-ascii.sh
 
+#
+# TODO
+# Installer sudo sur l'hôte !
+# Donner les droits sudoers à l'utilisateur seo (mdp : UtilisateurSEO)
+#
+
+gris='\e[1;30m' rougefonce='\e[0;31m' vertfonce='\e[0;32m' vertclair='\e[1;32m' jaune='\e[1;33m' bleufonce='\e[0;34m' bleuclair='\e[1;34m' grisclair='\e[0;37m' blanc='\e[1;37m' neutre='\e[0;m'
+
 echo " ################################## "
-echo " #          Choix du menu         # "
-echo " #    Installation automatique    # " 
+echo " #              ${bleuclair}Menu${neutre}              # "
+echo " #    ${bleuclair}Installation automatique${neutre}    # " 
 echo " ################################## "
 sleep 4
 echo
-echo " Cet assistant installe, configure ou supprime vos paquets automatiquement. "
+echo " L'assistant vous accompagne dans vos différents choix : "
+echo " ${vertfonce}Installations${neutre}, ${vertfonce}configurations${neutre}, ${vertclair}tests${neutre} ou ${gris}suppressions${neutre}. "
 sleep 4
 echo
-echo " [1] Installer Docker "
-echo " [2] Supprimer les conteneurs et les images de Docker "
-echo " [3] Supprimer Docker "
-echo " [4] Importer l'image Docker de Debian "
-echo " [5] Exit "
+echo " ${vertfonce}[1] Installer Docker${neutre} "
+echo " ${gris}[2] Supprimer les conteneurs et les images de Docker${neutre} "
+echo " ${gris}[3] Supprimer Docker${neutre} "
+echo " ${vertfonce}[4] Importer l'image Docker de Debian${neutre} "
+echo " ${vertfonce}[5] Entrer dans le shell de l'image et installer le serveur web local${neutre} "
+echo " ${vertclair}[6] Tester le serveur web local${neutre} "
+echo " ${vertclair}[7] Importer et installer Joomla!${neutre} "
+echo " [8] Exit "
 echo
 echo "Choisir une option pour continuer :"
 
@@ -42,6 +54,12 @@ sleep 4
 
 # "2" | "deux" | "DEUX" | "Deux" valeurs acceptées pour lancer ce menu.
   "2" | "deux" | "DEUX" | "Deux" )
+# S'identifier en root pour arrêter les conteneurs, les supprimer, supprimer les images.
+  echo
+  echo " Saisir le mot de passe root : OptimisationSEO "
+  sleep 1
+su -c '
+
   echo
   echo " Supprimer les conteneurs et les images de Docker "
   sleep 4
@@ -52,6 +70,8 @@ sh 1-supprimer-conteneurs-et-images.sh
 cd /home/
 rm 1-supprimer-conteneurs-et-images.sh
 sleep 4
+
+'
   ;;
 # Double points virgule pour fermer l'option 2.
 
@@ -88,23 +108,92 @@ sleep 4
 # "5" | "cinq" | "CINQ" | "Cinq" valeurs acceptées pour lancer ce menu.
   "5" | "cinq" | "CINQ" | "Cinq" )
   echo
-  echo " EXIT "
-  echo " L'assistant pour une installation automatique va s'arrêter. "
-  echo " Utiliser la commande sh 00-menu.sh pour relancer l'assistant. "
+  echo " Installer le serveur web local dans l'image debian de Docker "
   sleep 4
-  exit
+
+cd /home/
+wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/3-installer-le-serveur-dans-le-conteneur.sh
+sh 3-installer-le-serveur-dans-le-conteneur.sh
+cd /home/
+rm 3-installer-le-serveur-dans-le-conteneur.sh
+  sleep 4
   ;;
 # Double points virgule pour fermer l'option 5.
 
+# "6" | "six" | "SIX" | "Six" valeurs acceptées pour lancer ce menu.
+  "6" | "six" | "SIX" | "Six" )
+  echo
+  echo " Importer les scripts pour tester le serveur "
+  sleep 4
+
+cd /home/
+wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/4-hello.sh
+sh 4-hello.sh
+cd /home/
+rm 4-hello.sh
+  sleep 4
+  ;;
+# Double points virgule pour fermer l'option 6.
+
+# "7" | "sept" | "SEPT" | "Sept" valeurs acceptées pour lancer ce menu.
+  "7" | "sept" | "SEPT" | "Sept" )
+  echo
+  echo " Importer et installer Joomla! "
+  sleep 4
+
+cd /home/
+wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/4-installer-joomla.sh
+sh 4-installer-joomla.sh
+cd /home/
+rm 4-installer-joomla.sh
+  sleep 4
+  ;;
+# Double points virgule pour fermer l'option 7.
+
+# "8" | "huit" | "HUIT" | "Huit" | "exit" | "EXIT" | "Exit" valeurs acceptées pour lancer ce menu.
+  "8" | "huit" | "HUIT" | "Huit" | "exit" | "EXIT" | "Exit" )
+  echo
+  echo " ${rougefonce}L'assistant va s'arrêter${neutre} "
+  echo " Utiliser la commande ${vertfonce}sh 00-menu.sh${neutre} pour relancer l'assistant. "
+  sleep 4
+
+  echo
+  echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis GitHub${neutre}"
+  echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
+  sleep 4
+
+  exit
+  ;;
+# Double points virgule pour fermer l'option 8.
+
           * )
   # Réponse par défaut.
-  echo "Ce choix n'est pas disponible."
+  echo "${rougefonce}Ce choix n'est pas disponible${neutre}"
   sleep 2
-  echo
-  echo "Merci d'utiliser uniquement les options du menu."
+#  echo
+  echo "${rougefonce}Merci d'utiliser uniquement les options du menu${neutre}"
   sleep 3
   sh 00-menu.sh
   ;;
 
 esac
 exit 0
+
+# TODO
+# Faire revenir chaque action de script sur ce menu.
+
+# TODO
+# Retour erreur après chaque action. Exemple :
+# apt clean
+# if [ "$?" = "0" ] ; then
+# echo "Les paquets présents dans /var/cache/apt/archives ont été supprimés."
+# else
+# echo "Les paquets présents dans /var/cache/apt/archives n'ont pas été supprimés."
+# fi
+
+# TODO
+# sleep 4
+# Faciliter la lecture de l'installation.
+
+# clear
+# Faciliter la lecture de l'écran.
