@@ -1,9 +1,21 @@
 #!/bin/bash
+# Charger l'image ascii depuis Github.
+cd /home/
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
+
+# Charger le menu depuis Github.
+cd /home/
+wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
+
 clear # Clear the screen.
 cat 00-ascii.sh
 sleep 4
+
+cd /home/
 rm 00-ascii.sh
+
+sh 00-menu.sh
+rm 00-menu.sh
 
 #
 # TODO
@@ -200,3 +212,5 @@ exit 0
 
 # clear
 # Faciliter la lecture de l'écran.
+
+# Ajouter des couleurs.
