@@ -24,8 +24,8 @@ if [ -f "00-menu.sh" ]; then
  sleep 3
  # On lance le nouveau script de menu une fois et on arrête à la fin du script.
  # Permet d'éviter de continuer sur le script menu utilisé, qui peut être obsolète.
- sh 00-menu.sh
-# exit
+ sh ~/installeur/00-menu.sh
+exit
 
 else
  echo " Le fichier 00-menu.sh n'existe pas et va être créé dans le dossier installeur "
@@ -33,10 +33,10 @@ else
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
  # Lancer le menu à jour qui vient d'être chargé.
- sh 00-menu.sh
+ sh ~/installeur/00-menu.sh
  # On crée le nouveau script et on lance le nouveau script de menu une fois et on arrête à la fin du script.
  # Permet d'éviter de continuer sur le script menu utilisé, qui peut être obsolète.
-# exit
+ exit
 fi
 
 
