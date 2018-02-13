@@ -6,10 +6,10 @@ clear
 # Créer le dossier installeur si il n'existe pas.
 if [ -d "~/installeur" ]; then
  echo " Le dossier ~/installeur existe déjà "
- sleep 2
+ sleep 4
 else
  echo " Le dossier ~/installeur va être créé "
- sleep 2
+ sleep 4
  mkdir ~/installeur
 fi
 
@@ -20,10 +20,10 @@ clear
 cd ~/installeur
 if [ -f "00-menu.sh" ]; then
  echo " Le fichier 00-menu.sh existe déjà "
- sleep 2
+ sleep 4
 else
  echo " Le fichier 00-menu.sh va être créé dans le dossier installeur "
- sleep 2
+ sleep 4
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
  # Lancer le menu à jour qui vient d'être chargé.
@@ -205,8 +205,8 @@ rm 4-installer-joomla.sh
 # "8" | "huit" | "HUIT" | "Huit" | "exit" | "EXIT" | "Exit" valeurs acceptées pour lancer ce menu.
   "8" | "huit" | "HUIT" | "Huit" | "exit" | "EXIT" | "Exit" )
   echo
-  echo " ${rougefonce}L'assistant va s'arrêter${neutre} "
-  echo " Utiliser la commande ${vertfonce}sh 00-menu.sh${neutre} pour relancer l'assistant. "
+  echo "${rougefonce}L'assistant va s'arrêter${neutre}"
+  echo "Utiliser la commande ${vertfonce}sh 00-menu.sh${neutre} pour relancer l'assistant."
   sleep 4
 
 # Message temporaire pouvant être retiré une fois l'ensemble des scripts stables.
@@ -216,6 +216,7 @@ echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
 echo
 sleep 4
 
+# Supprimer le dossier installeur à la fin de l'installation.
 rm -R ~/installeur
 
   exit
