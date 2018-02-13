@@ -11,13 +11,13 @@ if [ -d "$ABS_PATH_INSTALLEUR" ]; then
 else
  echo " Le dossier d'installation n'existe pas encore et va être créé "
  sleep 3
- mkdir "$ABS_PATH_INSTALLEUR"
+ mkdir ~/installeur
 # Vider le terminal.
 clear
 fi
 
 # Charger le fichier ~/installeur/00-menu.sh si il n'existe pas.
-cd "$ABS_PATH_INSTALLEUR"
+cd ~/installeur
 if [ -f "00-menu.sh" ]; then
  echo " Le fichier pour appeler le menu existe déjà "
  sleep 3
@@ -30,7 +30,7 @@ else
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
  # Lancer le menu à jour qui vient d'être chargé.
- sh "$ABS_PATH_INSTALLEUR"/00-menu.sh
+ sh ~/installeur/00-menu.sh
  exit
 fi
 
