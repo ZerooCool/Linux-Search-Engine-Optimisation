@@ -61,14 +61,16 @@ wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisatio
 echo "$jour - $heure : Une boucle est lancée une seule fois." >> logs.txt
 echo "$jour - $heure : Suppression du menu existant en cas ou il soit obsolète." >> logs.txt
 echo "$jour - $heure : Le menu mis à jour est lancé." >> logs.txt
+
+
 # Lancer le menu à jour qui vient d'être chargé.
 sh ~/installeur/00-menu.sh
 # Lorsque le dernier menu à jour est chargé, puis, arrêté depuis les choix disponibles, l'appel initial pouvant venir de ce fichier 00-menu.sh en local continue son exécution.
 # Le dossier ~/installeur n'existant plus, supprimé à la fin de l'exécution du nouveau script de 00-menu.sh téléchargé et à jour, le fichier ascii ne peut se charger.
 # Pour empêcher la reprise de la fin du menu ci-dessous, arrêter ici la lecture du script avec exit.
-done
 
 exit
+done
 
 
 
