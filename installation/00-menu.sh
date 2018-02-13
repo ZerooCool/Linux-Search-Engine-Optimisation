@@ -3,7 +3,7 @@
 clear
 
 # Variables jour et heure.
-jour=$(date %d-%m-+%Y)
+jour=$(date +%d-%m-%Y)
 heure=$(date +%H:%M:%S)
 # Variables des couleurs.
 gris='\e[1;30m' rougefonce='\e[0;31m' vertfonce='\e[0;32m' vertclair='\e[1;32m' jaune='\e[1;33m' bleufonce='\e[0;34m' bleuclair='\e[1;34m' grisclair='\e[0;37m' blanc='\e[1;37m' neutre='\e[0;m'
