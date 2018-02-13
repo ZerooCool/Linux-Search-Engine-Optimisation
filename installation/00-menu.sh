@@ -1,52 +1,56 @@
 #!/bin/bash
 
+#################################################
 # Effacer l'écran du terminal.
 reset
+#################################################
 
-# Variables.
+################### Variables ###################
 # Jour et heure.
 jour=$(date +%d-%m-%Y)
 heure=$(date +%H:%M:%S)
 # Couleurs.
 gris='\e[1;30m' rougefonce='\e[0;31m' vertfonce='\e[0;32m' vertclair='\e[1;32m' jaune='\e[1;33m' bleufonce='\e[0;34m' bleuclair='\e[1;34m' grisclair='\e[0;37m' blanc='\e[1;37m' neutre='\e[0;m'
+#################################################
 
+#################################################
 # Vérifier si le dossier d'installation existe, sinon, le créer.
 ABS_PATH_INSTALLEUR=$(readlink -e ~/installeur)
 if [ -d "$ABS_PATH_INSTALLEUR" ]; then
- echo " Mise en route - Le dossier d'installation existe "
+ echo " Démarrage - Le dossier d'installation existe "
  sleep 3
 # Logs.txt
 cd ~/installeur
-echo "$jour - $heure : Mise en route - Le dossier d'installation existe." >> logs.txt
+echo "$jour - $heure : Démarrage - Le dossier d'installation existe." >> logs.txt
 
 else
- echo " Initialisation - Le dossier d'installation n'existe pas encore et va être créé "
+ echo " Chargement - Le dossier d'installation n'existe pas encore et va être créé "
  sleep 3
  mkdir ~/installeur
 # Logs.txt
 cd ~/installeur
-echo "$jour - $heure : Initialisation - Le dossier d'installation n'existe pas encore et va être créé." >> logs.txt
+echo "$jour - $heure : Chargement - Le dossier d'installation n'existe pas encore et va être créé." >> logs.txt
 fi
+#################################################
 
+#################################################
 # Charger le fichier ~/installeur/00-menu.sh si il n'existe pas.
 cd ~/installeur
 if [ -f "00-menu.sh" ]; then
- echo " Mise en route - Le fichier du menu existe "
+ echo " Démarrage - Le fichier du menu existe "
  sleep 3
-
 # Logs.txt
-echo "$jour - $heure : Mise en route - Le fichier du menu existe." >> logs.txt
+echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
 
 # Ajouter une boucle pour recharger une seule fois le fichier en cas ou il soit obsolète.
 
 else
- echo " Initialisation - Le fichier du menu n'existe pas encore et va être créé et exécuté "
+ echo " Chargement - Le fichier du menu n'existe pas et va être créé et exécuté "
  sleep 3
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
  # Logs.txt
- echo "$jour - $heure : Initialisation - Le fichier du menu n'existe pas encore et va être créé." >> logs.txt
- echo "$jour - $heure : Le fichier menu est exécuté" >> logs.txt
+ echo "$jour - $heure : Chargement - Le fichier du menu n'existe pas et va être créé et exécuté." >> logs.txt
  # Lancer le menu à jour qui vient d'être chargé.
  sh ~/installeur/00-menu.sh
  # Lorsque le dernier menu à jour est chargé, puis, arrêté depuis les choix disponibles, l'appel initial pouvant venir de ce fichier 00-menu.sh en local continue son exécution.
@@ -54,7 +58,9 @@ else
  # Pour empêcher la reprise de la fin du menu ci-dessous, arrêter ici la lecture du script avec exit.
  exit
 fi
+#################################################
 
+#################################################
 # Charger l'image ascii depuis Github.
 cd ~/installeur
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
@@ -64,20 +70,19 @@ cat ~/installeur/00-ascii.sh
 sleep 4
 # Supprimer le fichier de l'image ascii.
 rm ~/installeur/00-ascii.sh
-
 # Logs.txt
 cd ~/installeur
 echo "$jour - $heure : Chargement de l'image ascii." >> logs.txt
 echo "$jour - $heure : Effacer l'écran du terminal." >> logs.txt
 echo "$jour - $heure : Afficher l'image ascii." >> logs.txt
 echo "$jour - $heure : Supprimer le fichier de l'image ascii." >> logs.txt
-
+#################################################
 
 # A faire si nécessaire.
 # Installer sudo sur l'hôte !
 # Donner les droits sudoers à l'utilisateur seo (mdp : UtilisateurSEO)
 
-
+#################################################
 echo " ################################## "
 echo " #              ${bleuclair}Menu${neutre}              # "
 echo " #    ${bleuclair}Installation automatique${neutre}    # " 
@@ -100,8 +105,8 @@ echo
 echo "Choisir une option pour continuer :"
 
 # Logs.txt
-cd ~/installeur
-echo "$jour - $heure : Le menu est affiché." >> logs.txt
+echo "$jour - $heure : Le menu est affiché - En attente du choix." >> logs.txt
+#################################################
 
 read person
 case "$person" in
