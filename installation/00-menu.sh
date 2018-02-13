@@ -24,17 +24,17 @@ cd ~/installeur
 echo "$jour - $heure : Démarrage - Le dossier d'installation existe." >> logs.txt
 
 else
- echo " Chargement - Le dossier d'installation n'existe pas encore et va être créé "
+ echo " Chargement - Le dossier d'installation n'existe pas et va être créé "
  sleep 3
  mkdir ~/installeur
 # Logs.txt
 cd ~/installeur
-echo "$jour - $heure : Chargement - Le dossier d'installation n'existe pas encore et va être créé." >> logs.txt
+echo "$jour - $heure : Chargement - Le dossier d'installation n'existe pas et va être créé." >> logs.txt
 fi
 #################################################
 
 #################################################
-# Charger le fichier ~/installeur/00-menu.sh si il n'existe pas.
+# Charger le fichier 00-menu.sh si il n'existe pas.
 cd ~/installeur
 if [ -f "00-menu.sh" ]; then
  echo " Démarrage - Le fichier du menu existe "
@@ -42,7 +42,24 @@ if [ -f "00-menu.sh" ]; then
 # Logs.txt
 echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
 
-# Ajouter une boucle pour recharger une seule fois le fichier en cas ou il soit obsolète.
+# Une boucle met une fois à jour le fichier de menu existant en cas ou il soit obsolète.
+MAX=1
+for X in $(seq 1 $MAX) ; do
+# Suppression du menu présent dans le dossier d'installation.
+rm 00-menu.sh
+# Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
+wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
+# Logs.txt
+echo "$jour - $heure : Suppression du menu existant en cas ou il soit obsolète." >> logs.txt
+echo "$jour - $heure : Une boucle met une fois à jour le menu en chargeant la dernière version." >> logs.txt
+echo "$jour - $heure : Le menu mis à jour est lancé." >> logs.txt
+# Lancer le menu à jour qui vient d'être chargé.
+sh ~/installeur/00-menu.sh
+# Lorsque le dernier menu à jour est chargé, puis, arrêté depuis les choix disponibles, l'appel initial pouvant venir de ce fichier 00-menu.sh en local continue son exécution.
+# Le dossier ~/installeur n'existant plus, supprimé à la fin de l'exécution du nouveau script de 00-menu.sh téléchargé et à jour, le fichier ascii ne peut se charger.
+# Pour empêcher la reprise de la fin du menu ci-dessous, arrêter ici la lecture du script avec exit.
+exit
+done
 
 else
  echo " Chargement - Le fichier du menu n'existe pas et va être créé et exécuté "
@@ -105,7 +122,7 @@ echo
 echo "Choisir une option pour continuer :"
 
 # Logs.txt
-echo "$jour - $heure : Le menu est affiché - En attente du choix." >> logs.txt
+echo "$jour - $heure : Le menu est affiché en attente du choix." >> logs.txt
 #################################################
 
 read person
@@ -271,26 +288,3 @@ rm -R installeur
 
 esac
 exit 0
-
-# Faire revenir chaque action de script sur ce menu.
-
-# Continuer d'ajouter les logs à l'étape 2 et plus.
-
-# Faciliter la lecture de l'installation avec sleep 3 et reset
-
-# Ajouter des couleurs.
-
-# Retour erreur après chaque action. Exemple :
-# apt clean
-# if [ "$?" = "0" ] ; then
-# echo "Les paquets présents dans /var/cache/apt/archives ont été supprimés."
-# else
-# echo "Les paquets présents dans /var/cache/apt/archives n'ont pas été supprimés."
-# fi
-
-
-# Faire un test conditionnel ??? Pour éviter la redondance !!!
-# MAX=2
-# for X in $(seq 1 $MAX) ; do
-# commande
-# done
