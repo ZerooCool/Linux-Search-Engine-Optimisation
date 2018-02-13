@@ -1,13 +1,39 @@
 #!/bin/bash
+
+# Créer le dossier installeur si il n'existe pas.
+if [ -d "~/installeur" ]; then
+ echo "~/installeur est déjà créé"
+else
+ echo "~/installeur va être créé"
+ mkdir ~/installeur
+fi
+
 # Charger l'image ascii depuis Github.
-mkdir ~/installeur
 cd ~/installeur
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
 
-# Mise à jour de la dernière version ---- Charger le menu depuis Github.
-cd ~/installeur
-wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
-sh ~/installeur/00-menu.sh
+# Charger le fichier ~/installeur/00-menu.sh si il n'existe pas.
+if [ -d "~/installeur/00-menu.sh" ]; then
+ echo "~/installeur/00-menu.sh est déjà créé"
+else
+ echo "~/installeur/00-menu.sh va être créé"
+ # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
+ wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
+
+ # Lancer le menu à jour qui vient d'être chargé.
+ sh ~/installeur/00-menu.sh
+fi
+
+# test -d => teste l'existence d'un dossier (un fichier de type "d" )
+# test -f => teste l'existence d'un fichier (fichier de type "-" )
+# test -L => teste l'existence d'un lien symbolique (fichier de type "l" )
+# test -s => teste l'existence d'un socket (fichier de type "s" )
+# test -b => teste l'existence d'un fichier I/O en mode bloc (fichier de type "b" )
+# test -c => teste l'existence d'un fichier I/O en mode caractère (fichier de type "c" )
+# test -e => teste l'existence d'un fichier quel que soit son  
+# type mais ne fonctionne qu'en bash. Pour faire pareil en "sh" (vieux Unix), il faut faire "ls -d <fichier> 1>/dev/null 2>&1"
+# Petit danger => "test -d" sur un lien symbolique vers un dossier renvoie "vrai" (le test s'applique sur la cible du lien et non sur le lien lui-même).
+# Si on veut tester que le fichier est un vrai répertoire, il faut faire un test de ce type # test -d dossier -a ! -L dossier
 
 clear # Clear the screen.
 cat ~/installeur/00-ascii.sh
