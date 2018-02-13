@@ -1,12 +1,12 @@
 #!/bin/bash
 
-MAX=2
-for X in $(seq 1 $MAX) ; do
-
-
-
 # Clear the screen.
 clear
+
+
+MAX=1
+for X in $(seq 1 $MAX) ; do
+
 
 # Créer le dossier installeur si il n'existe pas.
 # ~/installeur est toujours inexistant du fait d'un chemin relatif donc toujours recréé. Utiliser -h ne change rien.
@@ -69,6 +69,10 @@ cat ~/installeur/00-ascii.sh
 # Supprimer le fichier de l'image ascii.
 rm ~/installeur/00-ascii.sh
 sleep 4
+
+
+done
+
 
 #
 # TODO
@@ -247,8 +251,6 @@ rm -R installeur
   sleep 3
   sh 00-menu.sh
   ;;
-
-done
 
 esac
 exit 0
