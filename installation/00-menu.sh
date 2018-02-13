@@ -4,7 +4,8 @@
 clear
 
 # Créer le dossier installeur si il n'existe pas.
-if [ -d "~/installeur" ]; then
+# Bogue !!!!!!!!!!!!! Il recrée le dossier à chaque fois !!!!!!!!!!!!!!!!!!   -h au lieu de  -d  pour lien relatif ???
+if [ -h "~/installeur" ]; then
  echo " Le dossier ~/installeur existe déjà "
  sleep 4
 else
