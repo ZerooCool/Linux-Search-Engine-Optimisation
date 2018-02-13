@@ -1,27 +1,33 @@
 #!/bin/bash
-# Vider le terminal.
+# Vider l'écran du terminal.
 clear
 
 # Variables jour et heure.
-jour=$(date +%Y%m%d)
-heure=$(date +%H%M)
+jour=$(date %d-%m-+%Y)
+heure=$(date +%H:%M:%S)
+# Variables des couleurs.
+gris='\e[1;30m' rougefonce='\e[0;31m' vertfonce='\e[0;32m' vertclair='\e[1;32m' jaune='\e[1;33m' bleufonce='\e[0;34m' bleuclair='\e[1;34m' grisclair='\e[0;37m' blanc='\e[1;37m' neutre='\e[0;m'
+
+# Logs.txt
+cd ~/installeur
+echo "$jour - $heure : Les variables date et couleurs sont chargées." >> logs.txt
 
 # Vérifier si le dossier d'installation existe, sinon, le créer.
 ABS_PATH_INSTALLEUR=$(readlink -e ~/installeur)
 if [ -d "$ABS_PATH_INSTALLEUR" ]; then
  echo " Mise en route - Le dossier d'installation existe "
  sleep 3
- # Logs.txt
- cd ~/installeur
- echo "$jour - $heure : Mise en route - Le dossier d'installation existe" >> logs.txt
+# Logs.txt
+cd ~/installeur
+echo "$jour - $heure : Mise en route - Le dossier d'installation existe." >> logs.txt
 
 else
  echo " Initialisation - Le dossier d'installation n'existe pas encore et va être créé "
  sleep 3
  mkdir ~/installeur
- # Logs.txt
- cd ~/installeur
- echo "$jour - $heure : Initialisation - Le dossier d'installation n'existe pas encore et va être créé" >> logs.txt
+# Logs.txt
+cd ~/installeur
+echo "$jour - $heure : Initialisation - Le dossier d'installation n'existe pas encore et va être créé." >> logs.txt
 fi
 
 # Charger le fichier ~/installeur/00-menu.sh si il n'existe pas.
@@ -32,17 +38,18 @@ if [ -f "00-menu.sh" ]; then
 
  ######### Ajouter une boucle pour recharger une seule fois le fichier en cas ou il soit obsolète.
 
- # Logs.txt
- cd ~/installeur
- echo "$jour - $heure : Mise en route - Le fichier du menu existe" >> logs.txt
+# Logs.txt
+cd ~/installeur
+echo "$jour - $heure : Mise en route - Le fichier du menu existe." >> logs.txt
 else
  echo " Initialisation - Le fichier du menu n'existe pas encore et va être créé "
  sleep 3
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
- # Logs.txt
- cd ~/installeur
- echo "$jour - $heure : Initialisation - Le fichier du menu n'existe pas encore et va être créé" >> logs.txt
+# Logs.txt
+cd ~/installeur
+echo "$jour - $heure : Initialisation - Le fichier du menu n'existe pas encore et va être créé." >> logs.txt
+echo "$jour - $heure : Le fichier menu est exécuté" >> logs.txt
 
  # Lancer le menu à jour qui vient d'être chargé.
  sh ~/installeur/00-menu.sh
@@ -52,46 +59,30 @@ else
  exit
 fi
 
-# Faire un test conditionnel ??? Pour éviter la redondance !!!
-# MAX=2
-# for X in $(seq 1 $MAX) ; do
-# commande
-# done
-
-# test -d => teste l'existence d'un dossier (un fichier de type "d" )
-# test -f => teste l'existence d'un fichier (fichier de type "-" )
-# test -L => teste l'existence d'un lien symbolique (fichier de type "l" )
-# test -s => teste l'existence d'un socket (fichier de type "s" )
-# test -b => teste l'existence d'un fichier I/O en mode bloc (fichier de type "b" )
-# test -c => teste l'existence d'un fichier I/O en mode caractère (fichier de type "c" )
-# test -e => teste l'existence d'un fichier quel que soit son  
-# type mais ne fonctionne qu'en bash. Pour faire pareil en "sh" (vieux Unix), il faut faire "ls -d <fichier> 1>/dev/null 2>&1"
-# Petit danger => "test -d" sur un lien symbolique vers un dossier renvoie "vrai" (le test s'applique sur la cible du lien et non sur le lien lui-même).
-# Si on veut tester que le fichier est un vrai répertoire, il faut faire un test de ce type # test -d dossier -a ! -L dossier
-
-
 # Charger l'image ascii depuis Github.
 cd ~/installeur
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
-
-# Clear the screen.
+# Vider l'écran du terminal.
 clear
-
 # Afficher l'image ascii.
 cat ~/installeur/00-ascii.sh
-
 # Supprimer le fichier de l'image ascii.
 rm ~/installeur/00-ascii.sh
 sleep 4
+# Logs.txt
+cd ~/installeur
+echo "$jour - $heure : Chargement de l'image ascii." >> logs.txt
+echo "$jour - $heure : Vider l'écran du terminal." >> logs.txt
+echo "$jour - $heure : Afficher l'image ascii." >> logs.txt
+echo "$jour - $heure : Supprimer le fichier de l'image ascii." >> logs.txt
 
 
 #
-# TODO
+# A faire si nécessaire.
 # Installer sudo sur l'hôte !
 # Donner les droits sudoers à l'utilisateur seo (mdp : UtilisateurSEO)
 #
 
-gris='\e[1;30m' rougefonce='\e[0;31m' vertfonce='\e[0;32m' vertclair='\e[1;32m' jaune='\e[1;33m' bleufonce='\e[0;34m' bleuclair='\e[1;34m' grisclair='\e[0;37m' blanc='\e[1;37m' neutre='\e[0;m'
 
 echo " ################################## "
 echo " #              ${bleuclair}Menu${neutre}              # "
@@ -114,6 +105,10 @@ echo " [8] Exit "
 echo
 echo "Choisir une option pour continuer :"
 
+# Logs.txt
+cd ~/installeur
+echo "$jour - $heure : Le menu est affiché." >> logs.txt
+
 read person
 case "$person" in
 
@@ -123,11 +118,26 @@ case "$person" in
   echo " Installer Docker "
   sleep 4
 
-cd /home/
+cd ~/installeur
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-installer-docker.sh
+
+# Logs.txt
+cd ~/installeur
+echo "$jour - $heure : Chargement du script d'installation pour Docker." >> logs.txt
+
 sh 1-installer-docker.sh
-cd /home/
+
+# Logs.txt
+cd ~/installeur
+echo "$jour - $heure : Lancement du script d'installation pour Docker." >> logs.txt
+
+cd ~/installeur
 rm 1-installer-docker.sh
+
+# Logs.txt
+cd ~/installeur
+echo "$jour - $heure : Suppression du script d'installation pour Docker." >> logs.txt
+
 sleep 4
   ;;
 # Double points virgule pour fermer l'option 1.
@@ -263,10 +273,14 @@ rm -R installeur
 esac
 exit 0
 
-# TODO
 # Faire revenir chaque action de script sur ce menu.
 
-# TODO
+# Continuer d'ajouter les logs à l'étape 2 et plus.
+
+# Faciliter la lecture de l'installation avec sleep 3 et clear
+
+# Ajouter des couleurs.
+
 # Retour erreur après chaque action. Exemple :
 # apt clean
 # if [ "$?" = "0" ] ; then
@@ -275,11 +289,21 @@ exit 0
 # echo "Les paquets présents dans /var/cache/apt/archives n'ont pas été supprimés."
 # fi
 
-# TODO
-# sleep 4
-# Faciliter la lecture de l'installation.
 
-# clear
-# Faciliter la lecture de l'écran.
+# Faire un test conditionnel ??? Pour éviter la redondance !!!
+# MAX=2
+# for X in $(seq 1 $MAX) ; do
+# commande
+# done
 
-# Ajouter des couleurs.
+
+# test -d => teste l'existence d'un dossier (un fichier de type "d" )
+# test -f => teste l'existence d'un fichier (fichier de type "-" )
+# test -L => teste l'existence d'un lien symbolique (fichier de type "l" )
+# test -s => teste l'existence d'un socket (fichier de type "s" )
+# test -b => teste l'existence d'un fichier I/O en mode bloc (fichier de type "b" )
+# test -c => teste l'existence d'un fichier I/O en mode caractère (fichier de type "c" )
+# test -e => teste l'existence d'un fichier quel que soit son  
+# type mais ne fonctionne qu'en bash. Pour faire pareil en "sh" (vieux Unix), il faut faire "ls -d <fichier> 1>/dev/null 2>&1"
+# Petit danger => "test -d" sur un lien symbolique vers un dossier renvoie "vrai" (le test s'applique sur la cible du lien et non sur le lien lui-même).
+# Si on veut tester que le fichier est un vrai répertoire, il faut faire un test de ce type # test -d dossier -a ! -L dossier
