@@ -34,18 +34,17 @@ if [ -f "00-menu.sh" ]; then
  echo " Mise en route - Le fichier du menu existe "
  sleep 3
 
+# Logs.txt
+echo "$jour - $heure : Mise en route - Le fichier du menu existe." >> logs.txt
+
 # Ajouter une boucle pour recharger une seule fois le fichier en cas ou il soit obsolète.
 
-# Logs.txt
-cd ~/installeur
-echo "$jour - $heure : Mise en route - Le fichier du menu existe." >> logs.txt
 else
- echo " Initialisation - Le fichier du menu n'existe pas encore et va être créé "
+ echo " Initialisation - Le fichier du menu n'existe pas encore et va être créé et exécuté "
  sleep 3
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
  # Logs.txt
- cd ~/installeur
  echo "$jour - $heure : Initialisation - Le fichier du menu n'existe pas encore et va être créé." >> logs.txt
  echo "$jour - $heure : Le fichier menu est exécuté" >> logs.txt
  # Lancer le menu à jour qui vient d'être chargé.
@@ -56,21 +55,20 @@ else
  exit
 fi
 
-clear
 # Charger l'image ascii depuis Github.
 cd ~/installeur
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
-# Vider l'écran du terminal.
 clear
 # Afficher l'image ascii.
 cat ~/installeur/00-ascii.sh
+sleep 4
 # Supprimer le fichier de l'image ascii.
 rm ~/installeur/00-ascii.sh
-sleep 4
+
 # Logs.txt
 cd ~/installeur
-echo "$jour - $heure : Vider l'écran du terminal." >> logs.txt
 echo "$jour - $heure : Chargement de l'image ascii." >> logs.txt
+echo "$jour - $heure : Vider l'écran du terminal." >> logs.txt
 echo "$jour - $heure : Afficher l'image ascii." >> logs.txt
 echo "$jour - $heure : Supprimer le fichier de l'image ascii." >> logs.txt
 
