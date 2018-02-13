@@ -22,17 +22,10 @@ cd ~/installeur
 if [ -f "00-menu.sh" ]; then
 
  echo " Le fichier 00-menu.sh existe déjà. "
-# Bogue ?
- # Suppression de la version courante du fichier 00-menu.sh
- # rm ~/installeur/00-menu.sh
-
-# Bogue ?
- # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
- # wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
  sleep 3
  # On lance le nouveau script de menu une fois et on arrête à la fin du script.
  # Permet d'éviter de continuer sur le script menu utilisé, qui peut être obsolète.
- sh ~/installeur/00-menu.sh
+ sh 00-menu.sh
  exit
 
 else
@@ -41,7 +34,7 @@ else
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
  # Lancer le menu à jour qui vient d'être chargé.
- sh ~/installeur/00-menu.sh
+ sh 00-menu.sh
  # On crée le nouveau script et on lance le nouveau script de menu une fois et on arrête à la fin du script.
  # Permet d'éviter de continuer sur le script menu utilisé, qui peut être obsolète.
  exit
