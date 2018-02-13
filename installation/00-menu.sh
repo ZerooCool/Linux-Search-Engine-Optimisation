@@ -42,24 +42,36 @@ if [ -f "00-menu.sh" ]; then
 # Logs.txt
 echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
 
+
+
+
+
+
 # Une boucle met une fois à jour le fichier de menu existant en cas ou il soit obsolète.
+i=1
 MAX=1
-for X in $(seq 1 $MAX) ; do
+for i in $(seq 1 $MAX) ; do
+i++
+
 # Suppression du menu présent dans le dossier d'installation.
 rm 00-menu.sh
 # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
 # Logs.txt
+echo "$jour - $heure : Une boucle est lancée une seule fois." >> logs.txt
 echo "$jour - $heure : Suppression du menu existant en cas ou il soit obsolète." >> logs.txt
-echo "$jour - $heure : Une boucle met une fois à jour le menu en chargeant la dernière version." >> logs.txt
 echo "$jour - $heure : Le menu mis à jour est lancé." >> logs.txt
 # Lancer le menu à jour qui vient d'être chargé.
 sh ~/installeur/00-menu.sh
 # Lorsque le dernier menu à jour est chargé, puis, arrêté depuis les choix disponibles, l'appel initial pouvant venir de ce fichier 00-menu.sh en local continue son exécution.
 # Le dossier ~/installeur n'existant plus, supprimé à la fin de l'exécution du nouveau script de 00-menu.sh téléchargé et à jour, le fichier ascii ne peut se charger.
 # Pour empêcher la reprise de la fin du menu ci-dessous, arrêter ici la lecture du script avec exit.
-exit
 done
+
+exit
+
+
+
 
 else
  echo " Chargement - Le fichier du menu n'existe pas et va être créé et exécuté "
