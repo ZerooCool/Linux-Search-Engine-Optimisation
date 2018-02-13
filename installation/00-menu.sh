@@ -43,11 +43,10 @@ else
  sleep 3
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
-# Logs.txt
-cd ~/installeur
-echo "$jour - $heure : Initialisation - Le fichier du menu n'existe pas encore et va être créé." >> logs.txt
-echo "$jour - $heure : Le fichier menu est exécuté" >> logs.txt
-
+ # Logs.txt
+ cd ~/installeur
+ echo "$jour - $heure : Initialisation - Le fichier du menu n'existe pas encore et va être créé." >> logs.txt
+ echo "$jour - $heure : Le fichier menu est exécuté" >> logs.txt
  # Lancer le menu à jour qui vient d'être chargé.
  sh ~/installeur/00-menu.sh
  # Lorsque le dernier menu à jour est chargé, puis, arrêté depuis les choix disponibles, l'appel initial pouvant venir de ce fichier 00-menu.sh en local continue son exécution.
@@ -57,11 +56,16 @@ echo "$jour - $heure : Le fichier menu est exécuté" >> logs.txt
 fi
 
 # Vider l'écran du terminal.
+
 clear
+
 # Charger l'image ascii depuis Github.
 cd ~/installeur
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
 # Afficher l'image ascii.
+
+clear
+
 cat ~/installeur/00-ascii.sh
 # Supprimer le fichier de l'image ascii.
 rm ~/installeur/00-ascii.sh
@@ -292,15 +296,3 @@ exit 0
 # for X in $(seq 1 $MAX) ; do
 # commande
 # done
-
-
-# test -d => teste l'existence d'un dossier (un fichier de type "d" )
-# test -f => teste l'existence d'un fichier (fichier de type "-" )
-# test -L => teste l'existence d'un lien symbolique (fichier de type "l" )
-# test -s => teste l'existence d'un socket (fichier de type "s" )
-# test -b => teste l'existence d'un fichier I/O en mode bloc (fichier de type "b" )
-# test -c => teste l'existence d'un fichier I/O en mode caractère (fichier de type "c" )
-# test -e => teste l'existence d'un fichier quel que soit son  
-# type mais ne fonctionne qu'en bash. Pour faire pareil en "sh" (vieux Unix), il faut faire "ls -d <fichier> 1>/dev/null 2>&1"
-# Petit danger => "test -d" sur un lien symbolique vers un dossier renvoie "vrai" (le test s'applique sur la cible du lien et non sur le lien lui-même).
-# Si on veut tester que le fichier est un vrai répertoire, il faut faire un test de ce type # test -d dossier -a ! -L dossier
