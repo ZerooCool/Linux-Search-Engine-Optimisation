@@ -7,10 +7,10 @@ clear
 # ~/installeur est toujours inexistant du fait d'un chemin relatif donc toujours recréé. Utiliser -h ne change rien.
 if [ -d "/home/seo/installeur" ]; then
  echo " Le dossier ~/installeur existe déjà "
- sleep 4
+ sleep 3
 else
  echo " Le dossier ~/installeur va être créé "
- sleep 4
+ sleep 3
  mkdir ~/installeur
 fi
 
@@ -20,28 +20,27 @@ clear
 # Charger le fichier ~/installeur/00-menu.sh si il n'existe pas.
 cd ~/installeur
 if [ -f "00-menu.sh" ]; then
- echo " Le fichier 00-menu.sh existe déjà "
- sleep 4
 
-
-# LA
+ echo " Le fichier 00-menu.sh existe et va être remplacé par la dernière version "
+ # Suppression de la version courante du fichier 00-menu.sh
+ rm ~/installeur/00-menu.sh
+ # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
+ wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
+ sleep 3
+ # On lance le nouveau script de menu une fois et on arrête à la fin du script.
  sh ~/installeur/00-menu.sh
  exit
 
-
 else
- echo " Le fichier 00-menu.sh va être créé dans le dossier installeur "
- sleep 4
+ echo " Le fichier 00-menu.sh n'existe pas et va être créé dans le dossier installeur "
+ sleep 3
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
  # Lancer le menu à jour qui vient d'être chargé.
  sh ~/installeur/00-menu.sh
-
-
-# LA
-exit
-
-
+ # On crée le nouveau script et on lance le nouveau script de menu une fois et on arrête à la fin du script.
+ # Permet d'éviter de continuer sur le script menu utilisé, qui peut être obsolète.
+ exit
 fi
 
 
@@ -51,6 +50,7 @@ fi
 # for X in $(seq 1 $MAX) ; do
 # commande
 # done
+# => exit a réglé le doublon.
 
 # test -d => teste l'existence d'un dossier (un fichier de type "d" )
 # test -f => teste l'existence d'un fichier (fichier de type "-" )
@@ -232,11 +232,11 @@ rm 4-installer-joomla.sh
   sleep 4
 
 # Message temporaire pouvant être retiré une fois l'ensemble des scripts stables.
-echo
-echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis GitHub${neutre}"
-echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
-echo
-sleep 4
+  echo
+  echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis GitHub${neutre}"
+  echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
+  echo
+  sleep 4
 
 # Supprimer le dossier installeur à la fin de l'installation.
 cd ~/
@@ -255,7 +255,7 @@ sleep 4
 #  echo
   echo "${rougefonce}Merci d'utiliser uniquement les options du menu${neutre}"
   sleep 3
-  sh 00-menu.sh
+  sh ~/installeur/00-menu.sh
   ;;
 
 esac
