@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Vider l'écran du terminal.
-clear
+# Effacer l'écran du terminal.
+reset
 
 # Variables.
 # Jour et heure.
@@ -58,7 +58,7 @@ fi
 # Charger l'image ascii depuis Github.
 cd ~/installeur
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
-clear
+reset
 # Afficher l'image ascii.
 cat ~/installeur/00-ascii.sh
 sleep 4
@@ -68,7 +68,7 @@ rm ~/installeur/00-ascii.sh
 # Logs.txt
 cd ~/installeur
 echo "$jour - $heure : Chargement de l'image ascii." >> logs.txt
-echo "$jour - $heure : Vider l'écran du terminal." >> logs.txt
+echo "$jour - $heure : Effacer l'écran du terminal." >> logs.txt
 echo "$jour - $heure : Afficher l'image ascii." >> logs.txt
 echo "$jour - $heure : Supprimer le fichier de l'image ascii." >> logs.txt
 
@@ -271,7 +271,7 @@ exit 0
 
 # Continuer d'ajouter les logs à l'étape 2 et plus.
 
-# Faciliter la lecture de l'installation avec sleep 3 et clear
+# Faciliter la lecture de l'installation avec sleep 3 et reset
 
 # Ajouter des couleurs.
 
