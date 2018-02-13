@@ -1,42 +1,36 @@
 #!/bin/bash
 
-# Clear the screen.
+# Vider le terminal.
 clear
 
-# Créer le dossier installeur si il n'existe pas.
-# ~/installeur est toujours inexistant du fait d'un chemin relatif donc toujours recréé. Utiliser -h ne change rien.
-# Je suis obligé de donner le path directement /home/seo/installeur
-
-ABS_PATH=$(readlink -e ~/installeur)
-if [ -d "$ABS_PATH" ]; then
- echo " Le dossier ~/installeur existe déjà "
- sleep 4
+# Vérifier si le dossier d'installation existe, sinon, le créer.
+ABS_PATH_INSTALLEUR=$(readlink -e ~/installeur)
+if [ -d "$ABS_PATH_INSTALLEUR" ]; then
+ echo " Le dossier d'installation existe déjà "
+ sleep 3
 else
- echo " Le dossier ~/installeur va être créé "
- sleep 4
- mkdir ~/installeur
+ echo " Le dossier d'installation n'existe pas encore et va être créé "
+ sleep 3
+ mkdir $ABS_PATH_INSTALLEUR
+# Vider le terminal.
+clear
 fi
 
-# Clear the screen.
-clear
-
 # Charger le fichier ~/installeur/00-menu.sh si il n'existe pas.
-cd ~/installeur
+cd $ABS_PATH_INSTALLEUR
 if [ -f "00-menu.sh" ]; then
- echo " Le fichier 00-menu.sh existe déjà "
- sleep 4
-
+ echo " Le fichier pour appeler le menu existe déjà "
+ sleep 3
 
 # ICI Ajouter une boucle pour recréer une seule fois le fichier pour le charger une seule fois, en cas ou il est obsolète.
 
-
 else
- echo " Le fichier 00-menu.sh va être créé dans le dossier installeur "
- sleep 4
+ echo " Le fichier pour appeler le menu n'existe pas encore et va être créé "
+ sleep 3
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
  # Lancer le menu à jour qui vient d'être chargé.
- sh ~/installeur/00-menu.sh
+ sh $ABS_PATH_INSTALLEUR/00-menu.sh
  exit
 fi
 
@@ -89,8 +83,8 @@ echo " #    ${bleuclair}Installation automatique${neutre}    # "
 echo " ################################## "
 sleep 4
 echo
-echo " L'assistant vous accompagne dans vos différents choix : "
-echo " ${vertfonce}Installations${neutre}, ${vertfonce}configurations${neutre}, ${vertclair}tests${neutre} ou ${gris}suppressions${neutre}. "
+echo " L'assistant vous accompagne dans vos différents choix "
+echo " ${vertfonce}Installer${neutre} - ${vertfonce}Configurer${neutre} - ${vertclair}Tester${neutre} - ${gris}Supprimmer${neutre} "
 sleep 4
 echo
 echo " ${vertfonce}[1] Installer Docker${neutre} "
