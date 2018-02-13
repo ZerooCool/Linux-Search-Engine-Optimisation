@@ -10,7 +10,7 @@ fi
 
 # Charger le fichier ~/installeur/00-menu.sh si il n'existe pas.
 cd ~/installeur
-if [ -d "00-menu.sh" ]; then
+if [ -f "00-menu.sh" ]; then
  echo "00-menu.sh est déjà créé"
 else
  echo "00-menu.sh va être créé dans le dossier installeur"
