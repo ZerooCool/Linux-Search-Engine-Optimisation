@@ -20,13 +20,12 @@ clear
 # Charger le fichier ~/installeur/00-menu.sh si il n'existe pas.
 cd ~/installeur
 if [ -f "00-menu.sh" ]; then
-
  echo " Le fichier 00-menu.sh existe déjà. "
  sleep 3
  # On lance le nouveau script de menu une fois et on arrête à la fin du script.
  # Permet d'éviter de continuer sur le script menu utilisé, qui peut être obsolète.
  sh 00-menu.sh
- exit
+# exit
 
 else
  echo " Le fichier 00-menu.sh n'existe pas et va être créé dans le dossier installeur "
@@ -37,7 +36,7 @@ else
  sh 00-menu.sh
  # On crée le nouveau script et on lance le nouveau script de menu une fois et on arrête à la fin du script.
  # Permet d'éviter de continuer sur le script menu utilisé, qui peut être obsolète.
- exit
+# exit
 fi
 
 
