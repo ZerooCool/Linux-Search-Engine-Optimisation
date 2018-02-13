@@ -56,11 +56,11 @@ echo "$jour - $heure : Le fichier menu est exécuté" >> logs.txt
  exit
 fi
 
+# Vider l'écran du terminal.
+clear
 # Charger l'image ascii depuis Github.
 cd ~/installeur
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
-# Vider l'écran du terminal.
-clear
 # Afficher l'image ascii.
 cat ~/installeur/00-ascii.sh
 # Supprimer le fichier de l'image ascii.
@@ -68,8 +68,8 @@ rm ~/installeur/00-ascii.sh
 sleep 4
 # Logs.txt
 cd ~/installeur
-echo "$jour - $heure : Chargement de l'image ascii." >> logs.txt
 echo "$jour - $heure : Vider l'écran du terminal." >> logs.txt
+echo "$jour - $heure : Chargement de l'image ascii." >> logs.txt
 echo "$jour - $heure : Afficher l'image ascii." >> logs.txt
 echo "$jour - $heure : Supprimer le fichier de l'image ascii." >> logs.txt
 
