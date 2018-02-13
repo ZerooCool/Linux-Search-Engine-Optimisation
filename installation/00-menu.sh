@@ -3,15 +3,15 @@
 mkdir ~/installeur
 cd ~/installeur
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
-sh 00-menu.sh
 
 # Mise à jour de la dernière version ---- Charger le menu depuis Github.
 cd ~/installeur
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
+sh ~/installeur/00-menu.sh
 
 clear # Clear the screen.
-cat 00-ascii.sh
-rm 00-ascii.sh
+cat ~/installeur/00-ascii.sh
+rm ~/installeur/00-ascii.sh
 sleep 4
 
 #
