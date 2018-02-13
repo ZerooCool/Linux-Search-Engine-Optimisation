@@ -5,7 +5,7 @@ clear
 
 # Créer le dossier installeur si il n'existe pas.
 # ~/installeur est toujours inexistant du fait d'un chemin relatif donc toujours recréé. Utiliser -h ne change rien.
-if [ -d "~/installeur" ]; then
+if [ -d "/home/seo/installeur" ]; then
  echo " Le dossier ~/installeur existe déjà "
  sleep 4
 else
@@ -28,7 +28,7 @@ else
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
  # Lancer le menu à jour qui vient d'être chargé.
- sh 00-menu.sh
+ sh ~/installeur/00-menu.sh
 fi
 
 # test -d => teste l'existence d'un dossier (un fichier de type "d" )
@@ -218,7 +218,8 @@ echo
 sleep 4
 
 # Supprimer le dossier installeur à la fin de l'installation.
-rm -R ~/installeur
+cd ~/
+rm -R installeur
 
   exit
   ;;
