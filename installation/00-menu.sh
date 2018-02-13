@@ -1,5 +1,10 @@
 #!/bin/bash
 
+MAX=2
+for X in $(seq 1 $MAX) ; do
+
+
+
 # Clear the screen.
 clear
 
@@ -30,6 +35,14 @@ else
  # Lancer le menu à jour qui vient d'être chargé.
  sh ~/installeur/00-menu.sh
 fi
+
+
+# PROBLEME Lorsque le dernier menu à jour est chargé, puis, arrêté, l'ancien se relance, le dossier ~/installeur n'existe plus, donc, le fichier ascii n'est pas chargé.
+# Faire un test conditionnel ??? Pour éviter la redondance !!!
+# MAX=2
+# for X in $(seq 1 $MAX) ; do
+# commande
+# done
 
 # test -d => teste l'existence d'un dossier (un fichier de type "d" )
 # test -f => teste l'existence d'un fichier (fichier de type "-" )
@@ -234,6 +247,8 @@ rm -R installeur
   sleep 3
   sh 00-menu.sh
   ;;
+
+done
 
 esac
 exit 0
