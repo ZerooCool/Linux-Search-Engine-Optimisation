@@ -3,11 +3,6 @@
 # Clear the screen.
 clear
 
-
-MAX=1
-for X in $(seq 1 $MAX) ; do
-
-
 # Créer le dossier installeur si il n'existe pas.
 # ~/installeur est toujours inexistant du fait d'un chemin relatif donc toujours recréé. Utiliser -h ne change rien.
 if [ -d "/home/seo/installeur" ]; then
@@ -27,6 +22,13 @@ cd ~/installeur
 if [ -f "00-menu.sh" ]; then
  echo " Le fichier 00-menu.sh existe déjà "
  sleep 4
+
+
+# LA
+ sh ~/installeur/00-menu.sh
+ exit
+
+
 else
  echo " Le fichier 00-menu.sh va être créé dans le dossier installeur "
  sleep 4
@@ -34,6 +36,12 @@ else
  wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
  # Lancer le menu à jour qui vient d'être chargé.
  sh ~/installeur/00-menu.sh
+
+
+# LA
+exit
+
+
 fi
 
 
@@ -69,10 +77,6 @@ cat ~/installeur/00-ascii.sh
 # Supprimer le fichier de l'image ascii.
 rm ~/installeur/00-ascii.sh
 sleep 4
-
-
-done
-
 
 #
 # TODO
@@ -237,6 +241,8 @@ sleep 4
 # Supprimer le dossier installeur à la fin de l'installation.
 cd ~/
 rm -R installeur
+echo " Le dossier installeur a été supprimé "
+sleep 4
 
   exit;
   ;;
