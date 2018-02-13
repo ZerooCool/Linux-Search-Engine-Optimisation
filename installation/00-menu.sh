@@ -1,41 +1,57 @@
 #!/bin/bash
-
 # Vider le terminal.
 clear
+
+# Variables jour et heure.
+jour=$(date +%Y%m%d)
+heure=$(date +%H%M)
 
 # Vérifier si le dossier d'installation existe, sinon, le créer.
 ABS_PATH_INSTALLEUR=$(readlink -e ~/installeur)
 if [ -d "$ABS_PATH_INSTALLEUR" ]; then
- echo " Le dossier d'installation existe déjà "
+ echo " Mise en route - Le dossier d'installation existe "
  sleep 3
+ # Logs.txt
+ cd ~/installeur
+ echo "$jour - $heure : Mise en route - Le dossier d'installation existe" >> logs.txt
+
 else
- echo " Le dossier d'installation n'existe pas encore et va être créé "
+ echo " Initialisation - Le dossier d'installation n'existe pas encore et va être créé "
  sleep 3
  mkdir ~/installeur
-# Vider le terminal.
-clear
+ # Logs.txt
+ cd ~/installeur
+ echo "$jour - $heure : Initialisation - Le dossier d'installation n'existe pas encore et va être créé" >> logs.txt
 fi
 
 # Charger le fichier ~/installeur/00-menu.sh si il n'existe pas.
 cd ~/installeur
 if [ -f "00-menu.sh" ]; then
- echo " Le fichier pour appeler le menu existe déjà "
+ echo " Mise en route - Le fichier du menu existe "
  sleep 3
 
-# ICI Ajouter une boucle pour recréer une seule fois le fichier pour le charger une seule fois, en cas ou il est obsolète.
+ ######### Ajouter une boucle pour recharger une seule fois le fichier en cas ou il soit obsolète.
 
+ # Logs.txt
+ cd ~/installeur
+ echo "$jour - $heure : Mise en route - Le fichier du menu existe" >> logs.txt
 else
- echo " Le fichier pour appeler le menu n'existe pas encore et va être créé "
+ echo " Initialisation - Le fichier du menu n'existe pas encore et va être créé "
  sleep 3
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
+ # Logs.txt
+ cd ~/installeur
+ echo "$jour - $heure : Initialisation - Le fichier du menu n'existe pas encore et va être créé" >> logs.txt
+
  # Lancer le menu à jour qui vient d'être chargé.
  sh ~/installeur/00-menu.sh
+ # Lorsque le dernier menu à jour est chargé, puis, arrêté depuis les choix disponibles, l'appel initial pouvant venir de ce fichier 00-menu.sh en local continue son exécution.
+ # Le dossier ~/installeur n'existant plus, supprimé à la fin de l'exécution du nouveau script de 00-menu.sh téléchargé et à jour, le fichier ascii ne peut se charger.
+ # Pour empêcher la reprise de la fin du menu ci-dessous, arrêter ici la lecture du script avec exit.
  exit
 fi
 
-
-# PROBLEME Lorsque le dernier menu à jour est chargé, puis, arrêté, l'ancien se relance, le dossier ~/installeur n'existe plus, donc, le fichier ascii n'est pas chargé.
 # Faire un test conditionnel ??? Pour éviter la redondance !!!
 # MAX=2
 # for X in $(seq 1 $MAX) ; do
