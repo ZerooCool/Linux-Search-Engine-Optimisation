@@ -5,13 +5,13 @@ clear
 
 # Créer le dossier installeur si il n'existe pas.
 # ~/installeur est toujours inexistant du fait d'un chemin relatif donc toujours recréé. Utiliser -h ne change rien.
-if [ -d "/home/installeur/" ]; then
+if [ -d "/home/installeur" ];then
  echo " Le dossier ~/installeur existe déjà "
  sleep 4
 else
  echo " Le dossier ~/installeur va être créé "
  sleep 4
- mkdir ~/installeur
+ mkdir /home/installeur
 fi
 
 # Clear the screen.
