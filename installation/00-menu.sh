@@ -6,7 +6,7 @@ clear
 # Créer le dossier installeur si il n'existe pas.
 # ~/installeur est toujours inexistant du fait d'un chemin relatif donc toujours recréé. Utiliser -h ne change rien.
 # Je suis obligé de donner le path directement /home/seo/installeur
-DIR=$( cd -P $( dirname ~/installeur )
+DIR=$( cd -P $( dirname ~/installeur ))
 if [ -d "$DIR" ]; then
  echo " Le dossier ~/installeur existe déjà "
  sleep 4
