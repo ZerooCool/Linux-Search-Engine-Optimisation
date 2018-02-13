@@ -1,12 +1,13 @@
 #!/bin/bash
+
 # Vider l'écran du terminal.
 clear
 
 # Variables.
-## Jour et heure.
+# Jour et heure.
 jour=$(date +%d-%m-%Y)
 heure=$(date +%H:%M:%S)
-## Couleurs.
+# Couleurs.
 gris='\e[1;30m' rougefonce='\e[0;31m' vertfonce='\e[0;32m' vertclair='\e[1;32m' jaune='\e[1;33m' bleufonce='\e[0;34m' bleuclair='\e[1;34m' grisclair='\e[0;37m' blanc='\e[1;37m' neutre='\e[0;m'
 
 # Vérifier si le dossier d'installation existe, sinon, le créer.
@@ -33,7 +34,7 @@ if [ -f "00-menu.sh" ]; then
  echo " Mise en route - Le fichier du menu existe "
  sleep 3
 
- ######### Ajouter une boucle pour recharger une seule fois le fichier en cas ou il soit obsolète.
+# Ajouter une boucle pour recharger une seule fois le fichier en cas ou il soit obsolète.
 
 # Logs.txt
 cd ~/installeur
@@ -55,17 +56,13 @@ else
  exit
 fi
 
-# Vider l'écran du terminal.
-
 clear
-
 # Charger l'image ascii depuis Github.
 cd ~/installeur
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
-# Afficher l'image ascii.
-
+# Vider l'écran du terminal.
 clear
-
+# Afficher l'image ascii.
 cat ~/installeur/00-ascii.sh
 # Supprimer le fichier de l'image ascii.
 rm ~/installeur/00-ascii.sh
@@ -78,11 +75,9 @@ echo "$jour - $heure : Afficher l'image ascii." >> logs.txt
 echo "$jour - $heure : Supprimer le fichier de l'image ascii." >> logs.txt
 
 
-#
 # A faire si nécessaire.
 # Installer sudo sur l'hôte !
 # Donner les droits sudoers à l'utilisateur seo (mdp : UtilisateurSEO)
-#
 
 
 echo " ################################## "
