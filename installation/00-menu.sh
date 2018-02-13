@@ -24,8 +24,16 @@ if [ -f "00-menu.sh" ]; then
  sleep 3
  # On lance le nouveau script de menu une fois et on arrête à la fin du script.
  # Permet d'éviter de continuer sur le script menu utilisé, qui peut être obsolète.
+
+MAX=1
+for X in $(seq 1 $MAX) ; do
+
  sh ~/installeur/00-menu.sh
+
+done
+
 exit
+
 
 else
  echo " Le fichier 00-menu.sh n'existe pas et va être créé dans le dossier installeur "
