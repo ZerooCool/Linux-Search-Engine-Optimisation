@@ -221,7 +221,7 @@ sleep 4
 cd ~/
 rm -R installeur
 
-  exit
+  exit;
   ;;
 # Double points virgule pour fermer l'option 8.
 
