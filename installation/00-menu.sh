@@ -9,14 +9,15 @@ else
 fi
 
 # Charger le fichier ~/installeur/00-menu.sh si il n'existe pas.
-if [ -d "~/installeur/00-menu.sh" ]; then
- echo "~/installeur/00-menu.sh est déjà créé"
+cd ~/installeur
+if [ -d "00-menu.sh" ]; then
+ echo "00-menu.sh est déjà créé"
 else
- echo "~/installeur/00-menu.sh va être créé"
+ echo "00-menu.sh va être créé dans le dossier installeur"
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
  # Lancer le menu à jour qui vient d'être chargé.
- sh ~/installeur/00-menu.sh
+ sh 00-menu.sh
 fi
 
 
