@@ -1,29 +1,34 @@
 #!/bin/bash
 
+# Clear the screen.
+clear
+
 # Créer le dossier installeur si il n'existe pas.
 if [ -d "~/installeur" ]; then
- echo "~/installeur est déjà créé"
+ echo " Le dossier ~/installeur existe déjà "
  sleep 2
 else
- echo "~/installeur va être créé"
+ echo " Le dossier ~/installeur va être créé "
  sleep 2
  mkdir ~/installeur
 fi
 
+# Clear the screen.
+clear
+
 # Charger le fichier ~/installeur/00-menu.sh si il n'existe pas.
 cd ~/installeur
 if [ -f "00-menu.sh" ]; then
- echo "00-menu.sh est déjà créé"
+ echo " Le fichier 00-menu.sh existe déjà "
  sleep 2
 else
- echo "00-menu.sh va être créé dans le dossier installeur"
+ echo " Le fichier 00-menu.sh va être créé dans le dossier installeur "
  sleep 2
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
  # Lancer le menu à jour qui vient d'être chargé.
  sh 00-menu.sh
 fi
-
 
 # test -d => teste l'existence d'un dossier (un fichier de type "d" )
 # test -f => teste l'existence d'un fichier (fichier de type "-" )
@@ -41,8 +46,13 @@ fi
 cd ~/installeur
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
 
-clear # Clear the screen.
+# Clear the screen.
+clear
+
+# Afficher l'image ascii.
 cat ~/installeur/00-ascii.sh
+
+# Supprimer le fichier de l'image ascii.
 rm ~/installeur/00-ascii.sh
 sleep 4
 
