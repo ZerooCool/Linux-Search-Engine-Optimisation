@@ -4,8 +4,8 @@
 clear
 
 # Créer le dossier installeur si il n'existe pas.
-# Bogue !!!!!!!!!!!!! Il recrée le dossier à chaque fois !!!!!!!!!!!!!!!!!!   -h au lieu de  -d  pour lien relatif ???
-if [ -h "~/installeur" ]; then
+# ~/installeur est toujours inexistant du fait d'un chemin relatif donc toujours recréé. Utiliser -h ne change rien.
+if [ -d "/home/installeur" ]; then
  echo " Le dossier ~/installeur existe déjà "
  sleep 4
 else
