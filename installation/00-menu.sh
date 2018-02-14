@@ -37,8 +37,6 @@ fi
 # Charger le fichier 00-menu.sh si il n'existe pas.
 cd ~/installeur
 
-
-
 if [ -f "00-menu.sh" ]; then
  echo " Démarrage - Le fichier du menu existe "
  sleep 3
@@ -48,9 +46,9 @@ echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
 
 
 
-
+WAIT_TIME=1
 # Une boucle met une fois à jour le fichier de menu existant en cas ou il soit obsolète.
-for ((o=1; o<2; o++))
+for (( x=0; x<$WAIT_TIME"; x++ ))
 do
  echo " BOUCLE "
  sleep 3
