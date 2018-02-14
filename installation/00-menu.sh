@@ -40,9 +40,11 @@ cd ~/installeur
 
 
 # Une boucle met une fois à jour le fichier de menu existant en cas ou il soit obsolète.
-for i in `seq 1 1`;
+for ((o=1; o<=$counttab; o++)) 
 do
  echo " BOUCLE "
+counttab=1
+
  sleep 3
 
 
@@ -69,7 +71,6 @@ echo "$jour - $heure : Une boucle est lancée une seule fois." >> logs.txt
 echo "$jour - $heure : Suppression du menu existant en cas ou il soit obsolète." >> logs.txt
 echo "$jour - $heure : Le menu mis à jour pour être lancé." >> logs.txt
 
-i=$(($i+1))
 
  echo " EXECUTE MENU "
  sleep 3
