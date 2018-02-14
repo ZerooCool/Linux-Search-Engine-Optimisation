@@ -96,6 +96,7 @@ echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
 
 # Comment recharger vers la version téléchargée ?
 echo ciao
+sh ~/installeur/00-menu.sh
 exit
 
 
