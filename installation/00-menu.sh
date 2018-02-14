@@ -120,16 +120,16 @@ fi
 # Comment recharger vers la version téléchargée ?
 echo Charger le fichier à jour
 sleep 3
- if [ $top -eq PasAJour ]; then
-echo Charger le fichier mis à jour
+ if [ $top = PasAJour ]; then
+echo "Charger le fichier mis à jour"
 sleep 3
 sh ~/installeur/00-menu.sh
 exit
 else
-echo Charger le fichier à jour
+echo "Rien du tout"
 sleep 3
-sh ~/installeur/00-menu.sh
-exit
+# sh ~/installeur/00-menu.sh
+# exit
 fi
 #################################################
 
