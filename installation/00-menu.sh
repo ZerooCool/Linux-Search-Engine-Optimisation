@@ -48,9 +48,9 @@ echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
 
 
 
-counttab=2
+
 # Une boucle met une fois à jour le fichier de menu existant en cas ou il soit obsolète.
-for ((o=1; o<$counttab; o++))
+for ((o=1; o<2; o++))
 do
  echo " BOUCLE "
  sleep 3
