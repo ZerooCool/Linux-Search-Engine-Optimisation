@@ -47,23 +47,31 @@ echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
 
 
 
+
 # Une boucle met une fois à jour le fichier de menu existant en cas ou il soit obsolète.
-i=0
+
 MAX=1
-for i in $(seq 1 $MAX) ; do
-i++
+for (i=0; i<$MAX;i++);
+do
+ echo " BOUCLE "
+ sleep 3
 
 # Suppression du menu présent dans le dossier d'installation.
 rm 00-menu.sh
+ echo " SUPPRESSION "
+ sleep 3
 # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
+ echo " CHARGE NOUVEAU MENU "
+ sleep 3
 # Logs.txt
 echo "$jour - $heure : Une boucle est lancée une seule fois." >> logs.txt
 echo "$jour - $heure : Suppression du menu existant en cas ou il soit obsolète." >> logs.txt
-echo "$jour - $heure : Le menu mis à jour est lancé." >> logs.txt
+echo "$jour - $heure : Le menu mis à jour pour être lancé." >> logs.txt
 done
 
-
+ echo " EXECUTE MENU "
+ sleep 3
 # Lancer le menu à jour qui vient d'être chargé.
 sh ~/installeur/00-menu.sh
 # Lorsque le dernier menu à jour est chargé, puis, arrêté depuis les choix disponibles, l'appel initial pouvant venir de ce fichier 00-menu.sh en local continue son exécution.
