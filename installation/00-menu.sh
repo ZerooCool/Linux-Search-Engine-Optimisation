@@ -180,6 +180,7 @@ echo " ${vertfonce}[5] Entrer dans le shell de l'image et installer le serveur w
 echo " ${vertclair}[6] Tester le serveur web local${neutre} "
 echo " ${vertclair}[7] Importer et installer Joomla!${neutre} "
 echo " [8] Exit "
+echo " [ls] ls "
 echo
 echo "Choisir une option pour continuer :"
 
@@ -337,6 +338,12 @@ rm -R installeur
   exit;
   ;;
 # Double points virgule pour fermer l'option 8.
+
+# "ls" valeur acceptée pour voir ls.
+  "ls" )
+ls
+  ;;
+# Double points virgule pour fermer l'option ls.
 
           * )
   # Réponse par défaut.
