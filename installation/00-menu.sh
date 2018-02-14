@@ -54,11 +54,12 @@ echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
  
  Duree_De_Vie=`expr $calcul / 60`
  echo
- echo " $Duree_De_Vie minute(s) "
+ echo " Le fichier 00-menu.sh existe depuis $Duree_De_Vie minute(s) "
+ sleep 3
  
  # Le fichier doit avoir une existance de moins de 1 minute, sinon, il est remis à jour.
  if [ $Duree_De_Vie -gt 1 ]; then
- echo " Le fichier n'est pas à jour avec $Duree_De_Vie minutes de durée de vie. "
+ echo " Le fichier n'est pas considéré à jour avec $Duree_De_Vie minutes d'existance. "
 
  # Suppression du menu présent dans le dossier d'installation.
  rm 00-menu.sh
@@ -71,12 +72,13 @@ echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
  sleep 3
 
  # Logs.txt
- echo "$jour - $heure : Le fichier n'est pas à jour avec plus de une minute de durée de vie.." >> logs.txt
+ echo "$jour - $heure : Le fichier n'est pas considéré à jour avec plus de une minute d'existance." >> logs.txt
  echo "$jour - $heure : Suppression du menu existant considéré comme obsolète." >> logs.txt
  echo "$jour - $heure : Chargement de la nouvelle version depuis Github." >> logs.txt
 
  else
- echo " Le fichier est à jour avec $Duree_De_Vie minute de durée de vie. "
+ echo " Le fichier est à jour avec moins de $Duree_De_Vie minute d'existance. "
+ sleep 3
  fi
 
 
