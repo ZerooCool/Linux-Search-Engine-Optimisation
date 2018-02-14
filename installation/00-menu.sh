@@ -70,17 +70,21 @@ echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
  sleep 3
 
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
- # wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
- # echo " Le fichier 00-menu.sh est à jour "
+ wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
+ echo " Le fichier 00-menu.sh est à jour "
  # Logs.txt
- # echo "$jour - $heure : Le fichier 00-menu.sh est chargé depuis Github et à jour." >> logs.txt
- # sleep 3
+ echo "$jour - $heure : Le fichier 00-menu.sh est chargé depuis Github et à jour." >> logs.txt
+ sleep 3
+
+top=PasAJour
 
  else
  echo " Le fichier est à jour avec moins de $Duree_De_Vie minute d'existance "
  # Logs.txt
  echo "$jour - $heure : Le fichier est à jour avec moins de $Duree_De_Vie minute d'existance." >> logs.txt
  sleep 3
+
+top=AJour
 
 # TESTER LE RAPPEL AU NOUVEAU MENU
 # echo " EXECUTE MENU "
@@ -91,15 +95,8 @@ echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
 # Le dossier ~/installeur n'existant plus, supprimé à la fin de l'exécution du nouveau script de 00-menu.sh téléchargé et à jour, le fichier ascii ne peut se charger.
 # Pour empêcher la reprise de la fin du menu ci-dessous, arrêter ici la lecture du script avec exit.
 # exit
-
-
-# Comment recharger vers la version téléchargée ?
-echo ciao
-wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
-sh ~/installeur/00-menu.sh
-exit
-
  fi
+
 
 
 
@@ -117,8 +114,23 @@ else
  # Pour empêcher la reprise de la fin du menu ci-dessous, arrêter ici la lecture du script avec exit.
  exit
 fi
+#################################################
 
-
+#################################################
+# Comment recharger vers la version téléchargée ?
+echo Charger le fichier à jour
+sleep 3
+ if [ $top -eq PasAJour ]; then
+echo Charger le fichier mis à jour
+sleep 3
+sh ~/installeur/00-menu.sh
+exit
+else
+echo Charger le fichier à jour
+sleep 3
+sh ~/installeur/00-menu.sh
+exit
+fi
 #################################################
 
 #################################################
