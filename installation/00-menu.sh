@@ -36,15 +36,6 @@ fi
 #################################################
 # Charger le fichier 00-menu.sh si il n'existe pas.
 cd ~/installeur
-if [ -f "00-menu.sh" ]; then
- echo " Démarrage - Le fichier du menu existe "
- sleep 3
-# Logs.txt
-echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
-
-
-
-
 
 
 
@@ -53,6 +44,17 @@ for i in `seq 1 1`;
 do
  echo " BOUCLE "
  sleep 3
+
+
+
+if [ -f "00-menu.sh" ]; then
+ echo " Démarrage - Le fichier du menu existe "
+ sleep 3
+# Logs.txt
+echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
+
+
+
 
 # Suppression du menu présent dans le dossier d'installation.
 rm 00-menu.sh
@@ -69,7 +71,6 @@ echo "$jour - $heure : Le menu mis à jour pour être lancé." >> logs.txt
 
 i=$(($i+1))
 
-
  echo " EXECUTE MENU "
  sleep 3
 # Lancer le menu à jour qui vient d'être chargé.
@@ -77,9 +78,8 @@ sh ~/installeur/00-menu.sh
 # Lorsque le dernier menu à jour est chargé, puis, arrêté depuis les choix disponibles, l'appel initial pouvant venir de ce fichier 00-menu.sh en local continue son exécution.
 # Le dossier ~/installeur n'existant plus, supprimé à la fin de l'exécution du nouveau script de 00-menu.sh téléchargé et à jour, le fichier ascii ne peut se charger.
 # Pour empêcher la reprise de la fin du menu ci-dessous, arrêter ici la lecture du script avec exit.
-
 exit
-done
+
 
 
 
@@ -97,6 +97,8 @@ else
  # Pour empêcher la reprise de la fin du menu ci-dessous, arrêter ici la lecture du script avec exit.
  exit
 fi
+
+done
 #################################################
 
 #################################################
