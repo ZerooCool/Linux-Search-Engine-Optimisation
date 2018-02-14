@@ -49,8 +49,8 @@ echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
 
 
 # Une boucle met une fois à jour le fichier de menu existant en cas ou il soit obsolète.
-for (( i = 0; i <= 1; i++ ))
-do
+i=1
+while [  $i -le 1 ];  do
  echo " BOUCLE "
  sleep 3
 
@@ -66,6 +66,8 @@ wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisatio
 echo "$jour - $heure : Une boucle est lancée une seule fois." >> logs.txt
 echo "$jour - $heure : Suppression du menu existant en cas ou il soit obsolète." >> logs.txt
 echo "$jour - $heure : Le menu mis à jour pour être lancé." >> logs.txt
+
+i=$(($i+1))
 done
 
  echo " EXECUTE MENU "
