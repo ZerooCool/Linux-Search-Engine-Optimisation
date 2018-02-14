@@ -45,39 +45,43 @@ echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
 
 
 # Vérifier si le fichier 00-menu.sh est à jour.
+# Variables dates pour connaître la durée d'existance du fichier 00-menu.sh
  Date_Modif_Fichier=`perl -e '($atime,$mtime,$ctime)=(stat($ARGV[0]))[8..10];print "$mtime\n";' ~/installeur/00-menu.sh `
  Date_Du_Jour=`date -u '+%s'`
-
  Duree_De_Vie=`expr $Date_Du_Jour - $Date_Modif_Fichier`
- echo
- echo " Date du jour - Date de modification du fichier : $Duree_De_Vie secondes. "
- 
- Duree_De_Vie=`expr $calcul / 60`
+# echo " Date du jour - Date de modification du fichier : $Duree_De_Vie secondes. "
+ Duree_De_Vie=`expr $Duree_De_Vie / 60`
  echo
  echo " Le fichier 00-menu.sh existe depuis $Duree_De_Vie minute(s) "
+ # Logs.txt
+ echo "$jour - $heure : Le fichier 00-menu.sh existe depuis $Duree_De_Vie minute(s)." >> logs.txt
  sleep 3
  
  # Le fichier doit avoir une existance de moins de 1 minute, sinon, il est remis à jour.
  if [ $Duree_De_Vie -gt 1 ]; then
- echo " Le fichier n'est pas considéré à jour avec $Duree_De_Vie minutes d'existance. "
+ echo " Le fichier n'est pas considéré à jour avec $Duree_De_Vie minutes d'existance "
+ # Logs.txt
+ echo "$jour - $heure : Le fichier n'est pas considéré à jour avec $Duree_De_Vie minutes d'existance." >> logs.txt
 
  # Suppression du menu présent dans le dossier d'installation.
  rm 00-menu.sh
  echo " Suppression du fichier 00-menu.sh pour charger la version en ligne "
+ # Logs.txt
+ echo "$jour - $heure : Suppression du fichier 00-menu.sh pour charger la version en ligne." >> logs.txt
  sleep 3
 
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
- echo " Le fichier 00-menu.sh est remis à jour "
+ echo " Le fichier 00-menu.sh est à jour "
+ # Logs.txt
+ echo "$jour - $heure : Le fichier 00-menu.sh est chargé depuis Github et à jour." >> logs.txt
  sleep 3
 
- # Logs.txt
- echo "$jour - $heure : Le fichier n'est pas considéré à jour avec plus de une minute d'existance." >> logs.txt
- echo "$jour - $heure : Suppression du menu existant considéré comme obsolète." >> logs.txt
- echo "$jour - $heure : Chargement de la nouvelle version depuis Github." >> logs.txt
 
  else
- echo " Le fichier est à jour avec moins de $Duree_De_Vie minute d'existance. "
+ echo " Le fichier est à jour avec moins de $Duree_De_Vie minute d'existance "
+ # Logs.txt
+ echo "$jour - $heure : Le fichier est à jour avec moins de $Duree_De_Vie minute d'existance." >> logs.txt
  sleep 3
  fi
 
