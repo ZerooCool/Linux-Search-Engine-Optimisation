@@ -36,7 +36,6 @@ fi
 #################################################
 # Charger le fichier 00-menu.sh si il n'existe pas.
 cd ~/installeur
-
 if [ -f "00-menu.sh" ]; then
  echo " Démarrage - Le fichier du menu existe "
  sleep 3
@@ -44,32 +43,23 @@ if [ -f "00-menu.sh" ]; then
 echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
 
 
-
-
-WAIT_TIME=1
 # Une boucle met une fois à jour le fichier de menu existant en cas ou il soit obsolète.
-for ((x=0; x<$WAIT_TIME; x++));
-do
- echo " BOUCLE "
- sleep 3
-
-
 
 # Suppression du menu présent dans le dossier d'installation.
-rm 00-menu.sh
- echo " SUPPRESSION "
- sleep 3
+#rm 00-menu.sh
+# echo " SUPPRESSION "
+# sleep 3
 # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
-wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
- echo " CHARGE NOUVEAU MENU "
- sleep 3
+#wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
+# echo " CHARGE NOUVEAU MENU "
+# sleep 3
 
-done
+#done
 
 # Logs.txt
-echo "$jour - $heure : Une boucle est lancée une seule fois." >> logs.txt
-echo "$jour - $heure : Suppression du menu existant en cas ou il soit obsolète." >> logs.txt
-echo "$jour - $heure : Le menu mis à jour pour être lancé." >> logs.txt
+#echo "$jour - $heure : Une boucle est lancée une seule fois." >> logs.txt
+#echo "$jour - $heure : Suppression du menu existant en cas ou il soit obsolète." >> logs.txt
+#echo "$jour - $heure : Le menu mis à jour pour être lancé." >> logs.txt
 
 
 ### echo " EXECUTE MENU ---- supprimer au dessous si nécessaire ?!! "
