@@ -38,16 +38,6 @@ fi
 cd ~/installeur
 
 
-counttab=2
-# Une boucle met une fois à jour le fichier de menu existant en cas ou il soit obsolète.
-for ((o=1; o<$counttab; o++))
-do
- echo " BOUCLE "
-
-
- sleep 3
-
-
 
 if [ -f "00-menu.sh" ]; then
  echo " Démarrage - Le fichier du menu existe "
@@ -55,6 +45,15 @@ if [ -f "00-menu.sh" ]; then
 # Logs.txt
 echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
 
+
+
+
+counttab=2
+# Une boucle met une fois à jour le fichier de menu existant en cas ou il soit obsolète.
+for ((o=1; o<$counttab; o++))
+do
+ echo " BOUCLE "
+ sleep 3
 
 
 
@@ -66,13 +65,16 @@ rm 00-menu.sh
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
  echo " CHARGE NOUVEAU MENU "
  sleep 3
+
+done
+
 # Logs.txt
 echo "$jour - $heure : Une boucle est lancée une seule fois." >> logs.txt
 echo "$jour - $heure : Suppression du menu existant en cas ou il soit obsolète." >> logs.txt
 echo "$jour - $heure : Le menu mis à jour pour être lancé." >> logs.txt
 
 
- echo " EXECUTE MENU "
+ echo " EXECUTE MENU ---- supprimer au dessous si nécessaire ?!! "
  sleep 3
 # Lancer le menu à jour qui vient d'être chargé.
 sh ~/installeur/00-menu.sh
@@ -99,7 +101,7 @@ else
  exit
 fi
 
-done
+
 #################################################
 
 #################################################
