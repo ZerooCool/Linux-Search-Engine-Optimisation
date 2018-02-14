@@ -83,19 +83,23 @@ echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
  # Logs.txt
  echo "$jour - $heure : Le fichier est à jour avec moins de $Duree_De_Vie minute d'existance." >> logs.txt
  sleep 3
+
+
+
+# TESTER LE RAPPEL AU NOUVEAU MENU
+ echo " EXECUTE MENU "
+ sleep 3
+# Lancer le menu à jour qui vient d'être chargé.
+ sh ~/installeur/00-menu.sh
+# Lorsque le dernier menu à jour est chargé, puis, arrêté depuis les choix disponibles, l'appel initial pouvant venir de ce fichier 00-menu.sh en local continue son exécution.
+# Le dossier ~/installeur n'existant plus, supprimé à la fin de l'exécution du nouveau script de 00-menu.sh téléchargé et à jour, le fichier ascii ne peut se charger.
+# Pour empêcher la reprise de la fin du menu ci-dessous, arrêter ici la lecture du script avec exit.
+ exit
+
  fi
 
 
 
-
-### echo " EXECUTE MENU "
-### sleep 3
-# Lancer le menu à jour qui vient d'être chargé.
-### sh ~/installeur/00-menu.sh
-# Lorsque le dernier menu à jour est chargé, puis, arrêté depuis les choix disponibles, l'appel initial pouvant venir de ce fichier 00-menu.sh en local continue son exécution.
-# Le dossier ~/installeur n'existant plus, supprimé à la fin de l'exécution du nouveau script de 00-menu.sh téléchargé et à jour, le fichier ascii ne peut se charger.
-# Pour empêcher la reprise de la fin du menu ci-dessous, arrêter ici la lecture du script avec exit.
-### exit
 
 
 
@@ -121,7 +125,13 @@ fi
 #################################################
 # Charger l'image ascii depuis Github.
 cd ~/installeur
+if [ -f "00-ascii.sh" ]; then
+rm 00-ascii.sh
 wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
+else
+wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
+fi
+
 reset
 # Afficher l'image ascii.
 cat ~/installeur/00-ascii.sh
