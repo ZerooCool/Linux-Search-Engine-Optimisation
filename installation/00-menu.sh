@@ -38,12 +38,12 @@ fi
 cd ~/installeur
 
 
-
+counttab=2
 # Une boucle met une fois à jour le fichier de menu existant en cas ou il soit obsolète.
-for ((o=1; o<$counttab; o++)) 
+for ((o=1; o<$counttab; o++))
 do
  echo " BOUCLE "
-counttab=1
+
 
  sleep 3
 
