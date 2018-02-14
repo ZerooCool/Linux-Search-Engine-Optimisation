@@ -67,7 +67,7 @@ echo "$jour - $heure : Une boucle est lancée une seule fois." >> logs.txt
 echo "$jour - $heure : Suppression du menu existant en cas ou il soit obsolète." >> logs.txt
 echo "$jour - $heure : Le menu mis à jour pour être lancé." >> logs.txt
 
-#i=$(($i+1))
+i=$(($i+1))
 
 
  echo " EXECUTE MENU "
