@@ -96,6 +96,7 @@ echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
 
 # Comment recharger vers la version téléchargée ?
 echo ciao
+wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
 sh ~/installeur/00-menu.sh
 exit
 
