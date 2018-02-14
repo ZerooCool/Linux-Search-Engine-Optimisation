@@ -92,7 +92,6 @@ echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
 # Pour empêcher la reprise de la fin du menu ci-dessous, arrêter ici la lecture du script avec exit.
 # exit
 
- fi
 
 # Comment recharger vers la version téléchargée ?
 echo ciao
@@ -100,7 +99,7 @@ wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisatio
 sh ~/installeur/00-menu.sh
 exit
 
-
+ fi
 
 
 
