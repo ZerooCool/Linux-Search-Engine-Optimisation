@@ -1,20 +1,22 @@
 #!/bin/bash
-
-#################################################
-# Effacer l'écran du terminal.
+###########
+########### Effacer l'écran du terminal.
 reset
-#################################################
+###########
+###########
 
-################### Variables ###################
+###########
+########### Variables
 # Jour et heure.
 jour=$(date +%d-%m-%Y)
 heure=$(date +%H:%M:%S)
 # Couleurs.
 gris='\e[1;30m' rougefonce='\e[0;31m' vertfonce='\e[0;32m' vertclair='\e[1;32m' jaune='\e[1;33m' bleufonce='\e[0;34m' bleuclair='\e[1;34m' grisclair='\e[0;37m' blanc='\e[1;37m' neutre='\e[0;m'
-#################################################
+###########
+###########
 
-#################################################
-# Vérifier si le dossier d'installation existe, sinon, le créer.
+###########
+########### Vérifier si le dossier d'installation existe, sinon, le créer.
 ABS_PATH_INSTALLEUR=$(readlink -e ~/installeur)
 if [ -d "$ABS_PATH_INSTALLEUR" ]; then
  echo " Démarrage - Le dossier d'installation existe "
@@ -22,7 +24,6 @@ if [ -d "$ABS_PATH_INSTALLEUR" ]; then
 # Logs.txt
 cd ~/installeur
 echo "$jour - $heure : Démarrage - Le dossier d'installation existe." >> logs.txt
-
 else
  echo " Chargement - Le dossier d'installation n'existe pas et va être créé "
  sleep 3
@@ -31,10 +32,11 @@ else
 cd ~/installeur
 echo "$jour - $heure : Chargement - Le dossier d'installation n'existe pas et va être créé." >> logs.txt
 fi
-#################################################
+###########
+###########
 
-#################################################
-# Charger le fichier 00-menu.sh si il n'existe pas.
+###########
+########### Charger le fichier 00-menu.sh si il n'existe pas.
 cd ~/installeur
 if [ -f "00-menu.sh" ]; then
  echo " Démarrage - Le fichier du menu existe "
@@ -70,13 +72,14 @@ echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
  sleep 3
 
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
- wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
+ curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
  echo " Le fichier 00-menu.sh est à jour "
  # Logs.txt
- echo "$jour - $heure : Le fichier 00-menu.sh est chargé depuis Github et à jour." >> logs.txt
+ echo "$jour - $heure : Le fichier 00-menu.sh a été chargé depuis Github." >> logs.txt
  sleep 3
 
-top=PasAJour
+ # Création de la variable $MenuValide pour lancer un test par la suite.
+MenuValide=PasAJour
 
  else
  echo " Le fichier est à jour avec moins de $Duree_De_Vie minute d'existance "
@@ -84,27 +87,15 @@ top=PasAJour
  echo "$jour - $heure : Le fichier est à jour avec moins de $Duree_De_Vie minute d'existance." >> logs.txt
  sleep 3
 
-top=AJour
-
-# TESTER LE RAPPEL AU NOUVEAU MENU
-# echo " EXECUTE MENU "
-# sleep 3
-# Lancer le menu à jour qui vient d'être chargé.
-# sh ~/installeur/00-menu.sh
-# Lorsque le dernier menu à jour est chargé, puis, arrêté depuis les choix disponibles, l'appel initial pouvant venir de ce fichier 00-menu.sh en local continue son exécution.
-# Le dossier ~/installeur n'existant plus, supprimé à la fin de l'exécution du nouveau script de 00-menu.sh téléchargé et à jour, le fichier ascii ne peut se charger.
-# Pour empêcher la reprise de la fin du menu ci-dessous, arrêter ici la lecture du script avec exit.
-# exit
+MenuValide=AJour
  fi
-
-
 
 
 else
  echo " Chargement - Le fichier du menu n'existe pas et va être créé et exécuté "
  sleep 3
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
- wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
+ curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
  # Logs.txt
  echo "$jour - $heure : Chargement - Le fichier du menu n'existe pas et va être créé et exécuté." >> logs.txt
  # Lancer le menu à jour qui vient d'être chargé.
@@ -114,33 +105,42 @@ else
  # Pour empêcher la reprise de la fin du menu ci-dessous, arrêter ici la lecture du script avec exit.
  exit
 fi
-#################################################
+###########
+###########
 
-#################################################
-# Comment recharger vers la version téléchargée ?
-echo Charger le fichier à jour
+###########
+########### Recharger vers la version téléchargée.
+echo
+echo " Chargement du fichier 00-menu.sh à jour "
 sleep 3
- if [ $top = PasAJour ]; then
-echo "Charger le fichier mis à jour"
+ # L'étape MenuValide PasAJour a été effectuée, le fichier 00-menu.sh a été téléchargé.
+ # Relancer le script 00-menu.sh
+ if [ $MenuValide = PasAJour ]; then
+echo
+echo "Charger le fichier du menu à jour"
 sleep 3
 sh ~/installeur/00-menu.sh
 exit
+ # L'étape MenuValide AJour a été effectuée, le fichier 00-menu.sh continue de charger.
+ # Le script ne se relance pas.
 else
-echo "Rien du tout"
+echo
+echo "................................."
 sleep 3
 # sh ~/installeur/00-menu.sh
 # exit
 fi
-#################################################
+###########
+###########
 
-#################################################
-# Charger l'image ascii depuis Github.
+###########
+########### Charger l'image ascii depuis Github.
 cd ~/installeur
 if [ -f "00-ascii.sh" ]; then
 rm 00-ascii.sh
-wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
 else
-wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
 fi
 
 reset
@@ -155,13 +155,11 @@ echo "$jour - $heure : Chargement de l'image ascii." >> logs.txt
 echo "$jour - $heure : Effacer l'écran du terminal." >> logs.txt
 echo "$jour - $heure : Afficher l'image ascii." >> logs.txt
 echo "$jour - $heure : Supprimer le fichier de l'image ascii." >> logs.txt
-#################################################
+###########
+###########
 
-# A faire si nécessaire.
-# Installer sudo sur l'hôte !
-# Donner les droits sudoers à l'utilisateur seo (mdp : UtilisateurSEO)
-
-#################################################
+###########
+########### Affichage du menu
 echo " ################################## "
 echo " #              ${bleuclair}Menu${neutre}              # "
 echo " #    ${bleuclair}Installation automatique${neutre}    # " 
@@ -180,25 +178,27 @@ echo " ${vertfonce}[5] Entrer dans le shell de l'image et installer le serveur w
 echo " ${vertclair}[6] Tester le serveur web local${neutre} "
 echo " ${vertclair}[7] Importer et installer Joomla!${neutre} "
 echo " [8] Exit "
-echo " [ls] ls "
+echo " [Logs] Consulter les logs de l'installation "
 echo
 echo "Choisir une option pour continuer :"
 
 # Logs.txt
 echo "$jour - $heure : Le menu est affiché en attente du choix." >> logs.txt
-#################################################
+###########
+###########
 
 read person
 case "$person" in
 
-# "1" | "un" | "UN" | "Un" valeurs acceptées pour lancer ce menu.
+###########
+########### "1" | "un" | "UN" | "Un" valeurs acceptées pour lancer ce menu.
   "1" | "un" | "UN" | "Un" )
   echo
   echo " Installer Docker "
   sleep 4
 
 cd ~/installeur
-wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-installer-docker.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-installer-docker.sh
 
 # Logs.txt
 cd ~/installeur
@@ -219,9 +219,11 @@ echo "$jour - $heure : Suppression du script d'installation pour Docker." >> log
 
 sleep 4
   ;;
-# Double points virgule pour fermer l'option 1.
+########### Double points virgule pour fermer l'option 1.
+###########
 
-# "2" | "deux" | "DEUX" | "Deux" valeurs acceptées pour lancer ce menu.
+###########
+########### "2" | "deux" | "DEUX" | "Deux" valeurs acceptées pour lancer ce menu.
   "2" | "deux" | "DEUX" | "Deux" )
 # S'identifier en root pour arrêter les conteneurs, les supprimer, supprimer les images.
   echo
@@ -233,91 +235,103 @@ su -c '
   echo
   sleep 4
 cd /home/
-wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-supprimer-conteneurs-et-images.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-supprimer-conteneurs-et-images.sh
 sh 1-supprimer-conteneurs-et-images.sh
 cd /home/
 rm 1-supprimer-conteneurs-et-images.sh
 sleep 4
 '
   ;;
-# Double points virgule pour fermer l'option 2.
+########### Double points virgule pour fermer l'option 2.
+###########
 
-# "3" | "trois" | "TROIS" | "Trois" valeurs acceptées pour lancer ce menu.
+###########
+########### "3" | "trois" | "TROIS" | "Trois" valeurs acceptées pour lancer ce menu.
   "3" | "trois" | "TROIS" | "Trois" )
   echo
   echo " Supprimer Docker "
   sleep 4
 
 cd /home/
-wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-supprimer-docker.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-supprimer-docker.sh
 sh 1-supprimer-docker.sh
 cd /home/
 rm 1-supprimer-docker.sh
 sleep 4
   ;;
-# Double points virgule pour fermer l'option 3.
+########### Double points virgule pour fermer l'option 3.
+###########
 
-# "4" | "quatre" | "QUATRE" | "Quatre" valeurs acceptées pour lancer ce menu.
+###########
+########### "4" | "quatre" | "QUATRE" | "Quatre" valeurs acceptées pour lancer ce menu.
   "4" | "quatre" | "QUATRE" | "Quatre" )
   echo
   echo " Importer l'image Docker de Debian "
   sleep 4
 
 cd /home/
-wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/2-importer-image-debian.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/2-importer-image-debian.sh
 sh 2-importer-image-debian.sh
 cd /home/
 rm 2-importer-image-debian.sh
 sleep 4
   ;;
-# Double points virgule pour fermer l'option 4.
+########### Double points virgule pour fermer l'option 4.
+###########
 
-# "5" | "cinq" | "CINQ" | "Cinq" valeurs acceptées pour lancer ce menu.
+########### "5" | "cinq" | "CINQ" | "Cinq" valeurs acceptées pour lancer ce menu.
+###########
   "5" | "cinq" | "CINQ" | "Cinq" )
   echo
   echo " Installer le serveur web local dans l'image debian de Docker "
   sleep 4
 
 cd /home/
-wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/3-installer-le-serveur-dans-le-conteneur.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/3-installer-le-serveur-dans-le-conteneur.sh
 sh 3-installer-le-serveur-dans-le-conteneur.sh
 cd /home/
 rm 3-installer-le-serveur-dans-le-conteneur.sh
   sleep 4
   ;;
-# Double points virgule pour fermer l'option 5.
+########### Double points virgule pour fermer l'option 5.
+###########
 
-# "6" | "six" | "SIX" | "Six" valeurs acceptées pour lancer ce menu.
+###########
+########### "6" | "six" | "SIX" | "Six" valeurs acceptées pour lancer ce menu.
   "6" | "six" | "SIX" | "Six" )
   echo
   echo " Importer les scripts pour tester le serveur "
   sleep 4
 
 cd /home/
-wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/4-hello.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/4-hello.sh
 sh 4-hello.sh
 cd /home/
 rm 4-hello.sh
   sleep 4
   ;;
-# Double points virgule pour fermer l'option 6.
+########### Double points virgule pour fermer l'option 6.
+###########
 
-# "7" | "sept" | "SEPT" | "Sept" valeurs acceptées pour lancer ce menu.
+###########
+########### "7" | "sept" | "SEPT" | "Sept" valeurs acceptées pour lancer ce menu.
   "7" | "sept" | "SEPT" | "Sept" )
   echo
   echo " Importer et installer Joomla! "
   sleep 4
 
 cd /home/
-wget https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/4-installer-joomla.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/4-installer-joomla.sh
 sh 4-installer-joomla.sh
 cd /home/
 rm 4-installer-joomla.sh
   sleep 4
   ;;
-# Double points virgule pour fermer l'option 7.
+########### Double points virgule pour fermer l'option 7.
+###########
 
-# "8" | "huit" | "HUIT" | "Huit" | "exit" | "EXIT" | "Exit" valeurs acceptées pour lancer ce menu.
+###########
+########### "8" | "huit" | "HUIT" | "Huit" | "exit" | "EXIT" | "Exit" valeurs acceptées pour lancer ce menu.
   "8" | "huit" | "HUIT" | "Huit" | "exit" | "EXIT" | "Exit" )
   echo
   echo "${rougefonce}L'assistant va s'arrêter${neutre}"
@@ -337,13 +351,20 @@ rm -R installeur
 
   exit;
   ;;
-# Double points virgule pour fermer l'option 8.
+########### Double points virgule pour fermer l'option 8.
+###########
 
-# "ls" valeur acceptée pour voir ls.
-  "ls" )
+###########
+########### "ls" valeur acceptée pour voir ls.
+  "logs" | "Logs" | "LOGS" | "log" | "Log" | "LOG" )
+pwd
 ls
+cat logs.txt
+sleep 5
+~/installeur/00-menu.sh
   ;;
-# Double points virgule pour fermer l'option ls.
+########### Double points virgule pour fermer l'option ls.
+###########
 
           * )
   # Réponse par défaut.
