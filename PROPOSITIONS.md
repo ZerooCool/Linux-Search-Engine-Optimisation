@@ -1,15 +1,22 @@
-# Propositions pour la Version 1.0
-Ajouter des pages du wiki dans les Favoris.<br/>
+# Propositions pour la Version 0.7
+Optimiser le poids des images pour les sites web.<br/>
+
 Transformer en URL coinhive les URL qui ne sont pas gratuites.<br/>
 
+Si nécessaire, installer sudo sur l'hôte !<br/>
+Donner les droits sudoers à l'utilisateur seo (mdp : UtilisateurSEO)<br/>
+
+Intégrer les scripts d'installation pour Docker et le serveur web local dans le menu.<br/>
+
+Intégrer Webcheck
+# Propositions pour la Version 1.0
+Ajouter des pages du wiki dans les Favoris.<br/>
 Récupérer la liste de ses contacts Twitter.<br/>
 Récupérer la liste de ses contacts Facebook.<br/><br/>
-Optimiser le poids des images pour les sites web.<br/>
 Identifier les liens morts dans une liste de liens.<br/>
 Ajouter des liens directs vers les outils partenaires.<br/>
 Ajouter les fichiers .pdf dans README avec le nom des auteurs : /home/seo/DOCU-SEO/Tutoriels/pdf/README<br/>
 Convertir les URL payantes et professionnelles avec coinhive. Les URL gratuites conserveront un accès direct.<br/>
-Intégrer Webcheck<br/>
 
 Vérifier pourquoi l'image Docker sauvegardée n'a pas de TAG lors de l'import.<br/>
 
