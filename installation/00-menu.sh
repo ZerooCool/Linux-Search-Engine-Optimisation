@@ -1,4 +1,5 @@
 #!/bin/bash
+
 ###########
 ########### Effacer l'écran du terminal.
 reset
@@ -125,7 +126,7 @@ exit
  # Le script ne se relance pas.
 else
 echo
-echo "................................."
+echo "_______________________"
 sleep 3
 # sh ~/installeur/00-menu.sh
 # exit
