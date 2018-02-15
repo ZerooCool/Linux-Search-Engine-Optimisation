@@ -73,7 +73,7 @@ echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
  sleep 3
 
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
- curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
+ curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh > ~/installeur/00-menu.sh
  echo " Le fichier 00-menu.sh est à jour "
  # Logs.txt
  echo "$jour - $heure : Le fichier 00-menu.sh a été chargé depuis Github." >> logs.txt
