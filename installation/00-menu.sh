@@ -363,11 +363,14 @@ rm -R installeur
 ###########
 ########### "ls" valeur acceptée pour voir ls.
   "logs" | "Logs" | "LOGS" | "log" | "Log" | "LOG" )
+echo
 pwd
+echo
 ls
+echo
 cat logs.txt
-sleep 5
-~/installeur/00-menu.sh
+sleep 25
+sh ~/installeur/00-menu.sh
   ;;
 ########### Double points virgule pour fermer l'option ls.
 ###########
