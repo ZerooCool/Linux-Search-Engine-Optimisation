@@ -112,13 +112,13 @@ fi
 ###########
 ########### Recharger vers la version téléchargée.
 echo
-echo " Chargement du fichier 00-menu.sh à jour "
+echo "  Démarrage - Le fichier du menu existe et est à jour "
 sleep 3
  # L'étape MenuValide PasAJour a été effectuée, le fichier 00-menu.sh a été téléchargé.
  # Relancer le script 00-menu.sh
  if [ $MenuValide = PasAJour ]; then
 echo
-echo "Charger le fichier du menu à jour"
+echo " Redémarrage de la dernière version du fichier 00-menu.sh "
 sleep 3
 sh ~/installeur/00-menu.sh
 exit
@@ -126,7 +126,7 @@ exit
  # Le script ne se relance pas.
 else
 echo
-echo "_______________________"
+echo " _________________________________________________________ "
 sleep 3
 # sh ~/installeur/00-menu.sh
 # exit
@@ -166,6 +166,11 @@ echo " #              ${bleuclair}Menu${neutre}              # "
 echo " #    ${bleuclair}Installation automatique${neutre}    # " 
 echo " ################################## "
 sleep 4
+reset
+echo " ################################## "
+echo " #              ${bleuclair}Menu${neutre}              # "
+echo " #    ${bleuclair}Installation automatique${neutre}    # " 
+echo " ################################## "
 echo
 echo " L'assistant vous accompagne dans vos différents choix "
 echo " ${vertfonce}Installer${neutre} - ${vertfonce}Configurer${neutre} - ${vertclair}Tester${neutre} - ${gris}Supprimmer${neutre} "
