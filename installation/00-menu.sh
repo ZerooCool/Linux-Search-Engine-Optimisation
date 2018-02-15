@@ -96,7 +96,7 @@ else
  echo " Chargement - Le fichier du menu n'existe pas et va être créé et exécuté "
  sleep 3
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
- curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh
+ curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh > ~/installeur/logs.txt
  # Logs.txt
  echo "$jour - $heure : Chargement - Le fichier du menu n'existe pas et va être créé et exécuté." >> logs.txt
  # Lancer le menu à jour qui vient d'être chargé.
@@ -139,9 +139,9 @@ fi
 cd ~/installeur
 if [ -f "00-ascii.sh" ]; then
 rm 00-ascii.sh
-curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh > ~/installeur/logs.txt
 else
-curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh > ~/installeur/logs.txt
 fi
 
 reset
@@ -199,7 +199,7 @@ case "$person" in
   sleep 4
 
 cd ~/installeur
-curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-installer-docker.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-installer-docker.sh > ~/installeur/logs.txt
 
 # Logs.txt
 cd ~/installeur
@@ -236,7 +236,7 @@ su -c '
   echo
   sleep 4
 cd /home/
-curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-supprimer-conteneurs-et-images.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-supprimer-conteneurs-et-images.sh > ~/installeur/logs.txt
 sh 1-supprimer-conteneurs-et-images.sh
 cd /home/
 rm 1-supprimer-conteneurs-et-images.sh
@@ -254,7 +254,7 @@ sleep 4
   sleep 4
 
 cd /home/
-curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-supprimer-docker.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-supprimer-docker.sh > ~/installeur/logs.txt
 sh 1-supprimer-docker.sh
 cd /home/
 rm 1-supprimer-docker.sh
@@ -271,7 +271,7 @@ sleep 4
   sleep 4
 
 cd /home/
-curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/2-importer-image-debian.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/2-importer-image-debian.sh > ~/installeur/logs.txt
 sh 2-importer-image-debian.sh
 cd /home/
 rm 2-importer-image-debian.sh
@@ -288,7 +288,7 @@ sleep 4
   sleep 4
 
 cd /home/
-curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/3-installer-le-serveur-dans-le-conteneur.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/3-installer-le-serveur-dans-le-conteneur.sh > ~/installeur/logs.txt
 sh 3-installer-le-serveur-dans-le-conteneur.sh
 cd /home/
 rm 3-installer-le-serveur-dans-le-conteneur.sh
@@ -305,7 +305,7 @@ rm 3-installer-le-serveur-dans-le-conteneur.sh
   sleep 4
 
 cd /home/
-curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/4-hello.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/4-hello.sh > ~/installeur/logs.txt
 sh 4-hello.sh
 cd /home/
 rm 4-hello.sh
@@ -322,7 +322,7 @@ rm 4-hello.sh
   sleep 4
 
 cd /home/
-curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/4-installer-joomla.sh
+curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/4-installer-joomla.sh > ~/installeur/logs.txt
 sh 4-installer-joomla.sh
 cd /home/
 rm 4-installer-joomla.sh
