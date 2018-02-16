@@ -1,5 +1,5 @@
 #!/bin/bash
-echo "  "
+
 echo "  "
 
 echo " Installer Wordpress 4.9.4"
