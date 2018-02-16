@@ -1,7 +1,5 @@
 #!/bin/bash
 
-echo "  "
-echo "  "
 echo " Installer Wordpress 4.9.4"
 
 # Créer une base de données wordpress avec PhpMyAdmin
