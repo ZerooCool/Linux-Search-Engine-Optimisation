@@ -20,11 +20,11 @@ gris='\e[1;30m' rougefonce='\e[0;31m' vertfonce='\e[0;32m' vertclair='\e[1;32m' 
 ########### Vérifier si le dossier d'installation existe, sinon, le créer.
 ABS_PATH_INSTALLEUR=$(readlink -e ~/installeur)
 if [ -d "$ABS_PATH_INSTALLEUR" ]; then
- echo " Démarrage - Le dossier d'installation existe "
+ echo " Initialisation - Le dossier d'installation existe "
  sleep 3
 # Logs.txt
 cd ~/installeur
-echo "$jour - $heure : Démarrage - Le dossier d'installation existe." >> logs.txt
+echo "$jour - $heure : Initialisation - Le dossier d'installation existe." >> logs.txt
 else
  echo " Chargement - Le dossier d'installation n'existe pas et va être créé "
  sleep 3
@@ -40,18 +40,18 @@ fi
 ########### Charger le fichier 00-menu.sh si il n'existe pas.
 cd ~/installeur
 if [ -f "00-menu.sh" ]; then
- echo " Démarrage - Le fichier du menu existe "
+ echo " Initialisation - Le fichier du menu existe "
  sleep 3
 # Logs.txt
 cd ~/installeur
-echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
+echo "$jour - $heure : Initialisation - Le fichier du menu existe." >> logs.txt
 
-# Vérifier si le fichier 00-menu.sh est à jour.
-# Variables dates pour connaître la durée d'existance du fichier 00-menu.sh
+ # Vérifier si le fichier 00-menu.sh est à jour.
+ # Variables dates pour connaître la durée d'existance du fichier 00-menu.sh
  Date_Modif_Fichier=`perl -e '($atime,$mtime,$ctime)=(stat($ARGV[0]))[8..10];print "$mtime\n";' ~/installeur/00-menu.sh `
  Date_Du_Jour=`date -u '+%s'`
  Duree_De_Vie=`expr $Date_Du_Jour - $Date_Modif_Fichier`
-# echo " Date du jour - Date de modification du fichier : $Duree_De_Vie secondes. "
+ # echo " Date du jour - Date de modification du fichier : $Duree_De_Vie secondes. "
  Duree_De_Vie=`expr $Duree_De_Vie / 60`
  echo
  echo " Le fichier 00-menu.sh existe depuis $Duree_De_Vie minute(s) "
@@ -80,6 +80,7 @@ echo "$jour - $heure : Démarrage - Le fichier du menu existe." >> logs.txt
  sleep 3
 
  # Création de la variable $MenuValide pour lancer un test par la suite.
+ # Le menu qui n'était pas à jour a été chargé et est à jour. L'attribut de la variable s'appel PasAJour.
 MenuValide=PasAJour
 
  else
@@ -93,12 +94,12 @@ MenuValide=AJour
 
 
 else
- echo " Chargement - Le fichier du menu n'existe pas et va être créé et exécuté "
+ echo " Chargement - Le fichier du menu n'existe pas et va être créé et démarré "
  sleep 3
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh > ~/installeur/00-menu.sh
  # Logs.txt
- echo "$jour - $heure : Chargement - Le fichier du menu n'existe pas et va être créé et exécuté." >> logs.txt
+ echo "$jour - $heure : Chargement - Le fichier du menu n'existe pas et va être créé et démmaré." >> logs.txt
  # Lancer le menu à jour qui vient d'être chargé.
  sh ~/installeur/00-menu.sh
  # Lorsque le dernier menu à jour est chargé, puis, arrêté depuis les choix disponibles, l'appel initial pouvant venir de ce fichier 00-menu.sh en local continue son exécution.
@@ -112,23 +113,30 @@ fi
 ###########
 ########### Recharger vers la version téléchargée.
 echo
-echo " Démarrage - Le fichier du menu existe et est à jour "
+echo " FIXE - Initialisation - Le fichier du menu existe et est à jour "
 sleep 3
- # L'étape MenuValide PasAJour a été effectuée, le fichier 00-menu.sh a été téléchargé.
+# Logs.txt
+cd ~/installeur
+echo "$jour - $heure : FIXE - Initialisation - Le fichier du menu existe et est à jour." >> logs.txt
+ # Si l'étape MenuValide PasAJour a été effectuée, le fichier 00-menu.sh a déjà été téléchargé.
  # Relancer le script 00-menu.sh
  if [ $MenuValide = PasAJour ]; then
 echo
-echo " Redémarrage de la dernière version du fichier 00-menu.sh "
+echo " Initialisation - Rechargement de la dernière version du fichier du menu "
 sleep 3
 sh ~/installeur/00-menu.sh
+# Logs.txt
+cd ~/installeur
+echo "$jour - $heure : Initialisation - Rechargement de la dernière version du fichier du menu." >> logs.txt
 exit
  # L'étape MenuValide AJour a été effectuée, le fichier 00-menu.sh continue de charger.
  # Le script ne se relance pas.
 else
-echo " ____________________________________________________ "
+echo " ___________________________________________________ "
 sleep 3
-# sh ~/installeur/00-menu.sh
-# exit
+# Logs.txt
+cd ~/installeur
+echo "$jour - $heure : ___________________________________________________" >> logs.txt
 fi
 ###########
 ###########
@@ -152,9 +160,9 @@ rm ~/installeur/00-ascii.sh
 # Logs.txt
 cd ~/installeur
 echo "$jour - $heure : Chargement de l'image ascii." >> logs.txt
-echo "$jour - $heure : Effacer l'écran du terminal." >> logs.txt
-echo "$jour - $heure : Afficher l'image ascii." >> logs.txt
-echo "$jour - $heure : Supprimer le fichier de l'image ascii." >> logs.txt
+echo "$jour - $heure : Effacement de l'écran du terminal." >> logs.txt
+echo "$jour - $heure : Affichage de l'image ascii." >> logs.txt
+echo "$jour - $heure : Suppression du fichier de l'image ascii." >> logs.txt
 ###########
 ###########
 
@@ -190,10 +198,11 @@ echo
 echo "Choisir une option pour continuer :"
 
 # Logs.txt
-echo "$jour - $heure : Le menu est affiché en attente du choix." >> logs.txt
+echo "$jour - $heure : Affichage du menu." >> logs.txt
 ###########
 ###########
 
+# Lecture de la touche sélectionnée.
 read person
 case "$person" in
 
@@ -204,30 +213,40 @@ case "$person" in
   echo " Installer Docker "
   sleep 4
 
+# S'identifier en root pour arrêter les conteneurs, les supprimer, supprimer les images.
+  echo
+  echo " Saisir le mot de passe root : OptimisationSEO "
+  sleep 1
+su -c '
 cd ~/installeur
 curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-installer-docker.sh > ~/installeur/1-installer-docker.sh
-
 # Logs.txt
 cd ~/installeur
-echo "$jour - $heure : Chargement du script d'installation pour Docker." >> logs.txt
+echo "$jour - $heure : Chargement du script pour installer Docker." >> logs.txt
 
 sh 1-installer-docker.sh
-
 # Logs.txt
 cd ~/installeur
-echo "$jour - $heure : Lancement du script d'installation pour Docker." >> logs.txt
+echo "$jour - $heure : Lancement du script pour installer Docker." >> logs.txt
 
 cd ~/installeur
 rm 1-installer-docker.sh
-
 # Logs.txt
 cd ~/installeur
-echo "$jour - $heure : Suppression du script d'installation pour Docker." >> logs.txt
-
+echo "$jour - $heure : Suppression du script pour installer Docker." >> logs.txt
 sleep 4
+'
   ;;
 ########### Double points virgule pour fermer l'option 1.
 ###########
+
+
+
+# Logs / su -c /
+# Todo ...
+
+
+
 
 ###########
 ########### "2" | "deux" | "DEUX" | "Deux" valeurs acceptées pour lancer ce menu.
