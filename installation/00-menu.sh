@@ -125,7 +125,7 @@ exit
  # L'étape MenuValide AJour a été effectuée, le fichier 00-menu.sh continue de charger.
  # Le script ne se relance pas.
 else
-echo " _________________________________________________________ "
+echo " ____________________________________________________ "
 sleep 3
 # sh ~/installeur/00-menu.sh
 # exit
@@ -173,6 +173,7 @@ echo " ################################## "
 sleep 4
 echo
 echo " L'assistant vous accompagne dans vos différents choix "
+sleep 2
 echo " ${vertfonce}Installer${neutre} - ${vertfonce}Configurer${neutre} - ${vertclair}Tester${neutre} - ${gris}Supprimmer${neutre} "
 sleep 4
 echo
@@ -182,7 +183,7 @@ echo " ${gris}[3] Supprimer Docker${neutre} "
 echo " ${vertfonce}[4] Importer l'image Docker de Debian${neutre} "
 echo " ${vertfonce}[5] Entrer dans le shell de l'image et installer le serveur web local${neutre} "
 echo " ${vertclair}[6] Tester le serveur web local${neutre} "
-echo " ${vertclair}[7] Importer et installer Joomla!${neutre} "
+echo " ${vertclair}[7] Importer et installer un CMS${neutre} "
 echo " [8] Exit "
 echo " [Logs] Consulter les logs de l'installation "
 echo
@@ -323,7 +324,7 @@ rm 4-hello.sh
 ########### "7" | "sept" | "SEPT" | "Sept" valeurs acceptées pour lancer ce menu.
   "7" | "sept" | "SEPT" | "Sept" )
   echo
-  echo " Importer et installer Joomla! "
+  echo " Importer et installer un CMS "
   sleep 4
 
 cd /home/
@@ -344,9 +345,9 @@ rm 4-installer-joomla.sh
   echo "Utiliser la commande ${vertfonce}sh 00-menu.sh${neutre} pour relancer l'assistant."
   sleep 4
 
-# Message temporaire pouvant être retiré une fois l'ensemble des scripts stables.
+# Support sur Github.
 echo
-echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis GitHub${neutre}"
+echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis Github${neutre}"
 echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
 echo
 sleep 4
