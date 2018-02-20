@@ -32,13 +32,7 @@ Chaque script terminé doit revenir sur le menu pour sortir avec le choix EXIT.
 
 Faciliter la lecture de l'installation avec sleep x et reset.
 Mettre en place le retour erreur après chaque action.
-  Exemple pour l'utilisation du paquet apt clean :
-  apt clean
-  if [ "$?" = "0" ] ; then
-  echo "Les paquets présents dans /var/cache/apt/archives ont été supprimés."
-  else
-  echo "Les paquets présents dans /var/cache/apt/archives n'ont pas été supprimés."
-  fi
+  Exemple : https://www.visionduweb.eu/wiki/index.php?title=Programmation_en_Shell_Bash_Linux#Code_retour
 Ajouter les logs à chaque étape.
 
 Ajouter des couleurs.
