@@ -17,45 +17,36 @@
 
 4 - Installer le dossier hello et les scripts pour tester le serveur.
 
-4 - Télécharger l'archive de Joomla et installer Joomla!
+4 - Télécharger l'archive d'un CMS et installer le CMS.
+ ( Faire un nouveau menu pour la liste des CMS proposés. )
+ Joomla
+ Dolibarr
+ WordPress
 
 #################################################
 
 # README
 ## Liste à faire.
 
-Chaque script terminé doit revenir sur le menu qui propose le choix de sortir avec exit.
+Chaque script terminé doit revenir sur le menu pour sortir avec le choix EXIT.
 
-Ajouter les logs à l'étape 2 du menu... et sur les autres scripts...
-
-Faciliter la lecture de l'installation avec sleep x et reset
+Faciliter la lecture de l'installation avec sleep x et reset.
+Mettre en place le retour erreur après chaque action.
+  Exemple pour l'utilisation du paquet apt clean :
+  apt clean
+  if [ "$?" = "0" ] ; then
+  echo "Les paquets présents dans /var/cache/apt/archives ont été supprimés."
+  else
+  echo "Les paquets présents dans /var/cache/apt/archives n'ont pas été supprimés."
+  fi
+Ajouter les logs à chaque étape.
 
 Ajouter des couleurs.
 
-
-Mettre en place le retour erreur après chaque action.
-
-Exemple pour l'utilisation du paquet apt clean :
-
-apt clean
-
-if [ "$?" = "0" ] ; then
-
-echo "Les paquets présents dans /var/cache/apt/archives ont été supprimés."
-
-else
-
-echo "Les paquets présents dans /var/cache/apt/archives n'ont pas été supprimés."
-
-fi
-
-
-Faire un test conditionnel.
-
-MAX=2
-
-for X in $(seq 1 $MAX) ; do
-
-commande
-
-done
+Ajouter le lien vers sur support de Github.
+  # Support sur Github.
+  echo
+  echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis Github${neutre}"
+  echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
+  echo
+  sleep 4
