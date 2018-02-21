@@ -1,11 +1,12 @@
 #!/bin/bash
-# En root.
+# Lancer à partir du fichier 00-menu.sh
+# Puis, passage en sudoers avec l'utilisateur seo
 
 
 Dossier_Installeur_Utilisateur=$(readlink -f ~/installeur)
 echo $Dossier_Installeur_Utilisateur
 # Affiche : /home/seo/installeur
-sleep 2
+sleep 4
 
 
 # Support sur Github.
@@ -32,7 +33,11 @@ fi
 ###########
 ###########
 
-apt purge docker-engine docker-compose
+echo "S'identifier maintenant en sudoers pour continuer la suppression de Docker"
+echo "Utiliser le mot de passe de l'utilisateur sudoers seo : UtilisateurSEO"
+sleep 4
+
+sudo apt purge docker-engine docker-compose
 if [ "$?" = "0" ] ; then
 echo "Les paquets de Docker ne sont plus installés"
 # Logs.txt
@@ -135,9 +140,11 @@ echo
 echo "Le processus de suppression de Docker est terminé"
 # Logs.txt
 echo "$jour - $heure : Le processus de suppression de Docker est terminé." >> logs.txt
-sleep 4
+sleep 2
 
+echo "Fin du script et retour à la fin de l'exécution du menu."
+sleep 4
 # Revenir sur le menu.
 # Logs.txt
-echo "$jour - $heure : Revenir sur le menu." >> logs.txt
-sh $Dossier_Installeur_Utilisateur/00-menu.sh
+# echo "$jour - $heure : Revenir sur le menu." >> logs.txt
+# sh $Dossier_Installeur_Utilisateur/00-menu.sh
