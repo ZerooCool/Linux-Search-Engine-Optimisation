@@ -75,22 +75,22 @@ echo "$jour - $heure : Initialisation - Le fichier du menu existe." >> logs.txt
 
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh > ~/installeur/00-menu.sh
- echo " Le fichier 00-menu.sh est à jour "
+ # echo " Le fichier 00-menu.sh est à jour "
  # Logs.txt
  echo "$jour - $heure : Le fichier 00-menu.sh a été chargé depuis Github." >> logs.txt
- sleep 3
+ # sleep 3
 
  # Création de la variable $MenuValide pour lancer un test par la suite.
  # Le menu qui n'était pas à jour a été chargé et est à jour. L'attribut de la variable s'appel PasAJour.
 MenuValide=PasAJour
 
  else
- echo " Le fichier est à jour avec moins de $Duree_De_Vie minute d'existance "
+ # echo " Le fichier est à jour avec moins de $Duree_De_Vie minute d'existance "
  # Logs.txt
  echo "$jour - $heure : Le fichier est à jour avec moins de $Duree_De_Vie minute d'existance." >> logs.txt
- sleep 3
-
+ # sleep 3
 MenuValide=AJour
+
  fi
 
 
@@ -117,7 +117,9 @@ fi
  # Relancer le script 00-menu.sh
  if [ $MenuValide = PasAJour ]; then
 echo
-echo " Initialisation - Rechargement de la dernière version du fichier du menu "
+echo " Initialisation avec la dernière version du menu "
+echo " Le fichier du menu se relance "
+echo " _____________________________ "
 sleep 3
 sh ~/installeur/00-menu.sh
 # Logs.txt
@@ -278,14 +280,14 @@ sleep 4
 
 cd ~/installeur/
 curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-supprimer-docker.sh > ~/installeur/1-supprimer-docker.sh
-sudo sh 1-supprimer-docker.sh
+sh 1-supprimer-docker.sh
 
 echo "Téléchargement et lancement du fichier de suppression de Docker"
 sleep 4
 
 cd ~/installeur/
 rm 1-supprimer-docker.sh
-echo "Suppression du fichier de suppression de Docker"
+echo "Suppression du fichier 1-supprimer-docker.sh"
 sleep 4
   ;;
 ########### Double points virgule pour fermer l'option 3.
