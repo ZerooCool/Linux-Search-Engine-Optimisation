@@ -54,7 +54,7 @@ fi
 
 echo "S'identifier maintenant en sudoers pour continuer la suppression de Docker"
 echo "Utiliser le mot de passe de l'utilisateur sudoers seo : UtilisateurSEO"
-sleep 4
+sleep 1
 
 sudo apt purge docker-engine docker-compose
 if [ "$?" = "0" ] ; then

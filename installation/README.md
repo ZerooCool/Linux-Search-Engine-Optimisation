@@ -17,10 +17,12 @@
 
 4 - Installer le dossier hello et les scripts pour tester le serveur.
 
-4 - Télécharger l'archive d'un CMS et installer le CMS.
- ( Faire un nouveau menu pour la liste des CMS proposés. )
+4 - Télécharger l'archive d'un CMS et installer le CMS. ( Faire un nouveau menu pour la liste des CMS proposés. )
+
  Joomla
+
  Dolibarr
+
  WordPress
 
 #################################################
@@ -28,19 +30,38 @@
 # README
 ## Liste à faire.
 
+Ajouter le lien vers sur support de Github au début du lancement de chaque script.
+
+  # Support sur Github.
+
+  echo
+
+  echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis Github${neutre}"
+
+  echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
+
+  echo
+
+  sleep 4
+
+
 Chaque script terminé doit revenir sur le menu pour sortir avec le choix EXIT.
 
-Faciliter la lecture de l'installation avec sleep x et reset.
-Mettre en place le retour erreur après chaque action.
+  sh ~/installeur/00-menu.sh
+
+
+Faciliter la lecture de l'installation. Faire un arrêt avec sleep x et vider l'écran avec reset.
+
+
+Utiliser le code de retour d'erreur après chaque commande.
+
   Exemple : https://www.visionduweb.eu/wiki/index.php?title=Programmation_en_Shell_Bash_Linux#Code_retour
+
+
 Ajouter les logs à chaque étape.
 
-Ajouter des couleurs.
+   # Logs.txt
+   cd ~/installeur
+   echo "$jour - $heure : Les paquets de Docker n'ont pas été supprimés." >> logs.txt
 
-Ajouter le lien vers sur support de Github.
-  # Support sur Github.
-  echo
-  echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis Github${neutre}"
-  echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
-  echo
-  sleep 4
+Ajouter des couleurs.

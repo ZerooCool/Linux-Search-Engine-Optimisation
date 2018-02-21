@@ -66,27 +66,27 @@ echo "$jour - $heure : Initialisation - Le fichier du menu existe." >> logs.txt
  echo
  # echo " Le fichier 00-menu.sh existe depuis $Duree_De_Vie minute(s) "
  # Logs.txt
- echo "$jour - $heure : Le fichier 00-menu.sh existe depuis $Duree_De_Vie minute(s)." >> logs.txt
+ echo "$jour - $heure : Initialisation - Le fichier 00-menu.sh existe depuis $Duree_De_Vie minute(s)." >> logs.txt
  # sleep 3
  
  # Le fichier doit avoir une existance de moins de 1 minute, sinon, il est remis à jour.
  if [ $Duree_De_Vie -gt 1 ]; then
  echo " Le fichier n'est pas considéré à jour avec $Duree_De_Vie minutes d'existance "
  # Logs.txt
- echo "$jour - $heure : Le fichier n'est pas considéré à jour avec $Duree_De_Vie minutes d'existance." >> logs.txt
+ echo "$jour - $heure : Initialisation - Le fichier n'est pas considéré à jour avec $Duree_De_Vie minutes d'existance." >> logs.txt
  # Suppression du menu présent dans le dossier d'installation.
  rm 00-menu.sh
  echo
  # echo " Suppression du fichier 00-menu.sh pour charger la version en ligne "
  # Logs.txt
- echo "$jour - $heure : Suppression du fichier 00-menu.sh pour charger la version en ligne." >> logs.txt
+ echo "$jour - $heure : Initialisation - Suppression du fichier 00-menu.sh pour charger la version en ligne." >> logs.txt
  # sleep 3
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
 echo
  curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh > ~/installeur/00-menu.sh
  # echo " Le fichier 00-menu.sh est à jour "
  # Logs.txt
- echo "$jour - $heure : Le fichier 00-menu.sh a été chargé depuis Github." >> logs.txt
+ echo "$jour - $heure : Initialisation - Le fichier 00-menu.sh a été chargé depuis Github." >> logs.txt
  sleep 3
 
  # Création de la variable $MenuValide pour lancer un test par la suite.
@@ -96,7 +96,7 @@ MenuValide=PasAJour
  else
  # echo " Le fichier est à jour avec moins de $Duree_De_Vie minute d'existance "
  # Logs.txt
- echo "$jour - $heure : Le fichier est à jour avec moins de $Duree_De_Vie minute d'existance." >> logs.txt
+ echo "$jour - $heure : Initialisation - Le fichier est à jour avec moins de $Duree_De_Vie minute d'existance." >> logs.txt
  # sleep 3
 MenuValide=AJour
  fi
@@ -127,6 +127,7 @@ fi
  if [ $MenuValide = PasAJour ]; then
 echo
 echo " Initialisation avec la dernière version du menu "
+echo
 echo " Le fichier du menu se relance "
 echo " _____________________________ "
 sleep 3
@@ -138,7 +139,7 @@ exit
  # L'étape MenuValide AJour a été effectuée, le fichier 00-menu.sh continue de charger.
  # Le script ne se relance pas.
 else
-echo
+# echo
 echo " Le fichier du menu est à jour "
 echo " _____________________________ "
 sleep 3

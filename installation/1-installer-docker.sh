@@ -1,12 +1,15 @@
 #!/bin/bash
 
-
 # Doit être logué en root.
 
-
 echo "  "
-echo " ----- Installer Docker sur Debian Stretch 9 ----- "
+echo " Installation de Docker sur Debian Stretch 9 "
 sleep 4s
+# Logs.txt
+cd ~/installeur
+echo "$jour - $heure : Installation de Docker sur Debian Stretch 9." >> logs.txt
+
+# todo
 
 echo "  "
 echo " ----- Ajout du dépôt dans /etc/apt/sources.list.d/docker.list ----- "
