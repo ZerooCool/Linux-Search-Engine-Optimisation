@@ -1,6 +1,13 @@
 #!/bin/bash
 # En root.
 
+
+Dossier_Installeur_Utilisateur=$(readlink -f ~/installeur)
+echo $Dossier_Installeur_Utilisateur
+# Affiche : /home/seo/installeur
+sleep 2
+
+
 # Support sur Github.
 echo
 echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis Github${neutre}"
