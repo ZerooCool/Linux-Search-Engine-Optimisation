@@ -67,7 +67,7 @@ echo "$jour - $heure : Initialisation - Le fichier du menu existe." >> logs.txt
  echo "$jour - $heure : Initialisation - Le fichier 00-menu.sh existe depuis $Duree_De_Vie minute(s)." >> logs.txt
  # sleep 3
  
- # Le fichier doit avoir une existance de moins de 1 minute, sinon, il est remis à jour.
+########### Le fichier doit avoir une existance de moins de 1 minute, sinon, il est remis à jour.
  if [ $Duree_De_Vie -gt 1 ]; then
  echo " Le fichier n'est pas considéré à jour avec $Duree_De_Vie minutes d'existance "
  # Logs.txt
@@ -85,7 +85,6 @@ echo
  # Logs.txt
  echo "$jour - $heure : Initialisation - Le fichier 00-menu.sh a été chargé depuis Github." >> logs.txt
  sleep 3
-
  # Création de la variable $MenuValide pour lancer un test par la suite.
  # Le menu qui n'était pas à jour a été chargé et est à jour. L'attribut de la variable s'appel PasAJour.
 MenuValide=PasAJour
@@ -97,7 +96,7 @@ MenuValide=PasAJour
  # sleep 3
 MenuValide=AJour
  fi
-
+###########
 
 else
  echo " Chargement - Le fichier du menu n'existe pas. Il va être téléchargé et exécuté "
