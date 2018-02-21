@@ -122,15 +122,15 @@ fi
 
 apt-key del 2C52609D
 if [ "$?" = "0" ] ; then
-echo "Toujours OK. La clé de dépôt ajoutée pour Docker a été supprimée"
+echo "La clé de dépôt ajoutée pour Docker, si elle existait, a été supprimée"
 # Logs.txt
 cd ~/installeur
-echo "$jour - $heure : Toujours OK. La clé de dépôt ajoutée pour Docker a été supprimée." >> logs.txt
+echo "$jour - $heure : La clé de dépôt ajoutée pour Docker, si elle existait, a été supprimée." >> logs.txt
 else
-echo "Toujours OK. La clé de dépôt ajoutée pour Docker n'a pas été supprimée"
+echo "La clé de dépôt ajoutée pour Docker n'a pas été supprimée"
 # Logs.txt
 cd ~/installeur
-echo "$jour - $heure : Toujours OK. La clé de dépôt ajoutée pour Docker n'a pas été supprimée." >> logs.txt
+echo "$jour - $heure : La clé de dépôt ajoutée pour Docker n'a pas été supprimée." >> logs.txt
 fi
 sleep 4
 
