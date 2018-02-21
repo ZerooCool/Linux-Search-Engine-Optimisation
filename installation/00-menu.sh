@@ -16,7 +16,7 @@ echo
 echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis Github${neutre}"
 echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
 echo
-sleep 4
+sleep 5
 ###########
 ###########
 
@@ -82,6 +82,7 @@ echo "$jour - $heure : Initialisation - Le fichier du menu existe." >> logs.txt
  echo "$jour - $heure : Suppression du fichier 00-menu.sh pour charger la version en ligne." >> logs.txt
  # sleep 3
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
+echo
  curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh > ~/installeur/00-menu.sh
  # echo " Le fichier 00-menu.sh est à jour "
  # Logs.txt
@@ -98,17 +99,17 @@ MenuValide=PasAJour
  echo "$jour - $heure : Le fichier est à jour avec moins de $Duree_De_Vie minute d'existance." >> logs.txt
  # sleep 3
 MenuValide=AJour
-
  fi
 
 
 else
- echo " Chargement - Le fichier du menu n'existe pas et va être créé et démarré "
+ echo " Chargement - Le fichier du menu n'existe pas dans ce chemin. Il va être téléchargé et exécuté "
  sleep 3
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
+ echo
  curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh > ~/installeur/00-menu.sh
  # Logs.txt
- echo "$jour - $heure : Chargement - Le fichier du menu n'existe pas et va être créé et démmaré." >> logs.txt
+ echo "$jour - $heure : Chargement - Le fichier du menu n'existe pas dans ce chemin. Il va être téléchargé et exécuté." >> logs.txt
  # Lancer le menu à jour qui vient d'être chargé.
  sh ~/installeur/00-menu.sh
  # Lorsque le dernier menu à jour est chargé, puis, arrêté depuis les choix disponibles, l'appel initial pouvant venir de ce fichier 00-menu.sh en local continue son exécution.
@@ -179,18 +180,18 @@ echo " ################################## "
 echo " #              ${bleuclair}Menu${neutre}              # "
 echo " #    ${bleuclair}Installation automatique${neutre}    # " 
 echo " ################################## "
-sleep 4
+sleep 2
 reset
 echo " ################################## "
 echo " #              ${bleuclair}Menu${neutre}              # "
 echo " #    ${bleuclair}Installation automatique${neutre}    # " 
 echo " ################################## "
-sleep 4
+sleep 2
 echo
 echo " L'assistant vous accompagne dans vos différents choix "
 sleep 2
 echo " ${vertfonce}Installer${neutre} - ${vertfonce}Configurer${neutre} - ${vertclair}Tester${neutre} - ${gris}Supprimmer${neutre} "
-sleep 4
+sleep 2
 echo
 echo " ${vertfonce}[1] Installer Docker${neutre} "
 echo " ${gris}[2] Supprimer les conteneurs et les images de Docker${neutre} "
