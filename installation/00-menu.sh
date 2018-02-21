@@ -74,7 +74,6 @@ echo "$jour - $heure : Initialisation - Le fichier du menu existe." >> logs.txt
  echo "$jour - $heure : Initialisation - Le fichier n'est pas considéré à jour avec $Duree_De_Vie minutes d'existance." >> logs.txt
  # Suppression du menu présent dans le dossier d'installation.
  rm 00-menu.sh
- echo
  # echo " Suppression du fichier 00-menu.sh pour charger la version en ligne "
  # Logs.txt
  echo "$jour - $heure : Initialisation - Suppression du fichier 00-menu.sh pour charger la version en ligne." >> logs.txt
@@ -129,20 +128,11 @@ echo
 echo " Le fichier du menu se relance "
 echo " _____________________________ "
 sleep 3
-
-
 # Logs.txt
-echo " Test des 2 lignes en fin de commande 3 - 8 en erreur - A supprimer quand 3 - 8 n'affiche plus d'erreur "
-sleep 6
-
 cd ~/installeur
 echo "$jour - $heure : Initialisation - Rechargement de la dernière version du fichier du menu." >> logs.txt
-
 sh ~/installeur/00-menu.sh
-# Le exit permet d'éviter le problème d'écriture de logs à la fin du choix de menu 3 puis 8 ?
 exit
-# Sinon, reposer une variable intermédiaire ?
-
 
  # L'étape MenuValide AJour a été effectuée, le fichier 00-menu.sh continue de charger.
  # Le script ne se relance pas.
