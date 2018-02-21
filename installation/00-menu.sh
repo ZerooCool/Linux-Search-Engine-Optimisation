@@ -67,6 +67,7 @@ echo "$jour - $heure : Initialisation - Le fichier du menu existe." >> logs.txt
 
  # Suppression du menu présent dans le dossier d'installation.
  rm 00-menu.sh
+ echo
  echo " Suppression du fichier 00-menu.sh pour charger la version en ligne "
  # Logs.txt
  echo "$jour - $heure : Suppression du fichier 00-menu.sh pour charger la version en ligne." >> logs.txt
@@ -128,7 +129,7 @@ exit
 else
 echo
 echo " Le fichier du menu est à jour "
-echo " ___________________________________________________ "
+echo " _____________________________ "
 sleep 3
 # Logs.txt
 cd ~/installeur
