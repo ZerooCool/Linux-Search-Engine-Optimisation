@@ -278,12 +278,14 @@ sleep 4
   echo " Supprimer Docker "
   sleep 4
 
-cd ~/installeur/
+su -c '
+#cd ~/installeur/
 curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-supprimer-docker.sh > ~/installeur/1-supprimer-docker.sh
 sh 1-supprimer-docker.sh
-cd ~/installeur/
-rm 1-supprimer-docker.sh
-sleep 4
+#cd ~/installeur/
+#rm 1-supprimer-docker.sh
+#sleep 4
+'
   ;;
 ########### Double points virgule pour fermer l'option 3.
 ###########
