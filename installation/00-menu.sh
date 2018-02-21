@@ -112,12 +112,6 @@ fi
 
 ###########
 ########### Recharger vers la version téléchargée.
-echo
-echo " FIXE - Initialisation - Le fichier du menu existe et est à jour "
-sleep 3
-# Logs.txt
-cd ~/installeur
-echo "$jour - $heure : FIXE - Initialisation - Le fichier du menu existe et est à jour." >> logs.txt
  # Si l'étape MenuValide PasAJour a été effectuée, le fichier 00-menu.sh a déjà été téléchargé.
  # Relancer le script 00-menu.sh
  if [ $MenuValide = PasAJour ]; then
@@ -132,11 +126,13 @@ exit
  # L'étape MenuValide AJour a été effectuée, le fichier 00-menu.sh continue de charger.
  # Le script ne se relance pas.
 else
+echo
+echo " Le fichier du menu est à jour "
 echo " ___________________________________________________ "
 sleep 3
 # Logs.txt
 cd ~/installeur
-echo "$jour - $heure : ___________________________________________________" >> logs.txt
+echo "$jour - $heure : Le fichier du menu est à jour." >> logs.txt
 fi
 ###########
 ###########
