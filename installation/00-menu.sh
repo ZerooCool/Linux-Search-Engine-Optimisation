@@ -101,13 +101,13 @@ MenuValide=AJour
 
 
 else
- echo " Chargement - Le fichier du menu n'existe pas dans ce chemin. Il va être téléchargé et exécuté "
+ echo " Chargement - Le fichier du menu n'existe pas. Il va être téléchargé et exécuté "
  sleep 3
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  echo
  curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh > ~/installeur/00-menu.sh
  # Logs.txt
- echo "$jour - $heure : Chargement - Le fichier du menu n'existe pas dans ce chemin. Il va être téléchargé et exécuté." >> logs.txt
+ echo "$jour - $heure : Chargement - Le fichier du menu n'existe pas. Il va être téléchargé et exécuté." >> logs.txt
  # Lancer le menu à jour qui vient d'être chargé.
  sh ~/installeur/00-menu.sh
  # Lorsque le dernier menu à jour est chargé, puis, arrêté depuis les choix disponibles, l'appel initial pouvant venir de ce fichier 00-menu.sh en local continue son exécution.
@@ -152,9 +152,10 @@ fi
 ########### Charger l'image ascii depuis Github.
 cd ~/installeur
 if [ -f "00-ascii.sh" ]; then
-rm 00-ascii.sh
-curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh > ~/installeur/00-ascii.sh
+echo " Ne rien faire "
+sleep 2
 else
+echo
 curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh > ~/installeur/00-ascii.sh
 fi
 
@@ -283,22 +284,24 @@ sleep 4
 ########### "3" | "trois" | "TROIS" | "Trois" valeurs acceptées pour lancer ce menu.
   "3" | "trois" | "TROIS" | "Trois" )
   echo
-  echo "Suppression de Docker démmarée"
-  echo "Saisir le mot de passe de l'utilisateur seo : UtilisateurSEO"
-  sleep 4
+  echo "La suppression de Docker va commencée"
+  # echo "Saisir le mot de passe de l'utilisateur seo : UtilisateurSEO"
+  sleep 2
 
 cd ~/installeur/
 curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-supprimer-docker.sh > ~/installeur/1-supprimer-docker.sh
 sh 1-supprimer-docker.sh
 
-echo "Téléchargement et lancement du fichier de suppression de Docker"
-sleep 4
+echo "Téléchargement et lancement du fichier pour supprimer Docker"
+sleep 2
 
 cd ~/installeur/
 rm 1-supprimer-docker.sh
 echo "Suppression du fichier 1-supprimer-docker.sh"
-sleep 4
+sleep 2
 sh 00-menu.sh
+# Voir si exit évite les 2 erreurs d'écriture, quand je lance 3 puis 8 pour exit.
+exit
   ;;
 ########### Double points virgule pour fermer l'option 3.
 ###########
