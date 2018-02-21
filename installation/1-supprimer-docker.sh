@@ -3,17 +3,18 @@
 # Passage en sudoers avec l'utilisateur seo pour les tâches administratives
 
 ###########
-########### Variables
+########### Variables # Exportées
 # Jour et heure.
-jour=$(date +%d-%m-%Y)
-heure=$(date +%H:%M:%S)
+##jour=$(date +%d-%m-%Y)
+##heure=$(date +%H:%M:%S)
 # Couleurs.
-gris='\e[1;30m' rougefonce='\e[0;31m' vertfonce='\e[0;32m' vertclair='\e[1;32m' jaune='\e[1;33m' bleufonce='\e[0;34m' bleuclair='\e[1;34m' grisclair='\e[0;37m' blanc='\e[1;37m' neutre='\e[0;m'
+##gris='\e[1;30m' rougefonce='\e[0;31m' vertfonce='\e[0;32m' vertclair='\e[1;32m' jaune='\e[1;33m' bleufonce='\e[0;34m' bleuclair='\e[1;34m' grisclair='\e[0;37m' blanc='\e[1;37m' neutre='\e[0;m'
 ###########
 ###########
 
 ###########
 ########### Support sur Github.
+reset
 echo
 echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis Github${neutre}"
 echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
@@ -22,18 +23,12 @@ sleep 4
 ###########
 ###########
 
+
 Dossier_Installeur_Utilisateur=$(readlink -f ~/installeur)
-echo $Dossier_Installeur_Utilisateur
+echo "Dossier installeur utilisé : $Dossier_Installeur_Utilisateur"
 # Affiche : /home/seo/installeur
 sleep 4
 
-
-# Support sur Github.
-echo
-echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis Github${neutre}"
-echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
-echo
-sleep 4
 
 ###########
 ########### Vérifier si le dossier d'installation existe, sinon, le créer.
@@ -52,6 +47,7 @@ fi
 ###########
 ###########
 
+echo
 echo "S'identifier maintenant en sudoers pour continuer la suppression de Docker"
 echo "Utiliser le mot de passe de l'utilisateur sudoers seo : UtilisateurSEO"
 sleep 1
