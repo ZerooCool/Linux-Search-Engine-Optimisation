@@ -271,17 +271,21 @@ sleep 4
 ########### "3" | "trois" | "TROIS" | "Trois" valeurs acceptées pour lancer ce menu.
   "3" | "trois" | "TROIS" | "Trois" )
   echo
-  echo " Supprimer Docker "
+  echo "Suppression de Docker démmarée"
+  echo "Saisir le mot de passe de l'utilisateur seo : UtilisateurSEO"
   sleep 4
 
-su -c '
-#cd ~/installeur/
+cd ~/installeur/
 curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-supprimer-docker.sh > ~/installeur/1-supprimer-docker.sh
-sh 1-supprimer-docker.sh
-#cd ~/installeur/
-#rm 1-supprimer-docker.sh
-#sleep 4
-'
+sudo sh 1-supprimer-docker.sh
+
+echo "Téléchargement et lancement du fichier de suppression de Docker"
+sleep 4
+
+cd ~/installeur/
+rm 1-supprimer-docker.sh
+echo "Suppression du fichier de suppression de Docker"
+sleep 4
   ;;
 ########### Double points virgule pour fermer l'option 3.
 ###########
