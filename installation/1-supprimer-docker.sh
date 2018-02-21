@@ -17,17 +17,17 @@ sleep 4
 
 ###########
 ########### Vérifier si le dossier d'installation existe, sinon, le créer.
-ABS_PATH_INSTALLEUR=$(readlink -e ~/installeur)
+ABS_PATH_INSTALLEUR=$(readlink -e $Dossier_Installeur_Utilisateur)
 if [ -d "$ABS_PATH_INSTALLEUR" ]; then
  echo " Initialisation - Le dossier d'installation existe "
  sleep 3
 # Logs.txt
 echo "$jour - $heure : Initialisation - Le dossier d'installation existe." >> logs.txt
 else
- echo " Le dossier d'installation n'existe pas. Lancer le menu 00-menu.sh pour supprimer Docker "
+ echo " Le dossier d'installation n'existe pas. Lancer le menu 00-menu.sh pour initialiser le programme "
  sleep 3
 # Logs.txt
-echo "$jour - $heure : Le dossier d'installation n'existe pas. Lancer le menu 00-menu.sh pour supprimer Docker." >> logs.txt
+echo "$jour - $heure : Le dossier d'installation n'existe pas. Lancer le menu 00-menu.sh pour initialiser le programme." >> logs.txt
 fi
 ###########
 ###########
@@ -44,15 +44,6 @@ echo "$jour - $heure : Les paquets de Docker n'ont pas été supprimés." >> log
 fi
 sleep 4
 
-# Dirmngr est utilisé pour l’accès au réseau par gpg, gpgsm et dirmngr-client entre autres outils.
-# À moins que ce paquet ne soit installé, les composants de la suite GnuPG essayant d’interagir avec le réseau échoueront. 
-# apt autoremove dirmngr
-# if [ "$?" = "0" ] ; then
-# echo "Le paquet dirmngr pour gérer les clés est supprimé."
-# else
-# echo "Le paquet dirmngr pour gérer les clés n'a pas été supprimé."
-# fi
-# sleep 4
 
 apt autoremove
 if [ "$?" = "0" ] ; then
@@ -139,18 +130,6 @@ echo "$jour - $heure : Les paquets présents dans /var/cache/apt/archives n'ont 
 fi
 sleep 4
 
-# aptitude purge '~c'
-## aptitude not found. N'est pas installé par défaut.
-# if [ "$?" = "0" ] ; then
-# echo "Les fichiers de configuration des paquets désinstallés non purgés ont été supprimés"
-# Logs.txt
-# echo "$jour - $heure : Les fichiers de configuration des paquets désinstallés non purgés ont été supprimés." >> logs.txt
-# else
-# echo "Les fichiers de configuration des paquets désinstallés non purgés n'ont pas été supprimés"
-# Logs.txt
-# echo "$jour - $heure : Les fichiers de configuration des paquets désinstallés non purgés n'ont pas été supprimés." >> logs.txt
-# fi
-# sleep 4
 
 echo
 echo "Le processus de suppression de Docker est terminé"
@@ -161,4 +140,4 @@ sleep 4
 # Revenir sur le menu.
 # Logs.txt
 echo "$jour - $heure : Revenir sur le menu." >> logs.txt
-sh ~/installeur/00-menu.sh
+sh $Dossier_Installeur_Utilisateur/00-menu.sh
