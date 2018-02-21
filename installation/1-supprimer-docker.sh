@@ -1,7 +1,26 @@
 #!/bin/bash
-# Lancer à partir du fichier 00-menu.sh
-# Puis, passage en sudoers avec l'utilisateur seo
+# Ce script doit être lancer à partir du fichier 00-menu.sh
+# Passage en sudoers avec l'utilisateur seo pour les tâches administratives
 
+###########
+########### Variables
+# Jour et heure.
+jour=$(date +%d-%m-%Y)
+heure=$(date +%H:%M:%S)
+# Couleurs.
+gris='\e[1;30m' rougefonce='\e[0;31m' vertfonce='\e[0;32m' vertclair='\e[1;32m' jaune='\e[1;33m' bleufonce='\e[0;34m' bleuclair='\e[1;34m' grisclair='\e[0;37m' blanc='\e[1;37m' neutre='\e[0;m'
+###########
+###########
+
+###########
+########### Support sur Github.
+echo
+echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis Github${neutre}"
+echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
+echo
+sleep 4
+###########
+###########
 
 Dossier_Installeur_Utilisateur=$(readlink -f ~/installeur)
 echo $Dossier_Installeur_Utilisateur
@@ -50,7 +69,7 @@ fi
 sleep 4
 
 
-apt autoremove
+sudo apt autoremove
 if [ "$?" = "0" ] ; then
 echo "Les paquets qui ne sont plus nécessaires ont été supprimés"
 # Logs.txt
@@ -68,7 +87,7 @@ VAR_LIB_DOCKER=$(readlink -e /var/lib/docker)
 if [ -d "$VAR_LIB_DOCKER" ]; then
  echo " Le dossier /var/lib/docker existe. Il va être supprimé. "
  sleep 3
-rm -rf /var/lib/docker
+sudo rm -rf /var/lib/docker
 if [ "$?" = "0" ] ; then
 echo "Le dossier /var/lib/docker a été supprimé"
 # Logs.txt
@@ -91,7 +110,7 @@ if [ -f "menu.sh" ]; then
 echo " Le fichier du menu existe "
 sleep 3
 
-rm /etc/apt/sources.list.d/docker.list
+sudo rm /etc/apt/sources.list.d/docker.list
 if [ "$?" = "0" ] ; then
 echo "Le dépôt ajouté pour Docker a été supprimé"
 # Logs.txt
@@ -111,7 +130,7 @@ sleep 3
 fi
 
 
-apt-key del 2C52609D
+sudo apt-key del 2C52609D
 if [ "$?" = "0" ] ; then
 echo "La clé de dépôt ajoutée pour Docker, si elle existait, a été supprimée"
 # Logs.txt
@@ -123,7 +142,7 @@ echo "$jour - $heure : La clé de dépôt ajoutée pour Docker n'a pas été sup
 fi
 sleep 4
 
-apt clean
+sudo apt clean
 if [ "$?" = "0" ] ; then
 echo "Les paquets présents dans /var/cache/apt/archives ont été supprimés"
 # Logs.txt
