@@ -4,25 +4,23 @@
 ########### Variables
 # Jour et heure.
 jour=$(date +%d-%m-%Y)
+export jour
 heure=$(date +%H:%M:%S)
+export heure
 # Couleurs.
 gris='\e[1;30m' rougefonce='\e[0;31m' vertfonce='\e[0;32m' vertclair='\e[1;32m' jaune='\e[1;33m' bleufonce='\e[0;34m' bleuclair='\e[1;34m' grisclair='\e[0;37m' blanc='\e[1;37m' neutre='\e[0;m'
+export gris rougefonce vertfonce vertclair jaune bleufonce bleuclair grisclair blanc neutre
 ###########
 ###########
 
 ###########
 ########### Support sur Github.
+reset
 echo
 echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis Github${neutre}"
 echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
 echo
 sleep 5
-###########
-###########
-
-###########
-########### Effacer l'écran du terminal.
-reset
 ###########
 ###########
 
