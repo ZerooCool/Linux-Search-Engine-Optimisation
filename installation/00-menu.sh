@@ -1,18 +1,28 @@
 #!/bin/bash
 
 ###########
-########### Effacer l'écran du terminal.
-reset
-###########
-###########
-
-###########
 ########### Variables
 # Jour et heure.
 jour=$(date +%d-%m-%Y)
 heure=$(date +%H:%M:%S)
 # Couleurs.
 gris='\e[1;30m' rougefonce='\e[0;31m' vertfonce='\e[0;32m' vertclair='\e[1;32m' jaune='\e[1;33m' bleufonce='\e[0;34m' bleuclair='\e[1;34m' grisclair='\e[0;37m' blanc='\e[1;37m' neutre='\e[0;m'
+###########
+###########
+
+###########
+########### Support sur Github.
+echo
+echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis Github${neutre}"
+echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
+echo
+sleep 4
+###########
+###########
+
+###########
+########### Effacer l'écran du terminal.
+reset
 ###########
 ###########
 
@@ -54,31 +64,29 @@ echo "$jour - $heure : Initialisation - Le fichier du menu existe." >> logs.txt
  # echo " Date du jour - Date de modification du fichier : $Duree_De_Vie secondes. "
  Duree_De_Vie=`expr $Duree_De_Vie / 60`
  echo
- echo " Le fichier 00-menu.sh existe depuis $Duree_De_Vie minute(s) "
+ # echo " Le fichier 00-menu.sh existe depuis $Duree_De_Vie minute(s) "
  # Logs.txt
  echo "$jour - $heure : Le fichier 00-menu.sh existe depuis $Duree_De_Vie minute(s)." >> logs.txt
- sleep 3
+ # sleep 3
  
  # Le fichier doit avoir une existance de moins de 1 minute, sinon, il est remis à jour.
  if [ $Duree_De_Vie -gt 1 ]; then
  echo " Le fichier n'est pas considéré à jour avec $Duree_De_Vie minutes d'existance "
  # Logs.txt
  echo "$jour - $heure : Le fichier n'est pas considéré à jour avec $Duree_De_Vie minutes d'existance." >> logs.txt
-
  # Suppression du menu présent dans le dossier d'installation.
  rm 00-menu.sh
  echo
- echo " Suppression du fichier 00-menu.sh pour charger la version en ligne "
+ # echo " Suppression du fichier 00-menu.sh pour charger la version en ligne "
  # Logs.txt
  echo "$jour - $heure : Suppression du fichier 00-menu.sh pour charger la version en ligne." >> logs.txt
- sleep 3
-
+ # sleep 3
  # Mise à jour de la dernière version de 00-menu.sh à charger depuis Github.
  curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-menu.sh > ~/installeur/00-menu.sh
  # echo " Le fichier 00-menu.sh est à jour "
  # Logs.txt
  echo "$jour - $heure : Le fichier 00-menu.sh a été chargé depuis Github." >> logs.txt
- # sleep 3
+ sleep 3
 
  # Création de la variable $MenuValide pour lancer un test par la suite.
  # Le menu qui n'était pas à jour a été chargé et est à jour. L'attribut de la variable s'appel PasAJour.
@@ -241,7 +249,8 @@ sleep 4
 
 
 
-# Logs / su -c /
+# Logs /
+# sudo ...
 # Todo ...
 
 
@@ -289,6 +298,7 @@ cd ~/installeur/
 rm 1-supprimer-docker.sh
 echo "Suppression du fichier 1-supprimer-docker.sh"
 sleep 4
+sh 00-menu.sh
   ;;
 ########### Double points virgule pour fermer l'option 3.
 ###########
@@ -368,13 +378,6 @@ rm 4-installer-joomla.sh
   echo "${rougefonce}L'assistant va s'arrêter${neutre}"
   echo "Utiliser la commande ${vertfonce}sh 00-menu.sh${neutre} pour relancer l'assistant."
   sleep 4
-
-# Support sur Github.
-echo
-echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis Github${neutre}"
-echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
-echo
-sleep 4
 
 # Supprimer le dossier installeur à la fin de l'installation.
 cd ~/
