@@ -129,11 +129,21 @@ echo
 echo " Le fichier du menu se relance "
 echo " _____________________________ "
 sleep 3
-sh ~/installeur/00-menu.sh
+
+
 # Logs.txt
+echo " Test des 2 lignes en fin de commande 3 - 8 en erreur - A supprimer quand 3 - 8 n'affiche plus d'erreur "
+sleep 6
+
 cd ~/installeur
 echo "$jour - $heure : Initialisation - Rechargement de la dernière version du fichier du menu." >> logs.txt
+
+sh ~/installeur/00-menu.sh
+# Le exit permet d'éviter le problème d'écriture de logs à la fin du choix de menu 3 puis 8 ?
 exit
+# Sinon, reposer une variable intermédiaire ?
+
+
  # L'étape MenuValide AJour a été effectuée, le fichier 00-menu.sh continue de charger.
  # Le script ne se relance pas.
 else
@@ -288,19 +298,20 @@ sleep 4
   # echo "Saisir le mot de passe de l'utilisateur seo : UtilisateurSEO"
   sleep 2
 
+echo "Téléchargement et lancement du fichier pour supprimer Docker"
+echo
+sleep 2
 cd ~/installeur/
 curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-supprimer-docker.sh > ~/installeur/1-supprimer-docker.sh
 sh 1-supprimer-docker.sh
 
-echo "Téléchargement et lancement du fichier pour supprimer Docker"
-sleep 2
-
+# Le script a été executé et on revient à la fin des commandes de l'étape 3.
 cd ~/installeur/
 rm 1-supprimer-docker.sh
 echo "Suppression du fichier 1-supprimer-docker.sh"
 sleep 2
 sh 00-menu.sh
-# Voir si exit évite les 2 erreurs d'écriture, quand je lance 3 puis 8 pour exit.
+# Laisser le exit ?
 exit
   ;;
 ########### Double points virgule pour fermer l'option 3.
