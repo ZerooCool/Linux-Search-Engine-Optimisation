@@ -19,7 +19,7 @@ echo
 echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis Github${neutre}"
 echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
 echo
-sleep 4
+sleep 2
 ###########
 ###########
 
@@ -27,7 +27,7 @@ sleep 4
 Dossier_Installeur_Utilisateur=$(readlink -f ~/installeur)
 echo "Dossier installeur utilisé : $Dossier_Installeur_Utilisateur"
 # Affiche : /home/seo/installeur
-sleep 4
+sleep 2
 
 
 ###########
@@ -35,12 +35,12 @@ sleep 4
 ABS_PATH_INSTALLEUR=$(readlink -e $Dossier_Installeur_Utilisateur)
 if [ -d "$ABS_PATH_INSTALLEUR" ]; then
  echo " Initialisation - Le dossier d'installation existe "
- sleep 3
+ sleep 2
 # Logs.txt
 echo "$jour - $heure : Initialisation - Le dossier d'installation existe." >> logs.txt
 else
  echo " Le dossier d'installation n'existe pas. Lancer le menu 00-menu.sh pour initialiser le programme "
- sleep 3
+ sleep 2
 # Logs.txt
 echo "$jour - $heure : Le dossier d'installation n'existe pas. Lancer le menu 00-menu.sh pour initialiser le programme." >> logs.txt
 fi
@@ -50,7 +50,7 @@ fi
 echo
 echo "S'identifier maintenant en sudoers pour continuer la suppression de Docker"
 echo "Utiliser le mot de passe de l'utilisateur sudoers seo : UtilisateurSEO"
-sleep 1
+sleep 2
 
 sudo apt purge docker-engine docker-compose
 if [ "$?" = "0" ] ; then
@@ -62,7 +62,7 @@ echo "Les paquets de Docker n'ont pas été supprimés"
 # Logs.txt
 echo "$jour - $heure : Les paquets de Docker n'ont pas été supprimés." >> logs.txt
 fi
-sleep 4
+sleep 2
 
 
 sudo apt autoremove
@@ -75,14 +75,14 @@ echo "Les paquets qui ne sont plus nécessaires n'ont pas été supprimé"
 # Logs.txt
 echo "$jour - $heure : Les paquets qui ne sont plus nécessaires n'ont pas été supprimés." >> logs.txt
 fi
-sleep 4
+sleep 2
 
 
 # Vérifier si le dossier /var/lib/docker existe, si oui, le supprimer.
 VAR_LIB_DOCKER=$(readlink -e /var/lib/docker)
 if [ -d "$VAR_LIB_DOCKER" ]; then
  echo " Le dossier /var/lib/docker existe. Il va être supprimé. "
- sleep 3
+ sleep 2
 sudo rm -rf /var/lib/docker
 if [ "$?" = "0" ] ; then
 echo "Le dossier /var/lib/docker a été supprimé"
@@ -93,18 +93,18 @@ echo "Le dossier /var/lib/docker n'a pas été supprimé correctement"
 # Logs.txt
 echo "$jour - $heure : Le dossier /var/lib/docker n'a pas été supprimé correctement." >> logs.txt
 fi
-sleep 4
+sleep 2
 
 else
  echo " Le dossier /var/lib/docker n'existe pas. Il a déjà été supprimé. "
- sleep 3
+ sleep 2
 fi
 
 
 # Supprimer la source du dépôt Docker
-if [ -f "menu.sh" ]; then
-echo " Le fichier du menu existe "
-sleep 3
+if [ -f "/etc/apt/sources.list.d/docker.list" ]; then
+echo " Le fichier de dépôt de Docker existe "
+sleep 2
 
 sudo rm /etc/apt/sources.list.d/docker.list
 if [ "$?" = "0" ] ; then
@@ -116,13 +116,13 @@ echo "Le dépôt ajouté pour Docker n'a pas été supprimé correctement"
 # Logs.txt
 echo "$jour - $heure : Le dépôt ajouté pour Docker n'a pas été supprimé correctement." >> logs.txt
 fi
-sleep 4
+sleep 2
 
 else
 echo " Le dépôt ajouté pour Docker a déjà été supprimé "
 # Logs.txt
 echo "$jour - $heure : Le dépôt ajouté pour Docker a déjà été supprimé." >> logs.txt
-sleep 3
+sleep 2
 fi
 
 
@@ -136,7 +136,7 @@ echo "La clé de dépôt ajoutée pour Docker n'a pas été supprimée"
 # Logs.txt
 echo "$jour - $heure : La clé de dépôt ajoutée pour Docker n'a pas été supprimée." >> logs.txt
 fi
-sleep 4
+sleep 2
 
 sudo apt clean
 if [ "$?" = "0" ] ; then
@@ -148,7 +148,7 @@ echo "Les paquets présents dans /var/cache/apt/archives n'ont pas été supprim
 # Logs.txt
 echo "$jour - $heure : Les paquets présents dans /var/cache/apt/archives n'ont pas été supprimés." >> logs.txt
 fi
-sleep 4
+sleep 2
 
 
 echo
@@ -158,7 +158,7 @@ echo "$jour - $heure : Le processus de suppression de Docker est terminé." >> l
 sleep 2
 
 echo "Fin du script et retour à la fin de l'exécution du menu."
-sleep 4
+sleep 2
 # Revenir sur le menu.
 # Logs.txt
 # echo "$jour - $heure : Revenir sur le menu." >> logs.txt
