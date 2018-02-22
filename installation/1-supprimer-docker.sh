@@ -2,15 +2,7 @@
 # Ce script doit être lancer à partir du fichier 00-menu.sh
 # Passage en sudoers avec l'utilisateur seo pour les tâches administratives
 
-###########
 ########### Variables # Exportées
-# Jour et heure.
-##jour=$(date +%d-%m-%Y)
-##heure=$(date +%H:%M:%S)
-# Couleurs.
-##gris='\e[1;30m' rougefonce='\e[0;31m' vertfonce='\e[0;32m' vertclair='\e[1;32m' jaune='\e[1;33m' bleufonce='\e[0;34m' bleuclair='\e[1;34m' grisclair='\e[0;37m' blanc='\e[1;37m' neutre='\e[0;m'
-###########
-###########
 
 ###########
 ########### Support sur Github.
@@ -23,12 +15,14 @@ sleep 2
 ###########
 ###########
 
-
+###########
+########### Localiser le chemin d'installation de l'utilisateur courant.
 Dossier_Installeur_Utilisateur=$(readlink -f ~/installeur)
 echo " Dossier installeur utilisé : $Dossier_Installeur_Utilisateur"
 # Affiche : /home/seo/installeur
 sleep 2
-
+###########
+###########
 
 ###########
 ########### Vérifier si le dossier d'installation existe, sinon, le créer.
@@ -153,6 +147,7 @@ fi
 sudo apt-key del 2C52609D
 if [ "$?" = "0" ] ; then
 echo
+# Un bogue semble toujours retourner OK ! A signaler à l'équipe Debian.
 echo "La clé de dépôt ajoutée pour Docker, si elle existait, a été supprimée"
 # Logs.txt
 echo "$jour - $heure : La clé de dépôt ajoutée pour Docker, si elle existait, a été supprimée." >> logs.txt
@@ -187,9 +182,6 @@ echo "$jour - $heure : Le processus de suppression de Docker est terminé." >> l
 sleep 2
 
 # echo "Fin du script et retour à la fin de l'exécution du menu."
-echo "Retour au menu."
+echo "$jour - $heure : Retour au menu." >> logs.txt
+echo "Retour au menu"
 sleep 2
-# Revenir sur le menu.
-# Logs.txt
-# echo "$jour - $heure : Revenir sur le menu." >> logs.txt
-# sh $Dossier_Installeur_Utilisateur/00-menu.sh
