@@ -72,9 +72,8 @@ echo "$jour - $heure : Initialisation - Le fichier du menu existe." >> logs.txt
  echo " Le fichier n'est pas considéré à jour avec $Duree_De_Vie minutes d'existance "
  # Logs.txt
  echo "$jour - $heure : Initialisation - Le fichier n'est pas considéré à jour avec $Duree_De_Vie minutes d'existance." >> logs.txt
- # Suppression du menu présent dans le dossier d'installation.
- rm 00-menu.sh
  # echo " Suppression du fichier 00-menu.sh pour charger la version en ligne "
+ rm 00-menu.sh
  # Logs.txt
  echo "$jour - $heure : Initialisation - Suppression du fichier 00-menu.sh pour charger la version en ligne." >> logs.txt
  # sleep 3
@@ -156,20 +155,24 @@ sleep 2
 else
 echo
 curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/00-ascii.sh > ~/installeur/00-ascii.sh
+# Logs.txt
+echo "$jour - $heure : Chargement de l'image ascii." >> logs.txt
 fi
 
 reset
+# Logs.txt
+echo "$jour - $heure : Effacement de l'écran du terminal." >> logs.txt
 # Afficher l'image ascii.
 cat ~/installeur/00-ascii.sh
+# Logs.txt
+echo "$jour - $heure : Affichage de l'image ascii." >> logs.txt
 sleep 4
 # Supprimer le fichier de l'image ascii.
 rm ~/installeur/00-ascii.sh
 # Logs.txt
-cd ~/installeur
-echo "$jour - $heure : Chargement de l'image ascii." >> logs.txt
-echo "$jour - $heure : Effacement de l'écran du terminal." >> logs.txt
-echo "$jour - $heure : Affichage de l'image ascii." >> logs.txt
 echo "$jour - $heure : Suppression du fichier de l'image ascii." >> logs.txt
+# cd ~/installeur
+
 ###########
 ###########
 
@@ -259,22 +262,24 @@ sleep 4
 ###########
 ########### "2" | "deux" | "DEUX" | "Deux" valeurs acceptées pour lancer ce menu.
   "2" | "deux" | "DEUX" | "Deux" )
-# S'identifier en root pour arrêter les conteneurs, les supprimer, supprimer les images.
-  echo
-  echo " Saisir le mot de passe root : OptimisationSEO "
-  sleep 1
-su -c '
-  echo
-  echo " Lancement de la suppression des conteneurs et images de Docker "
-  echo
-  sleep 4
-cd /home/
+echo
+echo " La suppression des conteneurs et images Docker va commencer"
+sleep 2
+
+echo " Téléchargement et lancement du fichier pour supprimer les conteneurs et images de Docker"
+echo
+sleep 2
+cd ~/installeur/
 curl https://raw.githubusercontent.com/ZerooCool/Linux-Search-Engine-Optimisation/master/installation/1-supprimer-conteneurs-et-images.sh > ~/installeur/1-supprimer-conteneurs-et-images.sh
 sh 1-supprimer-conteneurs-et-images.sh
-cd /home/
+
+# Le script a été executé et on revient à la fin des commandes de l'étape 2.
+cd ~/installeur/
 rm 1-supprimer-conteneurs-et-images.sh
-sleep 4
-'
+echo "Suppression du fichier 1-supprimer-conteneurs-et-images.sh"
+sleep 2
+sh 00-menu.sh
+exit
   ;;
 ########### Double points virgule pour fermer l'option 2.
 ###########
@@ -282,12 +287,11 @@ sleep 4
 ###########
 ########### "3" | "trois" | "TROIS" | "Trois" valeurs acceptées pour lancer ce menu.
   "3" | "trois" | "TROIS" | "Trois" )
-  echo
-  echo "La suppression de Docker va commencée"
-  # echo "Saisir le mot de passe de l'utilisateur seo : UtilisateurSEO"
-  sleep 2
+echo
+echo " La suppression de Docker va commencer"
+sleep 2
 
-echo "Téléchargement et lancement du fichier pour supprimer Docker"
+echo " Téléchargement et lancement du fichier pour supprimer Docker"
 echo
 sleep 2
 cd ~/installeur/
@@ -300,7 +304,6 @@ rm 1-supprimer-docker.sh
 echo "Suppression du fichier 1-supprimer-docker.sh"
 sleep 2
 sh 00-menu.sh
-# Laisser le exit ?
 exit
   ;;
 ########### Double points virgule pour fermer l'option 3.
