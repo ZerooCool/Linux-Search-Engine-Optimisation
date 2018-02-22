@@ -38,8 +38,8 @@ Import du dossier Webcheck dans la Version 0.6 a installer dans la Version 0.7 o
 
 # SEO Kalamity - Version 0.5
 Création de la page Github officielle : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation<br/>
-Mise en place du serveur PHP lamp via Docker : docker pull tutum/lamp<br/>
-Ajout du paquet php5-curl et sauvegarde de l'image Docker.<br/>
+Mise en place du serveur PHP lamp via Docker : docker pull tutum/lamp ( Supprimé dans la version 0.6 et remplacé par Debian Apache2 MariaDB php7.0 )<br/>
+Ajout du paquet php5-curl et sauvegarde de l'image Docker. ( Supprimé dans la version 0.6 et remplacé par php7.0-curl )<br/>
 Ajout d'un script pour réimporter le conteneur de Docker à neuf automatiquement.<br/>
 Ajout de la page du wiki sur Docker dans les favoris du navigateur Firefox : https://www.visionduweb.eu/wiki/index.php?title=Ajouter_Docker_sur_GNU_Linux<br/>
 Ajout du plugin Linkchecker pour identifier les liens morts d'un site avec Firefox : https://addons.mozilla.org/fr/firefox/addon/linkchecker/<br/>
@@ -60,10 +60,10 @@ Créer un compte sur Minergate pour fabriquer de la monnaie numérique : https:/
 Installation du Mineur cpuminer pour aider les nouveaux utilisateurs de monnaie numérique (https://www.visionduweb.eu/wiki/index.php?title=Sites_gratuits_pour_gagner_du_Monero_depuis_votre_navigateur#Installer_le_mineur_cpuminer_sur_Debian_Stretch)
 
 # SEO Kalamity - Version 0.3
-IMPORTANT - Installation du paquet gephi-0.9.2-linux.tar.gz dans le dossier utilisateur seo.<br/>
-IMPORTANT - Ajout du navigateur de pentest Mantra (Qui n'est plus maintenu.)<br/>
-IMPORTANT - Ajout de Eclipse GTK Oxygen. (HTML CSS PHP.)<br/>
-IMPORTANT - Ajout du script sitemap-e pour créer un fichier sitemap.xml<br/>
+Installation du paquet gephi-0.9.2-linux.tar.gz dans le dossier utilisateur seo.<br/>
+Ajout du navigateur de pentest Mantra (Qui n'est plus maintenu.)<br/>
+Ajout de Eclipse GTK Oxygen. (HTML CSS PHP.)<br/>
+Ajout du script sitemap-e pour créer un fichier sitemap.xml<br/>
 Ajout de perl et de certains modules demandés par Debian pour utiliser sitemap-e.<br/>
 Test du script et création du fichier README pour l'utilisation des scripts.<br/>
 Ajout de ressources sur la communication et le SE0 dans le dossier pdf /home/seo/DOCU-SEO/Tutoriels/Pdf/<br/>
