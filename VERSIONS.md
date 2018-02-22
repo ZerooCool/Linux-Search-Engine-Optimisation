@@ -18,7 +18,7 @@ Script 2 : Importer l'image Docker Debian.<br/>
 Script 3 : Installer le serveur web localement.<br/>
 Script 4 : Télécharger et installer Joomla! / Dolibarr / Wordpress<br/>
 
-Création du dossier hello qui contient des scripts pour vérifier le bon fonctionnement du serveur web local mis en place avec Docker.<br/>
+Création du dossier hello qui contient des scripts pour vérifier le bon fonctionnement du serveur web local Docker.<br/>
 https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/tree/master/hello<br/>
 Le fichier index.php affiche une image et les liens vers les scripts suivants :<br/>
 hello.php : Voir si php fonctionne. Doit afficher SEO.<br/>
@@ -40,8 +40,8 @@ Import du dossier Webcheck dans la Version 0.6 a installer dans la Version 0.7 o
 
 # SEO Kalamity - Version 0.5
 Création de la page Github officielle : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation<br/>
-Mise en place du serveur PHP lamp via Docker : docker pull tutum/lamp ( Supprimé dans la version 0.6 et remplacé par Debian Apache2 MariaDB php7.0 )<br/>
-Ajout du paquet php5-curl et sauvegarde de l'image Docker. ( Supprimé dans la version 0.6 et remplacé par php7.0-curl )<br/>
+Ajout du serveur PHP5 tutum/lamp via Docker. Supprimé dans la version 0.6 et remplacé par Debian Apache2 MariaDB php7.0<br/>
+Ajout du paquet php5-curl et sauvegarde de l'image Docker. Supprimé dans la version 0.6 et remplacé par php7.0-curl<br/>
 Ajout d'un script pour réimporter le conteneur de Docker à neuf automatiquement.<br/>
 Ajout de la page du wiki sur Docker dans les favoris du navigateur Firefox : https://www.visionduweb.eu/wiki/index.php?title=Ajouter_Docker_sur_GNU_Linux<br/>
 Ajout du plugin Linkchecker pour identifier les liens morts d'un site avec Firefox : https://addons.mozilla.org/fr/firefox/addon/linkchecker/<br/>
@@ -50,7 +50,7 @@ Nouveaux fonds d'écran.
 
 # SEO Kalamity - Version 0.4
 Ajout du lien pour Content Spinning : https://www.visionduweb.eu/wiki/index.php?title=SEO_Content_Spinning<br/>
-Ajout du plugin PurTraqueur de PurMedia pour partager vos pages intéressantes en un clic, sur PurMedia : http://purmedia.fr/pur-traqueur.html<br/>
+Ajout du plugin PurTraqueur de PurMedia pour partager vos articles en un clic sur PurMedia : http://purmedia.fr/pur-traqueur.html<br/>
 Ajout pour Scrapebox avec une liste de 119 footprints pour « Page Scanner » dans les favoris du navigateur Firefox.<br/>
 Ajout d'autres liens complémentaires dans les favoris du navigateur Firefox.<br/>
 Ajout du dossier de favoris Blast SEO. Nouvelle organisation des dossiers favoris. <br/>
