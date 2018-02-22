@@ -34,10 +34,7 @@ Cela permettra à un utilisateur normal d'exécuter des commandes avec des privi
 Permet d'éviter l'accès avec l'utilisateur root et complique le travail d'un pirate informatique qui devra connaître le nom de l'utilisateur ( Ici, seo).<br/>
 
 Suppression de Docker qui n'est plus installé par défaut pour partager une machine virtuelle plus légère.<br/>
-Import du dossier Webcheck dans la Version 0.6 a installer dans la Version 0.7 ou supérieur.<br/>
-Suppression de l'historique du terminal pour éviter la présence d'un historique de commandes inutiles.<br/>
-history -c<br/>
-history -w
+Import du dossier Webcheck dans la Version 0.6 a installer dans la Version 0.7 ou supérieur.
 
 # SEO Kalamity - Version 0.5
 Création de la page Github officielle : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation<br/>
