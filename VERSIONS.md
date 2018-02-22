@@ -5,9 +5,9 @@ Cmatrix, juste pour le fun : apt-get install cmatrix.<br/>
 Ajout d'un wiki sur GitHub : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/wiki<br/>
 Ajout de la page Docker : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/wiki/Utiliser-Docker<br/>
 
-Création du fichier Zenity Menu SEO.sh en BETA.<br/>
+Création du fichier Zenity Menu SEO.sh en BETA-TEST.<br/>
 
-Création du dossier installation sous Github qui contient les scripts suivants :<br/>
+Création du dossier installation sous Github qui contient les scripts suivants en BETA-TEST :<br/>
 Le fichier README.md<br/>
 Script 0 : Image d'introduction en ascii-art.<br/>
 Script 0 : Le menu pour une installation assistée.<br/>
