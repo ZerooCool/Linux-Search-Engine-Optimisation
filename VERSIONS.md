@@ -2,14 +2,9 @@
 # SEO Kalamity - Version 0.6
 Ajout du thème Plasma Fire pour XFCE.<br/>
 Cmatrix, juste pour le fun : apt-get install cmatrix.<br/>
-Ajout d'un wiki sur la page officielle de GitHub.<br/>
-Import du dossier Webcheck dans la Version 0.6 a installer dans la Version 0.7 ou supérieur.<br/>
-Création du fichier Zenity Menu SEO.sh en BETA.<br/>
+Ajout d'un wiki sur GitHub : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/wiki<br/>
 Ajout de la page Docker : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/wiki/Utiliser-Docker<br/>
-Suppression de Docker qui n'est plus installé par défaut pour partager une machine virtuelle plus légère.<br/>
-Suppression de l'historique du terminal pour éviter la présence d'un historique de commandes inutiles.<br/>
-history -c<br/>
-history -w<br/>
+Création du fichier Zenity Menu SEO.sh en BETA.<br/>
 
 Création du dossier installation sous Github qui contient les scripts suivants :<br/>
 Le fichier README.md<br/>
@@ -28,6 +23,7 @@ hello.php : Voir si php fonctionne. Doit afficher SEO.<br/>
 phpinfo.php : Retourne les informations du serveur web Apache2.<br/>
 curl.php : Voir si cURL fonctionne. Doit afficher Enabled.<br/>
 
+Ajout de la portée de variables, du menu, vers les autres scripts appelés depuis le menu.<br/>
 Ajout d'un système de logs pour suivre l'installation effectuée avec le menu.<br/>
 Voir ~/installeur/logs.txt<br/>
 
@@ -37,7 +33,11 @@ Un utilisateur ayant les privilèges de sudoers possède autant de droits que l'
 Cela permettra à un utilisateur normal d'exécuter des commandes avec des privilèges administratifs en plaçant le mot sudo avant chaque commande.<br/>
 Permet d'éviter l'accès avec l'utilisateur root et complique le travail d'un pirate informatique qui devra connaître le nom de l'utilisateur ( Ici, seo).<br/>
 
-Ajout de la portée de variables, du menu, vers les autres scripts appelés depuis le menu.
+Suppression de Docker qui n'est plus installé par défaut pour partager une machine virtuelle plus légère.<br/>
+Import du dossier Webcheck dans la Version 0.6 a installer dans la Version 0.7 ou supérieur.<br/>
+Suppression de l'historique du terminal pour éviter la présence d'un historique de commandes inutiles.<br/>
+history -c<br/>
+history -w
 
 # SEO Kalamity - Version 0.5
 Création de la page Github officielle : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation<br/>
