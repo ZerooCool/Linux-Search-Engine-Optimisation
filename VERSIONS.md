@@ -1,5 +1,5 @@
 
-# SEO Kalamity - Version 0.6
+# A venir : SEO Kalamity - Version 0.6
 Ajout du thème Plasma Fire pour XFCE.<br/>
 Cmatrix, juste pour le fun : apt-get install cmatrix.<br/>
 Ajout d'un wiki sur GitHub : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/wiki<br/>
