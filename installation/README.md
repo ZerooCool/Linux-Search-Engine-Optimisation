@@ -26,8 +26,8 @@ sleep 4
 ## Chaque script terminé doit revenir sur le menu pour sortir avec le choix EXIT.
 sh ~/installeur/00-menu.sh
 
-## Faciliter la lecture de l'installation. Faire un arrêt avec sleep x et vider l'écran avec reset.
-<br/>
+## Faciliter la lecture de l'installation.
+Faire un arrêt avec sleep x et vider l'écran avec reset.<br/>
 
 ## Utiliser le code de retour d'erreur après chaque commande.
 Exemple : https://www.visionduweb.eu/wiki/index.php?title=Programmation_en_Shell_Bash_Linux#Code_retour
