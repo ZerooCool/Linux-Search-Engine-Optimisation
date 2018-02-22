@@ -4,11 +4,13 @@ Ajout du thème Plasma Fire pour XFCE.<br/>
 Cmatrix, juste pour le fun : apt-get install cmatrix.<br/>
 Ajout d'un wiki sur GitHub : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/wiki<br/>
 Ajout de la page Docker : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/wiki/Utiliser-Docker<br/>
+
 Création du fichier Zenity Menu SEO.sh en BETA.<br/>
 
 Création du dossier installation sous Github qui contient les scripts suivants :<br/>
 Le fichier README.md<br/>
-Script 0 : Le menu pour une installation assistée et son image d'introduction en ascii.<br/>
+Script 0 : Image d'introduction en ascii-art.<br/>
+Script 0 : Le menu pour une installation assistée.<br/>
 Script 1 : Installer Docker.<br/>
 Script 1 : Supprimmer des conteneurs et images existantes.<br/>
 Script 1 : Supprimmer Docker et nettoyer l'installation.<br/>
@@ -28,12 +30,12 @@ Ajout d'un système de logs pour suivre l'installation effectuée avec le menu.<
 Voir ~/installeur/logs.txt<br/>
 
 Installation de sudo et ajout des droits sudoers à l'utilisateur seo.<br/>
-Un utilisateur ayant les privilèges de sudoers possède le droit d'accès à la racine du système.<br/>
 Un utilisateur ayant les privilèges de sudoers possède autant de droits que l'utilisateur root.<br/>
-Cela permettra à un utilisateur normal d'exécuter des commandes avec des privilèges administratifs en plaçant le mot sudo avant chaque commande.<br/>
-Permet d'éviter l'accès avec l'utilisateur root et complique le travail d'un pirate informatique qui devra connaître le nom de l'utilisateur ( Ici, seo).<br/>
+Placer sudo devant les commandes administratives a executer depuis le terminal<br/>
 
 Suppression de Docker qui n'est plus installé par défaut pour partager une machine virtuelle plus légère.<br/>
+L'installation de Docker est assistée avec le menu accueil 00-menu.sh (Dossier installation de Github.)<br/>
+
 Import du dossier Webcheck dans la Version 0.6 a installer dans la Version 0.7 ou supérieur.
 
 # SEO Kalamity - Version 0.5
