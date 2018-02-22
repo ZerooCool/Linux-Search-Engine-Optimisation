@@ -1,67 +1,48 @@
 # README
 ## Les scripts.
+00-ascii.sh - Affiche une image ascii.<br/>
+00-menu.sh - Lance le menu d'installation.<br/>
+1-installer-docker.sh - Installer Docker.<br/>
+1-supprimer-conteneurs-et-images.sh - Supprimer les conteneurs et images de Docker.<br/>
+1-supprimer-docker.sh - Supprimer le paquet Docker sur le système hôte.<br/>
+2 - Importer l'image Docker de Debian.<br/>
+3 - Installer le serveur local dans le conteneur Docker de Debian.<br/>
+4 - Installer le dossier hello et les scripts pour tester le serveur.<br/>
+4 - Télécharger l'archive d'un CMS et installer le CMS. ( Faire un nouveau menu pour la liste des CMS proposés. )<br/>
+Joomla<br/>
+Dolibarr<br/>
+WordPress
 
-00-ascii.sh - Affiche une image ascii.
-
-00-menu.sh - Lance le menu d'installation.
-
-1-installer-docker.sh - Installer Docker.
-
-1-supprimer-conteneurs-et-images.sh - Supprimer les conteneurs et images de Docker.
-
-1-supprimer-docker.sh - Supprimer le paquet Docker sur le système hôte.
-
-2 - Importer l'image Docker de Debian.
-
-3 - Installer le serveur local dans le conteneur Docker de Debian.
-
-4 - Installer le dossier hello et les scripts pour tester le serveur.
-
-4 - Télécharger l'archive d'un CMS et installer le CMS. ( Faire un nouveau menu pour la liste des CMS proposés. )
-
- Joomla
-
- Dolibarr
-
- WordPress
-
-#################################################
-
-# README
-## Liste à faire.
-
+# Liste à faire
 Ajouter le lien vers sur support de Github au début du lancement de chaque script.
 
-  # Support sur Github.
+## Support sur Github.
+echo<br/>
+echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis Github${neutre}"<br/>
+echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"<br/>
+echo<br/>
+sleep 4
 
-  echo
+## Chaque script terminé doit revenir sur le menu pour sortir avec le choix EXIT.
+sh ~/installeur/00-menu.sh
 
-  echo "${rougefonce}En cas d'erreur durant l'installation, merci d'ouvrir une issue depuis Github${neutre}"
+## Faciliter la lecture de l'installation. Faire un arrêt avec sleep x et vider l'écran avec reset.
+<br/>
 
-  echo "https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/issues"
+## Utiliser le code de retour d'erreur après chaque commande.
+Exemple : https://www.visionduweb.eu/wiki/index.php?title=Programmation_en_Shell_Bash_Linux#Code_retour
 
-  echo
+## Ajouter les logs à chaque étape.
+Logs.txt<br/>
+cd ~/installeur<br/>
+echo "$jour - $heure : Les paquets de Docker n'ont pas été supprimés." >> logs.txt
 
-  sleep 4
+## Ajouter des couleurs.
 
-
-Chaque script terminé doit revenir sur le menu pour sortir avec le choix EXIT.
-
-  sh ~/installeur/00-menu.sh
-
-
-Faciliter la lecture de l'installation. Faire un arrêt avec sleep x et vider l'écran avec reset.
-
-
-Utiliser le code de retour d'erreur après chaque commande.
-
-  Exemple : https://www.visionduweb.eu/wiki/index.php?title=Programmation_en_Shell_Bash_Linux#Code_retour
-
-
-Ajouter les logs à chaque étape.
-
-   # Logs.txt
-   cd ~/installeur
-   echo "$jour - $heure : Les paquets de Docker n'ont pas été supprimés." >> logs.txt
-
-Ajouter des couleurs.
+# A faire à chaque version
+Sauvegarde des favoris de firefox dans le dossier /home/seo/DOCU-SEO/Sauvegarde/Les favoris de Firefox/<br/>
+Se déconnecter de Firefox.<br/>
+Supprimer Docker pour minimiser le poids de la machine virtuelle à télécharger.<br/>
+Suppression de l'historique du terminal pour éviter la présence d'un historique de commandes inutiles.<br/>
+history -c<br/>
+history -w
