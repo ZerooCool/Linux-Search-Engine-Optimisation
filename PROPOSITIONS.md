@@ -20,6 +20,8 @@ Les favoris sont à reprendre -> coinhive.
 
 Outil de gestion des affiliations.
 
+Passer l'interface en français.
+
 # Propositions pour la Version 1.0
 Ajouter des pages du wiki dans les Favoris.<br/>
 Récupérer la liste de ses contacts Twitter.<br/>
