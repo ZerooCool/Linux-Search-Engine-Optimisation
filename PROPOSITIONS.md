@@ -16,6 +16,8 @@ Voir si il fonctionne et est bien reconnu depuis l'interface de minergate.
 
 Les favoris sont à reprendre -> coinhive.
 
+Outil de gestion des affiliations.
+
 # Propositions pour la Version 1.0
 Ajouter des pages du wiki dans les Favoris.<br/>
 Récupérer la liste de ses contacts Twitter.<br/>
