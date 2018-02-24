@@ -54,7 +54,7 @@ hello.php : Voir si php fonctionne. Doit afficher SEO.<br/>
 phpinfo.php : Retourne les informations du serveur web Apache2.<br/>
 curl.php : Voir si cURL fonctionne. Doit afficher Enabled.<br/>
 
-Ajout de la portée de variables depuis le menu vers les autres scripts appelés depuis le menu.<br/>
+Ajout de la portée de variables depuis le menu assistant de Docker vers les autres scripts appelés depuis le menu.<br/>
 Ajout d'un fichier de logs lors de l'installation depuis le menu. (~/installeur/logs.txt)<br/>
 Script de suppression de Docker pour partager une machine virtuelle plus légère.<br/>
 L'installation de Docker est assistée avec le menu accueil 00-menu.sh (Dossier installation de Github.)<br/>
