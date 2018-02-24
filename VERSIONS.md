@@ -1,13 +1,31 @@
 
-# A venir : SEO Kalamity - Version 0.6
-Ajout du thème Plasma Fire pour XFCE.<br/>
-Cmatrix, juste pour le fun : apt-get install cmatrix.<br/>
+# SEO Kalamity - Version 0.6
+Le système Debian Stretch 9 est remplacé par Kali Linux : kali-linux-light-2018.1-amd64.iso<br/>
+
 Ajout d'un wiki sur GitHub : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/wiki<br/>
 Ajout de la page Docker : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/wiki/Utiliser-Docker<br/>
 
-Création du fichier Zenity Menu SEO.sh en BETA-TEST.<br/>
+Ajout des droits root à l'utilisateur seo de Kali Linux. Utiliser sudo dans les scripts.<br/>
 
-Création du dossier installation sous Github qui contient les scripts suivants en BETA-TEST :<br/>
+OWASP Mantra est réinstallé, uniquement dans le menu des applications du compte root.<br/>
+
+Ajout de JAVA jre-8u161-linux-x64 dans le dossier jre pour Eclipse Oxygen ET pour le dossier bin de Gephi.<br/>
+Cmatrix pour le fun : Lancer cmatrix depuis le terminal.<br/>
+Ajout du thème Plasma Fire pour XFCE.<br/>
+Installation de mousepad.<br/>
+Installation de Bleachbit.<br/>
+Installation de GIT.<br/>
+
+Installation de Zenity : apt-get install zenity<br/>
+Ajout d'un menu Zenity pour les logiciels de développement web en BETA-TEST.<br/>
+Ajout d'un menu Zenity pour les logiciels de SEO en BETA-TEST.<br/>
+Le script charger-sitemap-production.sh est intégré au menu rapide SEO.<br/>
+Gephi est intégré au menu rapide SEO en BETA-TEST.<br/>
+Le script sitemap-e est fonctionnel avec libwww-mechanize-perl libdatetime-perl libio-tee-perl.<br/>
+Le script sitemap-e est intégré au menu rapide SEO en BETA-TEST.<br/>
+
+Les scripts pour installer Docker sont placés dans le dossier Scripts : /home/seo/KSEO/Scripts/Kalamity Docker/<br/>
+Le dossier installation sous Github contient les mêmes scripts , à jour, en BETA-TEST :<br/>
 Le fichier README.md<br/>
 Script 0 : Image d'introduction en ascii-art.<br/>
 Script 0 : Le menu pour une installation assistée.<br/>
@@ -25,16 +43,16 @@ hello.php : Voir si php fonctionne. Doit afficher SEO.<br/>
 phpinfo.php : Retourne les informations du serveur web Apache2.<br/>
 curl.php : Voir si cURL fonctionne. Doit afficher Enabled.<br/>
 
-Ajout de la portée de variables, du menu, vers les autres scripts appelés depuis le menu.<br/>
-Ajout d'un système de logs pour suivre l'installation effectuée avec le menu.<br/>
-Voir ~/installeur/logs.txt<br/>
-
-Installation de sudo et ajout des droits sudoers à l'utilisateur seo.<br/>
-Un utilisateur ayant les privilèges de sudoers possède autant de droits que l'utilisateur root.<br/>
-Placer sudo devant les commandes administratives a executer depuis le terminal<br/>
-
-Suppression de Docker qui n'est plus installé par défaut pour partager une machine virtuelle plus légère.<br/>
+Ajout de la portée de variables depuis le menu vers les autres scripts appelés depuis le menu.<br/>
+Ajout d'un fichier de logs lors de l'installation depuis le menu. (~/installeur/logs.txt)<br/>
+Script de suppression de Docker pour partager une machine virtuelle plus légère.<br/>
 L'installation de Docker est assistée avec le menu accueil 00-menu.sh (Dossier installation de Github.)<br/>
+
+Le mineur de monero est à nouveau installé. Intégré au menu rapide Dev Web il ne se lance pas.<br/>
+Lancer directement depuis le dossier /home/seo/KSEO/Outils/<br/>
+
+Le script ping-google-bing-sitemap.sh ne se lance pas avec le menu rapide SEO.<br/>
+Lancer directement depuis le dossier /home/seo/KSEO/Scripts/<br/>
 
 Import du dossier Webcheck dans la Version 0.6 a installer dans la Version 0.7 ou supérieur.
 
