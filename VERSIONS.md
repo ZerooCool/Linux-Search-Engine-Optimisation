@@ -113,3 +113,12 @@ Ajout du forum Scripts SEO dans les favoris du navigateur Firefox : http://scrip
 
 # SEO Kalamity - Version 0.1
 Installation du système. Debian Stretch 0 à l'origine, remplacé dans la version 0.6 par Kali Linux 2018.
+
+# A faire à chaque version
+Sauvegarde des favoris de firefox dans le dossier /home/seo/DOCU-SEO/Sauvegarde/Les favoris de Firefox/<br/>
+Se déconnecter de Firefox.<br/>
+Supprimer Docker pour minimiser le poids de la machine virtuelle à télécharger.<br/>
+Suppression de l'historique du terminal pour éviter la présence d'un historique de commandes inutiles.<br/>
+history -c<br/>
+history -w<br/>
+Lancer bleachbit.
