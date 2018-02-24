@@ -6,6 +6,7 @@ Le système Debian Stretch 9 est remplacé par Kali Linux : kali-linux-light-201
 Graphique install | Fr / fr | Nom de système : KSEO | Environnement de bureau : xfce4.<br/>
 Dépôt sources.list de Kali Linux 2018 par défaut.<br/>
 Ajout des droits root à l'utilisateur seo de Kali Linux. Utiliser sudo dans les scripts.<br/>
+La machine virtuelle passe de 30 à 35 Go.
 
 Addons invités. Interface graphique de VirtualBox Version 5.2.6 r120293 (Qt5.6.1)<br/>
 Copier / Coller bidirectionnel. | Transfert de fichier par cliquer déposer bidirectionnel. | Partage de dossier.<br/>
