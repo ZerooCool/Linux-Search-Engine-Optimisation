@@ -1,5 +1,5 @@
 
-# SEO Kalamity - Version 0.6
+# Kalamity SEO - Version 0.6
 Le système Debian Stretch 9 est remplacé par Kali Linux : kali-linux-light-2018.1-amd64.iso<br/>
 Graphique install | Fr / fr | Nom de système : KSEO | Environnement de bureau : xfce4.<br/>
 Dépôt sources.list de Kali Linux 2018 par défaut.<br/>
@@ -68,7 +68,7 @@ Lancer directement depuis le dossier /home/seo/KSEO/Scripts/<br/>
 
 Import du dossier Webcheck dans la Version 0.6 a installer dans la Version 0.7 ou supérieur.
 
-# SEO Kalamity - Version 0.5
+# Kalamity SEO - Version 0.5
 Création de la page Github officielle : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation<br/>
 Ajout du serveur PHP5 tutum/lamp via Docker. Supprimé dans la version 0.6 et remplacé par Debian Apache2 MariaDB php7.0<br/>
 Ajout du paquet php5-curl et sauvegarde de l'image Docker. Supprimé dans la version 0.6 et remplacé par php7.0-curl<br/>
@@ -76,7 +76,7 @@ Ajout d'un script pour réimporter le conteneur de Docker à neuf automatiquemen
 Ajout de la page du wiki pour le tutoriel sur Docker dans les favoris du navigateur Firefox : https://www.visionduweb.eu/wiki/index.php?title=Ajouter_Docker_sur_GNU_Linux<br/>
 Ajout du plugin Linkchecker pour identifier les liens morts d'un site avec Firefox : https://addons.mozilla.org/fr/firefox/addon/linkchecker/<br/>
 
-# SEO Kalamity - Version 0.4
+# Kalamity SEO - Version 0.4
 Ajout du lien pour Content Spinning : https://www.visionduweb.eu/wiki/index.php?title=SEO_Content_Spinning<br/>
 Ajout du plugin PurTraqueur de PurMedia pour partager vos articles en un clic sur PurMedia : http://purmedia.fr/pur-traqueur.html<br/>
 Ajout pour Scrapebox avec une liste de 119 footprints pour « Page Scanner » dans les favoris du navigateur Firefox.<br/>
@@ -89,7 +89,7 @@ Sauvegarde des favoris de firefox dans le dossier /home/seo/KSEO/DOCU-SEO/Sauveg
 Créer un compte sur Minergate pour fabriquer de la monnaie numérique : https://minergate.com/a/8ac23bd407f9b6db4d848765<br/>
 Installation du Mineur cpuminer pour aider les nouveaux utilisateurs de monnaie numérique : https://www.visionduweb.eu/wiki/index.php?title=Sites_gratuits_pour_gagner_du_Monero_depuis_votre_navigateur#Installer_le_mineur_cpuminer_sur_Debian_Stretch
 
-# SEO Kalamity - Version 0.3
+# Kalamity SEO - Version 0.3
 Installation du paquet gephi-0.9.2-linux.tar.gz dans le dossier utilisateur seo.<br/>
 Ajout du navigateur de pentest Mantra (Qui n'est plus maintenu.)<br/>
 Ajout de Eclipse GTK Oxygen. (HTML CSS PHP.)<br/>
@@ -101,7 +101,7 @@ Ajout de liens pour optimiser un référencement dans les favoris du navigateur 
 Ajout de liens pour créer et utiliser des masterspins en ligne dans les favoris du navigateur Firefox.<br/>
 Ajout de liens dans un dossier Black Hat SEO dans les favoris du navigateur Firefox.
 
-# SEO Kalamity - Version 0.2
+# Kalamity SEO - Version 0.2
 Ajour d'une liste d'annuaires et moteurs, autoapprouvés, pour master spin.<br/>
 La liste des annuaires et moteurs à mettre à jour : https://lite.framacalc.org/Moteurs_et_annuaires<br/>
 Liens à compléter et a vérifier avec la communauté pour pouvoir les exploiter.<br/>
@@ -111,7 +111,7 @@ IMPORTANT - La page d'accueil SEO depuis le wiki est ajoutée dans les favoris d
 Ajout de l'outil GHSTooLS et de son forum dans les favoris du navigateur Firefox.<br/>
 Ajout du forum Scripts SEO dans les favoris du navigateur Firefox : http://scripts-seo.com
 
-# SEO Kalamity - Version 0.1
+# Kalamity SEO - Version 0.1
 Installation du système. Debian Stretch 0 à l'origine, remplacé dans la version 0.6 par Kali Linux 2018.
 
 # A faire à chaque version
