@@ -38,11 +38,3 @@ cd ~/installeur<br/>
 echo "$jour - $heure : Les paquets de Docker n'ont pas été supprimés." >> logs.txt
 
 ## Ajouter des couleurs.
-
-# A faire à chaque version
-Sauvegarde des favoris de firefox dans le dossier /home/seo/DOCU-SEO/Sauvegarde/Les favoris de Firefox/<br/>
-Se déconnecter de Firefox.<br/>
-Supprimer Docker pour minimiser le poids de la machine virtuelle à télécharger.<br/>
-Suppression de l'historique du terminal pour éviter la présence d'un historique de commandes inutiles.<br/>
-history -c<br/>
-history -w
