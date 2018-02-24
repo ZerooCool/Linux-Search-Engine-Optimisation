@@ -5,11 +5,17 @@ Transformer en URL coinhive les URL qui ne sont pas gratuites.<br/>
 
 Intégrer les scripts d'installation pour Docker et le serveur web local dans le menu.<br/>
 
-Import du dossier Webcheck dans la Version 0.6 qui reste à installer dans la Version 0.7 ou supérieur.
+Import du dossier Webcheck dans la Version 0.6 qui reste à installer dans la Version 0.7 ou supérieur.<br/>
 
-Optimiser Java avec /usr/java/ pour ne pas avoir à doubler les dossier jre pour Eclipse et pour Gephi.
+Optimiser Java avec /usr/java/ pour ne pas avoir à doubler les dossier jre pour Eclipse et pour Gephi.<br/>
 
-Voir comment lancer le mineur et script ping-google-bing-sitemap.sh depuis le menu Zenity.
+Voir comment lancer le mineur et script ping-google-bing-sitemap.sh et dminer depuis le menu Zenity.<br/>
+
+dminer est copié collé de l'ancienne installation de Debian, et, se lance.<br/>
+Voir si il fonctionne et est bien reconnu depuis l'interface de minergate.
+
+Les favoris sont à reprendre -> coinhive.
+
 # Propositions pour la Version 1.0
 Ajouter des pages du wiki dans les Favoris.<br/>
 Récupérer la liste de ses contacts Twitter.<br/>
