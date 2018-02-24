@@ -3,12 +3,13 @@ Optimiser le poids des images pour les sites web.<br/>
 
 Transformer en URL coinhive les URL qui ne sont pas gratuites.<br/>
 
-Si nécessaire, installer sudo sur l'hôte !<br/>
-Donner les droits sudoers à l'utilisateur seo (mdp : UtilisateurSEO)<br/>
-
 Intégrer les scripts d'installation pour Docker et le serveur web local dans le menu.<br/>
 
-Intégrer Webcheck
+Import du dossier Webcheck dans la Version 0.6 qui reste à installer dans la Version 0.7 ou supérieur.
+
+Optimiser Java avec /usr/java/ pour ne pas avoir à doubler les dossier jre pour Eclipse et pour Gephi.
+
+Voir comment lancer le mineur et script ping-google-bing-sitemap.sh depuis le menu Zenity.
 # Propositions pour la Version 1.0
 Ajouter des pages du wiki dans les Favoris.<br/>
 Récupérer la liste de ses contacts Twitter.<br/>
@@ -20,7 +21,6 @@ Convertir les URL payantes et professionnelles avec coinhive. Les URL gratuites 
 
 Vérifier pourquoi l'image Docker sauvegardée n'a pas de TAG lors de l'import.<br/>
 
-La sauvegarde du conteneur ajoute 200Mo à l'image !<br/>
 Optimiser la sauvegarde des données avec Docker et les volumes.
 
 # Propositions pour la Version 2.0
@@ -29,4 +29,5 @@ Utiliser de nouveaux scripts Bash, PHP, Perl pour automatiser les actions.
 
 # Propositions pour la Version 3.0
 Installer Wine avec des logiciels de SEO de Windows.<br/>
+
 Pour le moment les logiciels de SEO de Windows ne fonctionnent pas depuis la VM.
