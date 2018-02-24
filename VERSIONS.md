@@ -1,5 +1,7 @@
 
 # Kalamity SEO - Version 0.6
+En ligne Samedi 24 février 2018, à partir de 23h.
+
 Le système Debian Stretch 9 est remplacé par Kali Linux : kali-linux-light-2018.1-amd64.iso<br/>
 Graphique install | Fr / fr | Nom de système : KSEO | Environnement de bureau : xfce4.<br/>
 Dépôt sources.list de Kali Linux 2018 par défaut.<br/>
