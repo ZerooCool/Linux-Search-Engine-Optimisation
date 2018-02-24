@@ -36,7 +36,7 @@ Script 2 : Importer l'image Docker Debian.<br/>
 Script 3 : Installer le serveur web localement.<br/>
 Script 4 : Télécharger et installer Joomla! / Dolibarr / Wordpress<br/>
 
-Création du dossier hello qui contient des scripts pour vérifier le bon fonctionnement du serveur web local Docker.<br/>
+Création du dossier Github hello avec des scripts pour tester le bon fonctionnement du serveur web local Docker.<br/>
 https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/tree/master/hello<br/>
 Le fichier index.php affiche une image et les liens vers les scripts suivants :<br/>
 hello.php : Voir si php fonctionne. Doit afficher SEO.<br/>
