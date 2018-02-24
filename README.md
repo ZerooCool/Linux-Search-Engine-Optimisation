@@ -4,14 +4,15 @@ L'objectif est de centraliser et partager des outils pour le référencement et 
 
 # Kalamity SEO - Version 0.6
 Télécharger l'image .ova de la Version 0.6 avec ce lien pour soutenir le projet Kalamity SEO : https://cnhv.co/1t19w<br/>
-Compter 2Go 500Mo pour le chargement.
+Compter 2Go 500Mo pour le chargement.<br/>
+
+Noter que les scripts proposés sont en version BETA-TEST !
 
 # Installer Kalamity SEO
-Installer VirtualBox dans sa dernière version.
-<br/><br/>
-Double cliquer sur l'archive .ova téléchargée pour importer la machine virtuelle Linux Search Engine Optimisation.<br/>
-Disposer d'environ 30Go disponibles pour installer la machine virtuelle sur VirtualBox.<br/>
-La version courante de Kalamity SEO sera ajoutée à VirtualBox.
+Installer VirtualBox dans sa dernière version.<br/>
+Ajouter la version courante de Kalamity SEO à VirtualBox.<br/>
+Disposer d'environ 35Go disponibles pour installer la machine virtuelle sur VirtualBox.<br/>
+Double cliquer sur l'archive .ova téléchargée pour importer la machine virtuelle Linux Search Engine Optimisation.
 
 # Démarrer la machine virtuelle
 Lancer la machine depuis Virtualbox.<br/>
