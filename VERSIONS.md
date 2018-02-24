@@ -8,6 +8,7 @@ Addons invités. Interface graphique de VirtualBox Version 5.1.30 r118389 (Qt5.6
 Copier / Coller bidirectionnel. | Transfert de fichier par cliquer déposer bidirectionnel. | Partage de dossier.<br/>
 Tutoriel : https://www.visionduweb.eu/wiki/index.php?title=Installer_VirtualBox_sur_Debian#Installer_les_Additions_invit.C3.A9s_de_VirtualBox<br/>
 
+Changement des emblèmes sur le dossier DOCU-SEO et son contenu et sur le dossier Scripts.<br/>
 Ajout d'un fond d'écran pour l'utilisateur root et de 4 fonds d'écran pour l'utilisateur seo.<br/>
 OWASP Mantra est réinstallé, uniquement dans le menu des applications du compte root.<br/>
 Ajout des droits root à l'utilisateur seo de Kali Linux. Utiliser sudo dans les scripts.<br/>
@@ -99,11 +100,10 @@ Ajout de liens dans un dossier Black Hat SEO dans les favoris du navigateur Fire
 
 # SEO Kalamity - Version 0.2
 Ajour d'une liste d'annuaires et moteurs, autoapprouvés, pour master spin.<br/>
-IMPORTANT - La liste des annuaires et moteurs à mettre à jour : https://lite.framacalc.org/Moteurs_et_annuaires<br/>
+La liste des annuaires et moteurs à mettre à jour : https://lite.framacalc.org/Moteurs_et_annuaires<br/>
 Liens à compléter et a vérifier avec la communauté pour pouvoir les exploiter.<br/>
-IMPORTANT - Ajout du lien pour soumettre son site dans l'annuaire de Vision du web dans les favoris du navigateur Firefox : https://www.visionduweb.eu/proposer-un-lien-web<br/>
+Ajout du lien pour soumettre son site dans l'annuaire de Vision du web dans les favoris du navigateur Firefox : https://www.visionduweb.eu/proposer-un-lien-web<br/>
 Ajout de fichiers et de dossiers en local concernant le SEO.<br/>
-Changement des emblèmes sur le dossier DOCU-SEO et son contenu et sur le dossier Scripts.<br/>
 IMPORTANT - La page d'accueil SEO depuis le wiki est ajoutée dans les favoris du navigateur Firefox : https://www.visionduweb.eu/wiki/index.php?title=Accueil_SEO<br/>
 Ajout de l'outil GHSTooLS et de son forum dans les favoris du navigateur Firefox.<br/>
 Ajout du forum Scripts SEO dans les favoris du navigateur Firefox : http://scripts-seo.com
