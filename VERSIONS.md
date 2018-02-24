@@ -1,13 +1,19 @@
 
 # SEO Kalamity - Version 0.6
 Le système Debian Stretch 9 est remplacé par Kali Linux : kali-linux-light-2018.1-amd64.iso<br/>
+Graphique install | Fr / fr | Nom de système : KSEO | Environnement de bureau : xfce4.<br/>
+Dépôt sources.list de Kali Linux 2018 par défaut.<br/>
+
+Addons invités. Interface graphique de VirtualBox Version 5.1.30 r118389 (Qt5.6.1)<br/>
+Copier / Coller bidirectionnel. | Transfert de fichier par cliquer déposer bidirectionnel. | Partage de dossier.<br/>
+Tutoriel : https://www.visionduweb.eu/wiki/index.php?title=Installer_VirtualBox_sur_Debian#Installer_les_Additions_invit.C3.A9s_de_VirtualBox<br/>
+
+Ajout d'un fond d'écran pour l'utilisateur root et de 4 fonds d'écran pour l'utilisateur seo.<br/>
+OWASP Mantra est réinstallé, uniquement dans le menu des applications du compte root.<br/>
+Ajout des droits root à l'utilisateur seo de Kali Linux. Utiliser sudo dans les scripts.<br/>
 
 Ajout d'un wiki sur GitHub : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/wiki<br/>
 Ajout de la page Docker : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/wiki/Utiliser-Docker<br/>
-
-Ajout des droits root à l'utilisateur seo de Kali Linux. Utiliser sudo dans les scripts.<br/>
-
-OWASP Mantra est réinstallé, uniquement dans le menu des applications du compte root.<br/>
 
 Ajout de JAVA jre-8u161-linux-x64 dans le dossier jre pour Eclipse Oxygen ET pour le dossier bin de Gephi.<br/>
 Cmatrix pour le fun : Lancer cmatrix depuis le terminal.<br/>
@@ -103,12 +109,4 @@ Ajout de l'outil GHSTooLS et de son forum dans les favoris du navigateur Firefox
 Ajout du forum Scripts SEO dans les favoris du navigateur Firefox : http://scripts-seo.com
 
 # SEO Kalamity - Version 0.1
- Debian 9 firmware-9.2.1-amd64-DVD-1<br/>
- Graphique install | Fr / fr | Nom de système : presence | Environnement de bureau : xfce4 | Utilitaires Linux préinstallés.<br/>
- sources.list Debian 9 stable<br/>
- Source : https://www.visionduweb.eu/wiki/index.php?title=Installer_Debian_Jessie#Sources.list_non-free_pour_Debian_9_Stretch<br/>
- Addons invités. Interface graphique de VirtualBox Version 5.1.30 r118389 (Qt5.6.1)<br/>
- Copier / Coller bidirectionnel. | Transfert de fichier par cliquer déposer bidirectionnel. | Partage de dossier.<br/>
- Source : https://www.visionduweb.eu/wiki/index.php?title=Installer_VirtualBox_sur_Debian#Installer_les_Additions_invit.C3.A9s_de_VirtualBox<br/>
- Installation du paquet gedit<br/>
- Ajout de fonds d'écran SEO.
+Installation du système. Debian Stretch 0 à l'origine, remplacé dans la version 0.6 par Kali Linux 2018.
