@@ -4,6 +4,9 @@ L'objectif est de centraliser et partager des outils pour le référencement et 
 
 # Kalamity SEO - Version 0.6
 Télécharger l'image .ova de la Version 0.6 avec ce lien pour soutenir le projet Kalamity SEO : https://cnhv.co/1t19w<br/>
+
+[Soutenir le projet Kalamity SEO](https://cnhv.co/1t19w).
+
 Merci de patienter le temps que 10240 hash coinhive soient calculés.<br/>
 Vous pouvez alors télécharger la machine virtuelle.<br/>
 Compter 2Go 500Mo pour le chargement.<br/>
