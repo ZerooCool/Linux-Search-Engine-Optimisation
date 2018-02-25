@@ -13,7 +13,7 @@ Compter 2Go 500Mo pour le chargement.<br/>
 # Installer Kalamity SEO
 Installer VirtualBox dans sa dernière version.<br/>
 Ajouter la version courante de Kalamity SEO à VirtualBox.<br/>
-Disposer d'environ 35Go disponibles pour installer la machine virtuelle sur VirtualBox.<br/>
+L'espace de stockage alloué à la machine virtuelle est de 35Go.<br/>
 Double cliquer sur l'archive .ova téléchargée pour importer la machine virtuelle Linux Search Engine Optimisation.
 
 # Démarrer la machine virtuelle
