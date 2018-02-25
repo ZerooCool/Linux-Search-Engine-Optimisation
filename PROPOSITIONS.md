@@ -1,6 +1,4 @@
 # Propositions pour la Version 0.7
-Passer l'interface en français.
-
 Faire un script de nettoyage, avant la mise en ligne.<br/>Voir au bas des versions depuis Github.
 
 Optimiser le poids des images pour les sites web.<br/>
