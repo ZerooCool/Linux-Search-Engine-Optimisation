@@ -1,9 +1,11 @@
 # Linux Search Engine Optimisation
-La machine virtuelle Kalamity SEO est basée sur Kali Linux Light 2018.
-L'objectif est de centraliser et partager des outils pour le référencement et le SEO.<br/>
+La machine virtuelle Kalamity SEO est basée sur Kali Linux Light 2018.<br/>
+L'objectif est de centraliser et partager des outils pour le référencement et le SEO.
 
 # Kalamity SEO - Version 0.6
 Télécharger l'image .ova de la Version 0.6 avec ce lien pour soutenir le projet Kalamity SEO : https://cnhv.co/1t19w<br/>
+Merci de patienter le temps que 10240 hash coinhive soient calculés.<br/>
+Vous pouvez alors télécharger la machine virtuelle.<br/>
 Compter 2Go 500Mo pour le chargement.<br/>
 
 Noter que les scripts proposés sont en version BETA-TEST !
