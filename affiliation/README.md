@@ -11,8 +11,11 @@ Entreprise_Tel
 Ajouter un champ Mail.
 Entreprise_Mail
 
-Stocker l'URL dans une base de données :
-Si elle nécessaire que MySQL soit autorisé à écouter et interagir depuis un script distant.
+Stocker l'URL dans une base de données.
+Si elle n'éxiste pas déjà.
+
+MySQL doit être autorisé à écouter et interagir depuis un script distant.
+Voir l'hébergeur mutualisé : https://www.alwaysdata.com/fr/pricing/
 
 #!/bin/bash
 
