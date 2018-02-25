@@ -2,11 +2,27 @@ Créer une interface Zenity.
 
 Mettre en place un formulaire de saisie d'adresse URL.
 
-Ajouter un champ URL.
-Ajouter un champ Note.
-Ajouter un champ Affiliation.
-Ajouter un champ Téléphone.
+Affiliation
+Entreprise_ID_Auto
+Entreprise_Nom
+Entreprise_URL
+Entreprise_Tel
+
 Ajouter un champ Mail.
+Entreprise_Mail
 
 Stocker l'URL dans une base de données :
-Si elle n'existe pas déjà.
+Si elle nécessaire que MySQL soit autorisé à écouter et interagir depuis un script distant.
+
+#!/bin/bash
+
+DB_USER='..';
+DB_PASSWD='..';
+DB_NAME='..';
+TABLE='..';
+
+echo 'mysql -u 'Utilisateur' -h 'serveur' -p'pass' -D 'NomBDD' "INSERT INTO 'Affiliation' (Entreprise_ID_Auto,Entreprise_Nom,Entreprise_URL,Entreprise_Tel) VALUES ('','Trop','Cool','777001')"'
+
+| sshpass -p $pass_serveur ssh serveur@192.168.0.1
+
+mysql --user=$DB_USER --password=$DB_PASSWD --default_character_set utf8 $DB_NAME
