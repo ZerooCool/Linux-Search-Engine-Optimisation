@@ -1,4 +1,8 @@
 # Propositions pour la Version 0.7
++ Passer l'interface en français.
+
++ Social Recon : https://www.visionduweb.eu/forum/hack-et-pentest/2143-social-recon-trouver-les-informations-liees-a-un-mail-ou-un-pseudo#2901
+
 Faire un script de nettoyage, avant la mise en ligne.<br/>Voir au bas des versions depuis Github.
 
 Optimiser le poids des images pour les sites web.<br/>
