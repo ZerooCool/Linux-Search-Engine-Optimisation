@@ -1,7 +1,5 @@
 # Propositions pour la Version 0.7
-+ Passer l'interface en français.
-
-+ Social Recon : https://www.visionduweb.eu/forum/hack-et-pentest/2143-social-recon-trouver-les-informations-liees-a-un-mail-ou-un-pseudo#2901
+Passer l'interface en français.
 
 Faire un script de nettoyage, avant la mise en ligne.<br/>Voir au bas des versions depuis Github.
 
@@ -23,8 +21,6 @@ Voir si il fonctionne et est bien reconnu depuis l'interface de minergate.
 Les favoris sont à reprendre -> coinhive.
 
 Outil de gestion des affiliations.
-
-Passer l'interface en français.
 
 # Propositions pour la Version 1.0
 Ajouter des pages du wiki dans les Favoris.<br/>
