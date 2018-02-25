@@ -60,8 +60,8 @@ Ajout d'un fichier de logs lors de l'installation depuis le menu. (~/installeur/
 Script de suppression de Docker pour partager une machine virtuelle plus légère.<br/>
 L'installation de Docker est assistée avec le menu accueil 00-menu.sh (Dossier installation de Github.)<br/>
 
-Le mineur de monero est à nouveau installé, mais la compilation n'a pas aboutie correctement.<br/>
-dminer est copié collé de l'ancienne installation de Debian, et, se lance.<br/>
+Le mineur de monero est à nouveau installé, mais la compilation n'a pas aboutie correctement sur Kali Linux.<br/>
+dminer est copié collé de l'ancienne installation de Debian Stretch, et, se lance normalement..
 Voir si il fonctionne et est bien reconnu depuis l'interface de minergate.<br/>
 Intégré au menu rapide Dev Web il ne se lance pas avec mon raccourci Zenity.<br/>
 Lancer le script directement depuis le dossier /home/seo/KSEO/Outils/<br/>
