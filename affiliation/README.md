@@ -1,11 +1,12 @@
-Créer une interface Zenity.<br/>
+# Créer une interface Zenity
 Mettre en place un formulaire de saisie d'adresse URL.<br/>
 https://www.visionduweb.eu/wiki/index.php?title=Programmation_GNU_Linux_Zenity<br/>
 
-Créer une base de données MySQL qui soit autorisée à écouter et interagir avec un script distant.<br/>
+# Créer une base de données MySQL
+La base de données doit être autorisée à écouter et interagir avec un script distant.<br/>
 Voir l'hébergeur mutualisé : https://www.alwaysdata.com/fr/pricing/<br/>
 
-Exemple pour une table de la base de données.<br/>
+# Créer la table
 
 A VENIR
 
