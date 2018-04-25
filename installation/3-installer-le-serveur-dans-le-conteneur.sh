@@ -29,6 +29,9 @@ echo " "
 echo "Installation des paquets nécessaires pour le serveur web local."
 apt install nano wget unzip apache2 php7.0 php7.0-curl mariadb-server mariadb-client -y
 
+echo " Un avertissement est affiché : "
+echo " locale: Cannot set LC_ALL to default locale: No such file or directory "
+
 echo " "
 echo " "
 
