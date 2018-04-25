@@ -9,14 +9,14 @@ echo "Se placer à la racine du dossier /var/www/html/ et charger Joomla!"
 cd /var/www/html/
 
 echo " Rapatrier la dernière version de Joomla! "
-# Rapatrier Joomla! 3.8.5 qui est la dernière version stable lors de la rédaction de ce tutoriel.
-wget https://github.com/AFUJ/joomla-cms-fr/releases/download/3.8.5.1/Joomla_3.8.5-FR-Stable-Full_Package.zip
+# Rapatrier Joomla! 3.8.7 qui est la dernière version stable lors de la rédaction de ce tutoriel.
+wget https://github.com/AFUJ/joomla-cms-fr/releases/download/3.8.7.1/Joomla_3.8.7-FR-Stable-Full_Package.zip
 
 echo " "
 
 # Dézipper au même niveau que l'archive .zip
 echo "Dézipper Joomla! dans le répertoire courant /var/www/html/"
-unzip Joomla_3.8.5-FR-Stable-Full_Package.zip
+unzip Joomla_3.8.7-FR-Stable-Full_Package.zip
 
 echo " "
 
