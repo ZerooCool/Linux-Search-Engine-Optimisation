@@ -114,7 +114,7 @@ echo " "
 # Sécuriser MariaDB
 echo "Sécuriser MariaDB."
 echo "Remove anonymous users : Yes"
-echo "Disallow root login  remotely ? [Y/n] : no"
+echo "Disallow root login  remotely ? [Y/n] : no" // Ou plutôt Yes en fait.
 echo "PLACER LA SECURISATION A LA FIN DU SCRIPT UNE FOIS L'UTILISATEUR MariaDB créé." 
 echo "... et mettre Y pour interdire root. <strike>No pour le moment.</strike>"
 echo "Delete test database : yes (?)"
