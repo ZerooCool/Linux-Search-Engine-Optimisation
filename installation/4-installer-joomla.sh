@@ -60,7 +60,7 @@ echo "  "
 echo " Renseigner la page 4 "
 echo " Noter que : "
 echo " configuration.php Modifiable est sur Non alors que la valeur devrait être Oui. "
-echo " Output Buffering Désactivé. Il faudrait activer le Output Buffering. "
+echo " Output Buffering doit être désactivé. "
 
 echo "  "
 
