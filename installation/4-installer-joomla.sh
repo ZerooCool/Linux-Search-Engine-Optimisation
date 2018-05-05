@@ -59,8 +59,16 @@ echo "  "
 
 echo " Renseigner la page 4 "
 echo " Noter que : "
-echo " configuration.php Modifiable est sur Non alors que la valeur devrait être Oui. "
 echo " Output Buffering doit être désactivé. "
+echo " configuration.php Modifiable est sur Non alors que la valeur devrait être Oui. "
+
+echo "  "
+
+# Créer le fichier vide, lui donner les droits, le placer dans le groupe de Apache;
+# Il faudrait CONFIGURER le serveur de Joomla pour que Joomla puisse créer le fichier sans avoir à changer pour le bon groupe.
+sudo touch configuration.php
+sudo chmod 0644 configuration.php
+sudo chown www-data:www-data configuration.php
 
 echo "  "
 
