@@ -38,13 +38,13 @@ echo " "
 # Modifier le php.ini
 echo "Modifier le fichier php.ini"
 echo "A intégrer dans le script automatique !"
-echo "En attendant, il faudra modifier soit même le fichier /etc/php/7.0/apache2/php.ini"
+echo "En attendant, modifier manuellement le fichier /etc/php/7.0/apache2/php.ini"
 # nano /etc/php/7.0/apache2/php.ini
-## Modifier les lignes :
-# memory_limit = 256M
-# upload_max_filesize = 32M
-# post_max_size = 32M
-# output_buffering on
+echo " Modifier les lignes "
+echo " memory_limit = 256M "
+echo " upload_max_filesize = 32M "
+echo " post_max_size = 32M "
+echo " output_buffering Off "
 
 echo " "
 echo " "
@@ -121,19 +121,25 @@ echo "Delete test database : yes (?)"
 echo "Reload privilèges tables now : yes"
 mysql_secure_installation
 
+
 echo " "
 echo " "
 
-echo " Changer le groupe et utilisateur pour celui de Apache. "
+
 echo " Apache est propriétaire du site. "
-echo " Depuis le répertoire /var/www/html/ "
+echo " Appliquer le changement de propriétaire et de groupe pour les fichiers du site depuis le répertoire /var/www/html/ "
 cd /var/www/html
 echo " Appliquer le changement de groupe et utilisateur "
-echo " chown www-data:www-data * -R  "
-chown www-data:www-data * -R
+echo " chown -Rv www-data:www-data * "
+chown -Rv www-data:www-data *
+echo " Permettre au groupe www-data d'écrire dans le dossier html. "
+echo " chmod -Rv g+w * "
+chmod -Rv g+w *
+
 
 echo " "
 echo " "
+
 
 echo " Notes pour créer une base de données. "
 echo " La base à sélectionner est mysqli "
