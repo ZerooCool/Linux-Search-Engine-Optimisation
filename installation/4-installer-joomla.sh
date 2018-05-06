@@ -20,13 +20,27 @@ unzip Joomla_3.8.7-FR-Stable-Full_Package.zip
 
 echo " "
 
-echo " Changer le groupe et utilisateur pour celui de Apache. "
-echo " Apache est propriétaire du site. "
+echo " Changer le propriétaire et le groupe pour celui de Apache. "
 echo " Depuis le répertoire /var/www/html/ "
 cd /var/www/html
-echo " Appliquer le changement de groupe et utilisateur "
-echo " chown www-data:www-data * -R  "
-chown www-data:www-data * -R
+echo " Appliquer le changement de propriétaire et de groupe pour les fichiers du site. "
+echo " chown -Rv www-data:www-data * "
+chown -Rv www-data:www-data *
+echo " Permettre au groupe www-data d'écrire dans le dossier html. "
+echo " chmod -Rv g+w * "
+chmod -Rv g+w *
+
+
+# Cette partie en commentaire devient inutile quand le groupe reçoit le droit d'écrire.
+# Supprimer cette partie commentée par la suite.
+# Créer le fichier vide, lui donner les droits, le placer dans le groupe de Apache;
+# Il faudrait CONFIGURER le serveur de Joomla pour que Joomla puisse créer le fichier sans avoir à changer pour le bon groupe.
+# sudo touch configuration.php
+# sudo chmod 0644 configuration.php
+# sudo chown www-data:www-data configuration.php
+# echo "  "
+
+
 echo " Effectué. "
 
 echo "  "
@@ -59,16 +73,8 @@ echo "  "
 
 echo " Renseigner la page 4 "
 echo " Noter que : "
-echo " Output Buffering doit être désactivé. "
-echo " configuration.php Modifiable est sur Non alors que la valeur devrait être Oui. "
+echo " Output Buffering doit être désactivé dans le fichier php.ini. "
 
-echo "  "
-
-# Créer le fichier vide, lui donner les droits, le placer dans le groupe de Apache;
-# Il faudrait CONFIGURER le serveur de Joomla pour que Joomla puisse créer le fichier sans avoir à changer pour le bon groupe.
-sudo touch configuration.php
-sudo chmod 0644 configuration.php
-sudo chown www-data:www-data configuration.php
 
 echo "  "
 
