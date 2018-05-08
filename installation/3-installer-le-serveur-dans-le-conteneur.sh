@@ -29,9 +29,6 @@ echo " "
 echo "Installation des paquets nécessaires pour le serveur web local."
 apt install nano wget unzip apache2 php7.0 php7.0-curl mariadb-server mariadb-client -y
 
-echo " Un avertissement est affiché : "
-echo " locale: Cannot set LC_ALL to default locale: No such file or directory "
-
 echo " "
 echo " "
 
@@ -65,9 +62,9 @@ echo " "
 echo " "
 
 # Modifier le php.ini
-echo "Modifier le fichier php.ini"
-echo "A intégrer dans le script automatique !"
-echo "En attendant, modifier manuellement le fichier /etc/php/7.0/apache2/php.ini"
+echo " Modifier le fichier php.ini "
+echo " A intégrer dans le script automatique ! "
+echo " En attendant, modifier manuellement le fichier /etc/php/7.0/apache2/php.ini "
 # nano /etc/php/7.0/apache2/php.ini
 echo " Modifier les lignes "
 echo " memory_limit = 256M "
@@ -105,7 +102,7 @@ echo " "
 echo " "
 
 # Démarrer Apache2.
-echo "Démarrage de Apache2."
+echo " Démarrage de Apache2. "
 service apache2 start
 
 echo " "
@@ -188,8 +185,8 @@ echo " Se connecter à PHPMyAdmin avec znation / KillTheZombie "
 echo " Créer une nouvelle base de données joomlazombies "
 echo " Modifier le préfixe à sa convenance : wtb3n_ "
 
-echo "Installation du serveur terminée !"
-echo "Les paquets suivants ont été installés : nano wget unzip apache2 php7.0 php7.0-curl mariadb-server mariadb-client mysql_secure_installation !"
+echo " Installation du serveur terminée ! "
+echo " Les paquets suivants ont été installés : nano wget unzip apache2 php7.0 php7.0-curl mariadb-server mariadb-client mysql_secure_installation ! "
 echo " Ainsi que les paquets pour les modules de php. "
 
 echo " "
@@ -217,6 +214,6 @@ echo " L'archive de Joomla a été téléchargée et installée. "
 sleep 4
 echo
 
-# En cas de difficulté à l'installation, penser à redémarrer Apache2 et mySQL
+# En cas de difficulté à l'installation, penser à redémarrer Apache2 et MySQL
 # service apache2 restart
 # service mysql restart
