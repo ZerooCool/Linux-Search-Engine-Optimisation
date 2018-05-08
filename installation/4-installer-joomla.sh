@@ -14,11 +14,10 @@ wget https://github.com/AFUJ/joomla-cms-fr/releases/download/3.8.7.1/Joomla_3.8.
 
 echo " "
 
-# Dézipper au même niveau que l'archive .zip
+# Dézipper l'archive zip au même niveau.
 echo "Dézipper Joomla! dans le répertoire courant /var/www/html/"
 unzip Joomla_3.8.7-FR-Stable-Full_Package.zip
-# Supprimer l'archive.
-# Vérifier si l'archive n'est pas supprimée par après dans un autre script ( Menu accueil ? )
+# Supprimer l'archive zip.
 rm Joomla_3.8.7-FR-Stable-Full_Package.zip
 
 echo " "
