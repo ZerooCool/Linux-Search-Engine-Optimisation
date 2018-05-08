@@ -17,6 +17,9 @@ echo " "
 # Dézipper au même niveau que l'archive .zip
 echo "Dézipper Joomla! dans le répertoire courant /var/www/html/"
 unzip Joomla_3.8.7-FR-Stable-Full_Package.zip
+# Supprimer l'archive.
+# Vérifier si l'archive n'est pas supprimée par après dans un autre script ( Menu accueil ? )
+rm Joomla_3.8.7-FR-Stable-Full_Package.zip
 
 echo " "
 
