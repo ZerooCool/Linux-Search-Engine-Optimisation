@@ -41,6 +41,11 @@ chmod -Rv g+w *
 # echo "  "
 
 
+# Supprimer les fichiers suivants pour éviter de laisser des informations sur le CMS utilisé.
+# LICENSE.txt, README.txt et web.config.txt
+rm LICENSE.txt README.txt web.config.txt
+
+
 echo " Effectué. "
 
 echo "  "
@@ -80,13 +85,9 @@ echo "  "
 
 echo " L'installation aboutie correctement. "
 
-echo "  "
-
-echo " IMPORTANT "
-echo " Copier la configuration proposée en bas de page et l'ajouter dans le fichier configuration.php. "
-echo " touch configuration.php "
-echo " nano configuration.php "
-echo " Coller les données du fichier configuration.php "
+# echo " Cette étape est automatique quand le groupe www-data est autorisé en écriture. "
+# echo " Copier la configuration proposée en bas de page et l'ajouter dans le fichier configuration.php. "
+# echo " Coller les données proposées par Joomla dans le fichier configuration.php "
 
 echo "  "
 
@@ -95,6 +96,9 @@ echo " Erreur. Le dossier ne peut pas être supprimé. "
 echo " Veuillez le supprimer manuellement. "
 echo " rm -R installation/ "
 
+# Avec la bonne configuration du serveur,
+# Le groupe www-data autorisé en écriture,
+# Cette étape ci-dessous devrait fonctionnée :
 # cd /var/www/html
 # rm -R installation/
 
