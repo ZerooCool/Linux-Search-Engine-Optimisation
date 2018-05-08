@@ -37,10 +37,28 @@ echo " "
 
 echo " Installer des paquets pour les modules complémentaires de php "
 echo " Ajouter le support ZIP natif "
-echo " Le paquet php-zip a été installé. "
-# Vérifier lequel des paquets est à utiliser, php-zip ou php7.0-zip
-echo " Le paquet php7.0-zip n'est pas installé pour ne pas avoir de doublons. "
+echo " Le paquet php-zip va installer également le paquet php7.0-zip. "
 apt install php-zip
+
+# Le message suivant est affiché lors de l'installation du paquet php-zip
+# perl: warning: Setting locale failed.
+# perl: warning: Please check that your locale settings:
+# 	LANGUAGE = (unset),
+# 	LC_ALL = (unset),
+# 	LC_TIME = "fr_FR.UTF-8",
+# 	LC_MONETARY = "fr_FR.UTF-8",
+# 	LC_ADDRESS = "fr_FR.UTF-8",
+# 	LC_TELEPHONE = "fr_FR.UTF-8",
+# 	LC_NAME = "fr_FR.UTF-8",
+# 	LC_MEASUREMENT = "fr_FR.UTF-8",
+# 	LC_IDENTIFICATION = "fr_FR.UTF-8",
+# 	LC_NUMERIC = "fr_FR.UTF-8",
+# 	LC_PAPER = "fr_FR.UTF-8",
+# 	LANG = "en_US.UTF-8"
+#     are supported and installed on your system.
+# perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
+# locale: Cannot set LC_ALL to default locale: No such file or directory
+
 apt install libapache2-mod-php7.0 php7.0-cli php7.0-common php7.0-mbstring php7.0-gd php7.0-intl php7.0-xml php7.0-mysql php7.0-mcrypt
 
 echo " "
