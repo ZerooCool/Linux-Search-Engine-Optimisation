@@ -13,6 +13,9 @@
 # Autoriser les droits en lecture.
 # sudo chmod 0444 phpinfo.php
 
+# Recharger la configuration du serveur.
+sudo /etc/init.d/apache2 reload
+
 <?php
 phpinfo();
 ?>
