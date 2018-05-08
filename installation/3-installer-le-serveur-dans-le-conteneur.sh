@@ -35,6 +35,17 @@ echo " locale: Cannot set LC_ALL to default locale: No such file or directory "
 echo " "
 echo " "
 
+echo " Installer des paquets pour les modules complémentaires de php "
+echo " Ajouter le support ZIP natif "
+echo " Le paquet php-zip a été installé. "
+# Vérifier lequel des paquets est à utiliser, php-zip ou php7.0-zip
+echo " Le paquet php7.0-zip n'est pas installé pour ne pas avoir de doublons. "
+apt install php-zip
+apt install libapache2-mod-php7.0 php7.0-cli php7.0-common php7.0-mbstring php7.0-gd php7.0-intl php7.0-xml php7.0-mysql php7.0-mcrypt
+
+echo " "
+echo " "
+
 # Modifier le php.ini
 echo "Modifier le fichier php.ini"
 echo "A intégrer dans le script automatique !"
@@ -45,6 +56,13 @@ echo " memory_limit = 256M "
 echo " upload_max_filesize = 32M "
 echo " post_max_size = 32M "
 echo " output_buffering Off "
+
+echo " "
+echo " "
+
+echo " Configurer le serveur de mails PHP MAIL : "
+echo " Renseigner le fichier php.ini "
+echo " Renseigner phpmailer "
 
 echo " "
 echo " "
@@ -154,11 +172,12 @@ echo " Modifier le préfixe à sa convenance : wtb3n_ "
 
 echo "Installation du serveur terminée !"
 echo "Les paquets suivants ont été installés : nano wget unzip apache2 php7.0 php7.0-curl mariadb-server mariadb-client mysql_secure_installation !"
+echo " Ainsi que les paquets pour les modules de php. "
 
 echo " "
 
 echo " Tester l'appel des 3 fichiers dans le dossier hello. "
-echo " Le serveur web local est fonctionnel ! "
+echo " Le serveur web local doit maintenant être fonctionnel ! "
 
 echo " "
 
