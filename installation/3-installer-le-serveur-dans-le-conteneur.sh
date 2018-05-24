@@ -159,6 +159,7 @@ echo " "
 echo " "
 
 
+# Concerne notamment le CMS Joomla!
 # En cas d'erreurs lors de l'import MySql
 # incorrect datetime value '0000-00-00 00:00:00'
 # Dans les configuration de base de MySql la valeur zéro est maintenant interdite dans les dates.
