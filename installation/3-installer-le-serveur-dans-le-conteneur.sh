@@ -159,6 +159,25 @@ echo " "
 echo " "
 
 
+# En cas d'erreurs lors de l'import MySql
+# incorrect datetime value '0000-00-00 00:00:00'
+# Dans les configuration de base de MySql la valeur zéro est maintenant interdite dans les dates.
+# Si vous avez des champs date avec des valeurs à zéro, il faut enlever ce contrôle.
+# Dans le fichier de configuration de MySql (/etc/mysql/mysql.conf.d/mysql.cnf)
+# Rechercher la variable d'environnement sql-mode et supprimer NO_ZERO_DATE et NO_ZERO_IN_DATE
+# Ajouter le bloc suivant dans la configuration de MySQL :
+# 
+# [client]
+# sql-mode="STRICT_ALL_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER"
+# 
+# [mysql]
+# sql-mode="STRICT_ALL_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER"
+
+
+echo " "
+echo " "
+
+
 echo " Apache est propriétaire du site. "
 echo " Appliquer le changement de propriétaire et de groupe pour les fichiers du site depuis le répertoire /var/www/html/ "
 cd /var/www/html
