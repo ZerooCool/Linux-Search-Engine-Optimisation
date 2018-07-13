@@ -189,10 +189,21 @@ echo " Permettre au groupe www-data d'écrire dans le dossier html. "
 echo " chmod -Rv g+w * "
 chmod -Rv g+w *
 
-
 echo " "
 echo " "
 
+echo " Installer Denyhosts pour protéger des tentatives d'intrusion. "
+wget http://ftp.fr.debian.org/debian/pool/main/d/denyhosts/denyhosts_2.10-2_all.deb
+dpkg -i denyhosts_2.10-2_all.deb
+sudo rm denyhosts_2.10-2_all.deb
+
+echo " "
+
+echo " Installation du serveur terminée ! "
+echo " Les paquets suivants ont été installés : nano wget unzip apache2 php7.0 php7.0-curl mariadb-server mariadb-client mysql_secure_installation ! "
+echo " Ainsi que les paquets pour les modules de php. "
+
+echo " "
 
 echo " Notes pour créer une base de données. "
 echo " La base à sélectionner est mysqli "
@@ -204,10 +215,6 @@ echo " Aller sur la page locale http://localhost/phpmyadmin "
 echo " Se connecter à PHPMyAdmin avec znation / KillTheZombie "
 echo " Créer une nouvelle base de données joomlazombies "
 echo " Modifier le préfixe à sa convenance : wtb3n_ "
-
-echo " Installation du serveur terminée ! "
-echo " Les paquets suivants ont été installés : nano wget unzip apache2 php7.0 php7.0-curl mariadb-server mariadb-client mysql_secure_installation ! "
-echo " Ainsi que les paquets pour les modules de php. "
 
 echo " "
 
