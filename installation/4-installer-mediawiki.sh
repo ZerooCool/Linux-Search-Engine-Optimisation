@@ -58,10 +58,10 @@ echo " Renseigner un mail valide pour le rappel de mot de passe. "
 echo " A la fin de l'installation, télécharger le fichier LocalSettings.php"
 echo " Créer le fichier LocalSettings.php dans le dossier /var/www/html/wiki"
 cd /var/www/html/wiki
-touch LocalSettings.php
+sudo touch LocalSettings.php
 sudo chown -R www-data:www-data /var/www/html/wiki/LocalSettings.php
 sudo chmod -R 755 /var/www/html/wiki/LocalSettings.php
-nano LocalSettings.php
+sudo nano LocalSettings.php
 
 echo " Copier le contenu du fichier qui a été téléchargé. "
 echo " Coller le contenu dans LocalSettings.php "
