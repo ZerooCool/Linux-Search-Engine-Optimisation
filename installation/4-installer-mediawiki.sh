@@ -10,10 +10,10 @@ echo " Créer une nouvelle base mediawiki "
 
 # Créer le dossier qui va accueillir le wiki.
 cd /var/www/html
-mkdir wiki
+sudo mkdir wiki
 
 
-# Se placer à la racine du dossier html qui contient les fichiers par défaut du serveur web local.
+# Se placer à la racine du dossier wiki qui contient les fichiers par défaut du serveur web local.
 echo "Se placer à la racine du dossier /var/www/html/wiki et charger Mediawiki."
 cd /var/www/html/wiki
 
@@ -46,72 +46,35 @@ echo " Effectué. "
 
 echo "  "
 
-
-# A suivre
-
-
 echo " Ouvrir le navigateur avec l'adresse localhost/wiki "
 echo " Finaliser l'installation de Mediawiki "
 
-echo " Renseigner la page 1 "
-echo " Cliquer sur C'est parti !"
-
+echo " Suivre les étapes de l'installation de Mediawiki "
 echo "  "
 
-echo " Renseigner la page 2 "
+echo " Créer un utilisateur et son mot de passe pour Mediawiki. "
+echo " Renseigner un mail valide pour le rappel de mot de passe. "
 
-echo " Renseigner la rubrique Nom de la base de données"
-echo " Saisir wordpress"
+echo " A la fin de l'installation, télécharger le fichier LocalSettings.php"
+echo " Créer le fichier LocalSettings.php dans le dossier /var/www/html/wiki"
+cd /var/www/html/wiki
+touch LocalSettings.php
+sudo chown -R www-data:www-data /var/www/html/wiki/LocalSettings.php
+sudo chmod -R 755 /var/www/html/wiki/LocalSettings.php
+nano LocalSettings.php
 
-echo "Renseigner Identifiant: znation"
-echo "Renseigner mot de passe : KillTheZombie" 
-
-echo "Renseigner Adresse de la base de données"
-echo "Saisir localhost"
-
-echo " Renseigner Préfixe des tables"
-echo " Saisir : wp_"
-
-echo " Cliquer sur Valider"
-
-
-echo " Sur la page 3 , cliquer sur Lancer l'installation !"
-
-echo " Renseigner la page 4 "
-
-echo " Rubrique Titre du site" 
-echo " Nommer votre site : VictoireWP"
-
-echo " Renseigner Votre adresse de messagerie"
-echo " Saisir votre adresse e-mail"
-
-echo " Renseigner Visibilité pour les moteurs de recherche:"
-echo "Laisser cette case décochée pour un site accessible à tous."
-echo " Cliquer sur Installer Wordpress."
-
-echo " Sur la page 5 : cliquer sur Se connecter."
-
-echo " Sur la page de connexion, renseigner Identifiant et Mot de passe"
-echo " Identifiant : znation"
-echo " Mot de passe : KillTheZombie"
-echo "Cliquer sur Se connecter"
-echo " On arrive sur la page d'administration de Wordpress"
-
-
-
-echo "Sortir du conteneur"
-echo "Saisir exit"
-
+echo " Copier le contenu du fichier qui a été téléchargé. "
+echo " Coller le contenu dans LocalSettings.php "
 
 
 echo "Identifier le conteneur à sauvegarder avec docker ps -a"
-echo "docker export 5cd7e1ffb9f6 > wordpress.tgz"
-echo "docker import - wordpress < wordpress.tgz"
+echo "docker export 5cd7e1ffb9f6 > mediawiki.tgz"
+echo "docker import - mediawiki < mediawiki.tgz"
 
 echo "Stopper le précédent conteneur"
-echo "docker stop wordpress"
+echo "docker stop mediawiki"
 echo "Relancer le conteneur sauvegardé"
 echo "docker ps -a"
-echo "docker run --name Wordpress -p 80:80 -t -i wordpress /bin/bash"
+echo "docker run --name Mediawiki -p 80:80 -t -i mediawiki /bin/bash"
 echo "service apache2 start"
 echo "service mysql start"
