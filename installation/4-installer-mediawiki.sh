@@ -3,7 +3,6 @@
 echo " Installer Mediawiki "
 
 # Créer une base de données Mediawiki avec PhpMyAdmin
-# Ajouter la procédure
 echo " Aller sur la page locale http://localhost/phpmyadmin "
 echo " Se connecter à PHPMyAdmin avec znation / KillTheZombie "
 echo " Créer une nouvelle base mediawiki "
@@ -20,44 +19,39 @@ cd /var/www/html/wiki
 
 echo " Rapatrier la dernière version de Mediawiki "
 # Rapatrier la version de Mediawiki qui est la dernière version stable lors de la rédaction de ce tutoriel.
-wget https://releases.wikimedia.org/mediawiki/1.31/mediawiki-1.31.0.tar.gz
+sudo wget https://releases.wikimedia.org/mediawiki/1.31/mediawiki-1.31.0.tar.gz
 echo " "
 
-
-
-@ suivre
-
-
-
 # Dézipper au même niveau que l'archive .zip
-echo "Dézipper Wordpress dans le répertoire courant /var/www/html/"
-unzip wordpress-4.9.4-fr_FR.zip
-rm wordpress-4.9.4-fr_FR.zip 
+echo "Décompresser Mediawiki dans le répertoire courant /var/www/html/wiki"
+sudo tar xzvf mediawiki-1.31.0.tar.gz
+sudo rm mediawiki-1.31.0.tar.gz
 
-# Le paquet Worpdress créé un nouveau répertoire, on copie les données du répertoire htdocs directement dans le dossier html.
-cd wordpress
-mv * /var/www/html
-cd /var/www/html
-# La source devient inutile
-rm -R wordpress
-
+# Déplacer le contenu du dossier mediawiki-1.31.0 vers le dossier wiki
+cd mediawiki-1.31.0
+sudo cp -R * /var/www/html/wiki/
+sudo rm -R mediawiki-1.31.0/
 
 echo " "
 
 echo " Changer le groupe et utilisateur pour celui de Apache. "
-echo " Apache est propriétaire du site. "
-echo " Depuis le répertoire /var/www/html/ "
-cd /var/www/html
+echo " Apache doit être propriétaire du site. "
+echo " Depuis le répertoire /var/www/html/wiki "
+cd /var/www/html/wiki
 echo " Appliquer le changement de groupe et utilisateur "
 echo " chown www-data:www-data * -R  "
-chown -R www-data:www-data /var/www/html/
-chmod -R 755 /var/www/html/
+sudo chown -R www-data:www-data /var/www/html/wiki
+sudo chmod -R 755 /var/www/html/wiki
 echo " Effectué. "
 
 echo "  "
 
-echo " Ouvrir le navigateur avec l'adresse localhost/index.php "
-echo " Finaliser l'installation de Wordpress "
+
+# A suivre
+
+
+echo " Ouvrir le navigateur avec l'adresse localhost/wiki "
+echo " Finaliser l'installation de Mediawiki "
 
 echo " Renseigner la page 1 "
 echo " Cliquer sur C'est parti !"
