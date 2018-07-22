@@ -4,7 +4,7 @@ L'objectif est de centraliser et partager des outils pour le référencement et 
 
 Noter que les scripts sont testés sur une base Kali Linux 2018 / Debian Stretch.<br/>
 Vous pouvez faire des tentatives sur d'autres distributions, mais, elles n'auront pas été testées.<br/>
-Vous pouvez ouvrir une issue si vous utilisez un autre système. Adapter les scripts à vos besoins.
+Vous pouvez ouvrir une issue si vous rencontrez des difficultés.
 
 # Kalamity SEO - Version 0.6
 Télécharger l'image .ova avec le lien de coinhive : [Télécharger et soutenir le projet Kalamity SEO](https://cnhv.co/1t19w).<br/>
