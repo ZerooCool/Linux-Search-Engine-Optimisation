@@ -129,8 +129,6 @@ echo "FLUSH PRIVILEGES;"
 echo "Pour sortir, saisir alors exit;"
 mysql -u root -p
 # Saisir le mot de passe de l'utilisateur root : GestionnaireBDD
-# Par défaut le mot de passe est vide.
-# Si besoin de changer le mot de passe root :  SET PASSWORD FOR 'root'@'localhost' = PASSWORD('new_password');
 # Une fois connecté à l'interface MariaDB, lancer les 3 commandes suivantes :
 
 ## COMMENT FAIRE CETTE SAISIE AUTOMATIQUEMENT ?
