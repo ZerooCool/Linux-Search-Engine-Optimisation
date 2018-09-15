@@ -26,16 +26,23 @@ echo " "
 echo " "
 
 # Installer les paquets nécessaires pour le serveur web local.
-echo "Installation des paquets nécessaires pour le serveur web local."
-apt install nano wget unzip apache2 php7.0 php7.0-curl mariadb-server mariadb-client -y
+echo " Installation des paquets nécessaires pour le serveur web local. "
+apt install nano wget unzip apache2 mariadb-server mariadb-client -y
 
 echo " "
 echo " "
 
-echo " Installer des paquets pour les modules complémentaires de php "
-echo " Ajouter le support ZIP natif "
-echo " Le paquet php-zip va installer également le paquet php7.0-zip. "
-apt install php-zip
+echo " Choix du dépôt PHP7.2 pour Debian. "
+apt-get install apt-transport-https lsb-release ca-certificates
+wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg
+echo "deb https://packages.sury.org/php/ $(lsb_release -sc) main" >> /etc/apt/sources.list.d/php.list
+apt-get update
+
+echo " "
+echo " "
+
+echo " Installer les paquets pour PHP7.2 "
+apt-get install php7.2 php7.2-opcache libapache2-mod-php7.2 php7.2-mysql php7.2-curl php7.2-json php7.2-gd  php7.2-intl php7.2-mbstring php7.2-xml php7.2-zip php7.2-fpm php7.2-readline
 
 # Le message suivant est affiché lors de l'installation du paquet php-zip
 # perl: warning: Setting locale failed.
@@ -55,8 +62,6 @@ apt install php-zip
 #     are supported and installed on your system.
 # perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
 # locale: Cannot set LC_ALL to default locale: No such file or directory
-
-apt install libapache2-mod-php7.0 php7.0-cli php7.0-common php7.0-mbstring php7.0-gd php7.0-intl php7.0-xml php7.0-mysql php7.0-mcrypt
 
 echo " "
 echo " "
