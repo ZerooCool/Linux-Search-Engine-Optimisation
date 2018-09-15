@@ -44,25 +44,6 @@ echo " "
 echo " Installer les paquets pour PHP7.2 "
 apt-get install php7.2 php7.2-opcache libapache2-mod-php7.2 php7.2-mysql php7.2-curl php7.2-json php7.2-gd  php7.2-intl php7.2-mbstring php7.2-xml php7.2-zip php7.2-fpm php7.2-readline
 
-# Le message suivant est affiché lors de l'installation du paquet php-zip
-# perl: warning: Setting locale failed.
-# perl: warning: Please check that your locale settings:
-# 	LANGUAGE = (unset),
-# 	LC_ALL = (unset),
-# 	LC_TIME = "fr_FR.UTF-8",
-# 	LC_MONETARY = "fr_FR.UTF-8",
-# 	LC_ADDRESS = "fr_FR.UTF-8",
-# 	LC_TELEPHONE = "fr_FR.UTF-8",
-# 	LC_NAME = "fr_FR.UTF-8",
-# 	LC_MEASUREMENT = "fr_FR.UTF-8",
-# 	LC_IDENTIFICATION = "fr_FR.UTF-8",
-# 	LC_NUMERIC = "fr_FR.UTF-8",
-# 	LC_PAPER = "fr_FR.UTF-8",
-# 	LANG = "en_US.UTF-8"
-#     are supported and installed on your system.
-# perl: warning: Falling back to a fallback locale ("en_US.UTF-8").
-# locale: Cannot set LC_ALL to default locale: No such file or directory
-
 echo " "
 echo " "
 
