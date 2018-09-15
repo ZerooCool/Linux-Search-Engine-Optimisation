@@ -63,7 +63,14 @@ echo " "
 
 echo " Configurer le serveur de mails PHP MAIL : "
 echo " Renseigner le fichier php.ini "
-echo " Renseigner phpmailer "
+# echo " Renseigner phpmailer "
+# [mail function]
+# ; For Win32 only.
+# ; http://php.net/smtp
+# SMTP = Le serveur SMTP du fournisseur de messagerie.
+# ; http://php.net/smtp-port
+# ; Port 587 pour SSL/TLS
+# smtp_port = 587
 
 echo " "
 echo " "
