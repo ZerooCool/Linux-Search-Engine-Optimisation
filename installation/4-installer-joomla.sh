@@ -16,9 +16,9 @@ echo " "
 
 # Dézipper l'archive zip au même niveau.
 echo "Dézipper Joomla! dans le répertoire courant /var/www/html/"
-unzip Joomla_3.8.12.1-FR-Stable-Full_Package.zip
+unzip Joomla_3.8.12-FR-Stable-Full_Package.zip
 # Supprimer l'archive zip.
-rm Joomla_3.8.12.1-FR-Stable-Full_Package.zip
+rm Joomla_3.8.12-FR-Stable-Full_Package.zip
 
 echo " "
 
