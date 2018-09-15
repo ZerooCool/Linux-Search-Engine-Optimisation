@@ -88,6 +88,7 @@ echo "  "
 echo " L'installation aboutie correctement. "
 
 # echo " Cette étape est automatique quand le groupe www-data est autorisé en écriture. "
+# Votre fichier de configuration n'est pas modifiable ou il y a eu un problème durant sa création, par exemple le répertoire de Joomla! n'est pas ouvert en écriture.
 # echo " Copier la configuration proposée en bas de page et l'ajouter dans le fichier configuration.php. "
 # echo " Coller les données proposées par Joomla dans le fichier configuration.php "
 
