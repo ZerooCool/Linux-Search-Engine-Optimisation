@@ -88,9 +88,8 @@ echo " Proposition de mot de passe : GestionnaireBDD "
 apt install phpmyadmin -y
 # yes pour configurer phpmyadmin
 # Utiliser dbconfig-common y
-# Choisir un mot de passe : GestionnaireBDD
 # Choix 1 pour configurer Apache2
-
+# Choisir un mot de passe : GestionnaireBDD
 echo " "
 echo " "
 
