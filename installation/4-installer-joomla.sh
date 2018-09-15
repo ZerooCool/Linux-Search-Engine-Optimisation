@@ -105,6 +105,10 @@ echo " rm -R installation/ "
 # cd /var/www/html
 # rm -R installation/
 
+# cd ..
+# chown -R www-data:www-data html/
+# root@joomla:/var/www# chmod -Rv g+w html/
+
 echo "  "
 
 # echo " Si le plugin install from the web est manquant, c'est un problème de droits. "
