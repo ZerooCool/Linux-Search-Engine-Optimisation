@@ -50,8 +50,8 @@ echo " "
 # Modifier le php.ini
 echo " Modifier le fichier php.ini "
 echo " A intégrer dans le script automatique ! "
-echo " En attendant, modifier manuellement le fichier /etc/php/7.0/apache2/php.ini "
-# nano /etc/php/7.0/apache2/php.ini
+echo " En attendant, modifier manuellement le fichier /etc/php/7.2/apache2/php.ini "
+# nano /etc/php/7.2/apache2/php.ini
 echo " Modifier les lignes "
 echo " memory_limit = 256M "
 echo " upload_max_filesize = 32M "
