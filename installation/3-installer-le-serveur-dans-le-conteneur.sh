@@ -66,7 +66,10 @@ echo " Renseigner le fichier php.ini "
 # echo " Renseigner phpmailer "
 # Seuls les mails de Joomla avec SMTP et Gmail sortent avec une configuration par défaut.
 # Joomla et PHP Mail : Impossible de lancer la fonction mail.
-# 
+# Sans serveur de mail installé, il faudrait utiliser le smtp du FAI.
+# SMTP = smtp.FAI.fr
+# smtp_port = 25
+# sendmail_from = expediteur@mail.fr
 
 echo " "
 echo " "
