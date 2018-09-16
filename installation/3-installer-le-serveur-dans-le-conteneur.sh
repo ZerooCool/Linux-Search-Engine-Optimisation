@@ -64,13 +64,9 @@ echo " "
 echo " Configurer le serveur de mails PHP MAIL : "
 echo " Renseigner le fichier php.ini "
 # echo " Renseigner phpmailer "
-# [mail function]
-# ; For Win32 only.
-# ; http://php.net/smtp
-# SMTP = Le serveur SMTP du fournisseur de messagerie.
-# ; http://php.net/smtp-port
-# ; Port 587 pour SSL/TLS
-# smtp_port = 587
+# Seuls les mails de Joomla avec SMTP et Gmail sortent avec une configuration par défaut.
+# Joomla et PHP Mail : Impossible de lancer la fonction mail.
+# 
 
 echo " "
 echo " "
