@@ -61,18 +61,16 @@ echo " output_buffering Off "
 echo " "
 echo " "
 
-echo " Configurer le serveur de mails PHP MAIL : "
-echo " Renseigner le fichier php.ini "
-# echo " Renseigner phpmailer "
-# Seuls les mails de Joomla avec SMTP et Gmail sortent avec une configuration par défaut.
 # Joomla et PHP Mail : Impossible de lancer la fonction mail.
-# Sans serveur de mail installé, il faudrait utiliser le smtp du FAI.
-# SMTP = smtp.FAI.fr
-# smtp_port = 25
-# sendmail_from = expediteur@mail.fr
+# Seuls les mails de Joomla avec SMTP et Gmail sortent avec une configuration par défaut.
+# Avoir un vrai serveur de mail en interne serait plus adéquate pour un grand projet.
+# Utiliser le bon serveur SMTP SSL, pour OVH, permet l'envoie de mail : ssl0.ovh.net
+# Il faut donc contacter le support de son hébergeur pour obtenir les bonnes informations.
+# Contacter Nerim pour le domaine visionduweb.com et obtenir le bon serveur SMTP avec SSL.
+# Voir l'issue : https://github.com/joomla/joomla-cms/issues/22249
 
-echo " "
-echo " "
+# echo " "
+# echo " "
 
 # Démarrer MariaDB.
 echo "Démarrage de MariaDB."
@@ -166,8 +164,8 @@ echo " "
 # sql-mode="STRICT_ALL_TABLES,ERROR_FOR_DIVISION_BY_ZERO,NO_AUTO_CREATE_USER"
 
 
-echo " "
-echo " "
+# echo " "
+# echo " "
 
 
 echo " Apache est propriétaire du site. "
