@@ -61,7 +61,7 @@ echo " output_buffering Off "
 echo " "
 echo " "
 
-# Joomla et PHP Mail : Impossible de lancer la fonction mail.
+# Joomla et SMTP : Impossible de lancer la fonction mail.
 # Seuls les mails de Joomla avec SMTP et Gmail sortent avec une configuration par défaut.
 # Avoir un vrai serveur de mail en interne serait plus adéquate pour un grand projet.
 # Utiliser le bon serveur SMTP SSL, pour OVH, permet l'envoie de mail : ssl0.ovh.net
