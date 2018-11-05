@@ -64,7 +64,7 @@ echo " "
 # Joomla et SMTP : Impossible de lancer la fonction mail.
 # Seuls les mails de Joomla avec SMTP et Gmail sortent avec une configuration par défaut.
 # Avoir un vrai serveur de mail en interne serait plus adéquate pour un grand projet.
-# Utiliser le bon serveur SMTP SSL, pour OVH, permet l'envoie de mail : ssl0.ovh.net
+# Utiliser le bon serveur SMTP SSL, pour OVH, permet l'envoie de mail : (STARTTLS) ssl0.ovh.net
 # Il faut donc contacter le support de son hébergeur pour obtenir les bonnes informations.
 # Contacter Nerim pour le domaine visionduweb.com et obtenir le bon serveur SMTP avec SSL.
 # Voir l'issue : https://github.com/joomla/joomla-cms/issues/22249
