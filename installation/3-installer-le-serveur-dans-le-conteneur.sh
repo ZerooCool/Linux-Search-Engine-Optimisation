@@ -56,7 +56,7 @@ echo " Modifier les lignes "
 echo " memory_limit = 256M "
 echo " upload_max_filesize = 32M "
 echo " post_max_size = 32M "
-echo " output_buffering Off "
+echo " output_buffering = Off "
 
 echo " "
 echo " "
