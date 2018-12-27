@@ -16,7 +16,7 @@ Changement des emblèmes sur le dossier DOCU-SEO et son contenu et sur le dossie
 Ajout d'un fond d'écran pour l'utilisateur root et de 4 fonds d'écran pour l'utilisateur seo.<br/>
 OWASP Mantra, qui n'est plus maintenu, est réinstallé dans le menu des applications du compte root.<br/>
 Ajout du plugin PurTraqueur de PurMedia pour partager vos articles en un clic sur PurMedia : http://purmedia.fr/pur-traqueur.html<br/>
-Ajout du plugin Linkchecker pour identifier les liens morts d'un site avec Firefox : https://addons.mozilla.org/fr/firefox/addon/linkchecker/<br/>
+<del>Ajout du plugin Linkchecker pour identifier les liens morts d'un site avec Firefox : https://addons.mozilla.org/fr/firefox/addon/linkchecker/</del><br/>
 
 Ajout d'un wiki sur GitHub : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/wiki<br/>
 Ajout de la page Docker : https://github.com/ZerooCool/Linux-Search-Engine-Optimisation/wiki/Utiliser-Docker<br/>
@@ -77,7 +77,7 @@ Ajout du serveur PHP5 tutum/lamp via Docker. Supprimé dans la version 0.6 et re
 Ajout du paquet php5-curl et sauvegarde de l'image Docker. Supprimé dans la version 0.6 et remplacé par php7.0-curl<br/>
 Ajout d'un script pour réimporter le conteneur de Docker à neuf automatiquement. Modifié dans la version 0.6 pour un appel depuis le menu 00-menu.sh<br/>
 Ajout de la page du wiki pour le tutoriel sur Docker dans les favoris du navigateur Firefox : https://www.visionduweb.eu/wiki/index.php?title=Ajouter_Docker_sur_GNU_Linux<br/>
-Ajout du plugin Linkchecker pour identifier les liens morts d'un site avec Firefox : https://addons.mozilla.org/fr/firefox/addon/linkchecker/<br/>
+<del>Ajout du plugin Linkchecker pour identifier les liens morts d'un site avec Firefox : https://addons.mozilla.org/fr/firefox/addon/linkchecker/</del><br/>
 
 # Kalamity SEO - Version 0.4
 Ajout du lien pour Content Spinning : https://www.visionduweb.eu/wiki/index.php?title=SEO_Content_Spinning<br/>
