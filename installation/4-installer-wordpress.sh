@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo " Installer Wordpress 4.9.4"
+echo " Installer Wordpress 5.1.1"
 
 # Créer une base de données wordpress avec PhpMyAdmin
 # Ajouter la procédure
@@ -15,13 +15,14 @@ cd /var/www/html/
 
 echo " Rapatrier la dernière version de Wordpress "
 # Rapatrier la version Wordpress qui est la dernière version stable lors de la rédaction de ce tutoriel.
-wget https://fr.wordpress.org/wordpress-4.9.4-fr_FR.zip
+wget https://fr.wordpress.org/latest-fr_FR.zip
 echo " "
 
 # Dézipper au même niveau que l'archive .zip
 echo "Dézipper Wordpress dans le répertoire courant /var/www/html/"
-unzip wordpress-4.9.4-fr_FR.zip
-rm wordpress-4.9.4-fr_FR.zip 
+unzip latest-fr_FR.zip
+rm latest-fr_FR.zip
+rm index.html
 
 # Le paquet Worpdress créé un nouveau répertoire, on copie les données du répertoire htdocs directement dans le dossier html.
 cd wordpress
