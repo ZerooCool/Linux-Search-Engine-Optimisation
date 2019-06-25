@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo " Installer Wordpress 5.1.1"
+echo " Installer Wordpress 5.2.2"
 
 # Créer une base de données wordpress avec PhpMyAdmin
 # Ajouter la procédure
